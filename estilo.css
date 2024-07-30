@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    font-family: "Poppins", "sans-serif";
+}
+
+header li{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+     font-size: x-large !important;
+    font-weight: 500 !important;
+}
+
+
+
+.imgCompany{
+    width: 130px;
+    margin: 5px;
+    margin-left: 2vw;
+}
+
+.logoCompany{
+    margin: 5px;
+}
+
+
+.btn-primary{
+    background-color: rgb(31, 105, 189);
+    border-color: rgb(31, 105, 189);
+    width: 6rem;
+}
+
+.mobile{
+    display: none;
+}
+
+#navbarNav {
+    width: 100%;
+    margin: 20px;
+}
+
+#listaNav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-left: 5vw;
+    gap: 10vw;
+}
+
+
+
+.btnSignIn{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    .mobile {
+        display: block 
+    }
+    .desktop {
+        display: none;
+    }
+}
+
+/* Main Menú */
+
+
+.containerMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+}
+
+.mainMenuDesktop{
+    background-image: url(./Images/mainImage1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 30rem;
+    width: 100%;
+    opacity: 0.8;
+    filter: brightness(0.8);
+}
+
+.btn-outline-success{
+        background-color: rgb(15, 40, 69);
+        border-color: rgb(15, 40, 69);
+        width: 6rem;
+    }
+
+
+.Home{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    justify-content: center
+}
+
+.mainMenuTitle{
+    color: white;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(2px 5px 6px black);
+}
+
+#menuTitle{
+    width: 100%;
+}
+
+#menuSearch{
+    width: 100%;
+}
+
+#menuSearchBox{
+    display: flex;
+    justify-content: center;
+}
+
+#formSearch{
+    width: 58%;
+}
+
+#mainMenuBox{
+    margin: 5vh;
+}
+
+/* MainMenu Mobile */
+
+.mainMenuMobile{
+    display: none;
+    background-image: url(./Images/mainImage1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 30rem;
+    width: 100%;
+    opacity: 0.8;
+    filter: brightness(0.8);
+}
+
+
+@media only screen and (max-width: 992px) {
+    .mainMenuMobile {
+        display: block 
+    }
+    .mainMenuDesktop {
+        display: none;
+    }
+}
+
+.containerMenuMobile{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    justify-content: center
+}
+
+#mainMenuBoxMobile{
+    margin: 1vh;
+    display: flex;
+    align-items: center;
+}
+
+#menuTitleMobile{
+    width: 100%;
+}
+
+#menuSearchMobile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#menuSearchBoxMobile{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.mainMenuTitleMobile{
+    font-size: 6vw;
+    width: 100%;
+    color: white;
+    filter: drop-shadow(2px 5px 6px black);
+}
+
+#formSearchMobile{
+    width: 100%;
+}
+
+/* SecondMainMenu */
+
+.containerSecondMenu{
+    margin-top: 10vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.containerSecondMenu img{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.containerSecondMenu h3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 2vh;
+    font-weight: 600;
+}
+
+.containerSecondMenu .col{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1vw;
+}
+
+.containerSecondMenu p{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    margin-left: 2vw;
+    font-size: larger;
+    font-weight: 500;
+}
+
+h1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+/* Third Main Menu */
+
+.thirdMainMenu{
+    background-color: #07223e;
+    margin-top: 8vh;
+    border-radius: 20px;
+    margin: 6vw;
+}
+
+.geologicalServiceImage{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 100%;
+}
+
+#thirdMenuGrid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#thirdMenuGrid h2{
+    font-weight: 700;
+}
+
+#thirdMenuGrid h3{
+    margin-top: 5vh;
+}
+
+#thirdMenuGrid p{
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+
+#thirdMenuGrid .btn-primary{
+    color: white;
+    width: 100%;
+    margin: 2vw;
+    color: white;
+    width: 80%;
+}
+
+.thirdGridButton{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.thirdGridButton a{
+    width: 100%;
+}
+
+/* Fourth Menu */
+
+.containerFourthMenu img{
+    width: 150px;
+    height: 130px;
+}
+
+.containerFourthMenu{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 6vw;
+
+}
+
+.containerFourthMenu .row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.containerFourthMenu .col{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFourthMenu h3{
+    padding: 10px;
+}
+
+.containerFourthMenu h2{
+    padding: 12px;
+    margin-top: 2vh;
+}
+
+
+.containerFourthMenu button {
+    margin-top: 5vh;
+    width: 50%;
+}
+
+#h3FourthMenu {
+    padding: 10px;
+}
+
+#h2FourthMenu {
+    padding: 6px;
+}
+
+/* Fifth Menú */
+.fifthMainMenu h1{
+    margin: 5vh;
+}
+
+.carouselMenu h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px ;
+    padding: 10px;
+}
+
+.carouselMenu p{
+    color: white;
+    font-size: 1.31rem;
+    margin: 3vw;
+}
+
+.carouselMenu span{
+    color: white;
+    margin-top: 2vh;
+}
+
+.card img{
+    width: 85px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.carouselMenu {
+    
+    width: 100%;
+}
+
+.carouselMenu .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    margin-right: 2vw;
+    
+}
+
+.carousel .card{
+height: 100%;
+ list-style: none;
+ background:  #07223e;
+ border-radius: 8px;
+ padding-bottom: 15px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: column;
+}
+
+/* List Your Business 
+
+Main Menu
+
+*/
+
+.ListMenu{
+    background: #07223e;
+}
+
+#ListMenuGrid{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 2vw;
+}
+
+#ListMenuGrid p{
+    width: 100%;
+    text-align: justify;
+}
+
+
+.ListGridMenu{
+    width: 100%;
+    margin-top: -15px;
+    display: flex;
+    justify-content: center;
+}
+
+.ListGridMenu button{
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Second List Menu */
+
+.circleList{
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color:  #11447a;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.containerSecondList .row{
+    padding: 3vw;
+    gap: 15px
+    ;
+}
+
+.listButton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listButton .btn{
+    width: 18%;
+}
+
+.thirdListMenu{
+    margin-top: 10vh;
+}
+
+/* Cards List */
+
+.containerReview{
+    margin: 2vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+
+.testimonial{
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    row-gap: 30px;
+}
+
+.testimonialContent img{
+    height: 180px;
+    width: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.testimonialContent .slideReview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slideReview p{
+    padding: 0px 160px;
+    text-align:center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.slideReview .detailsReview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideReview .nameReview{
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.slideReview .jobReview{
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+  }
+
+  .slideReview .quote-icon{
+    font-size: 30px;
+    color: #4070f4;
+  }
+
+/*  Geo Info  */
+
+.geoMain{
+    height: 50vh;
+}
+
+.geoMain img{
+    width: 100%;
+    height: 64vh;
+}
+
+.geoListMenu{
+    color: white;
+    background-color: #2b5f7d;
+    margin-top: 2vh
+}
+
+.containerGeoList .row{
+    padding: 40px;
+    gap: 15px;
+}
+
+.secondListMenu{
+    margin-top: 2vh;
+}
+
+.listButton{
+    margin: 5vh;
+}
+
+.listButton a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.geoFormMain{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 3vw;
+    gap: 2vw;
+}
+
+.geoForm1{
+    width: 50%;
+}
+
+.geoForm2{
+    width: 50%;
+    margin-right: 2vw;
+}
+
+.geoFormMain form{
+    padding-top: 20px;
+}
+
+.geoForm div{
+    padding-bottom: 20px;
+}
+
+/* Home Page */
+
+.logoCompanyHome{
+    margin: 5px;
+}
+
+.userOn img{
+    width: 70px;
+    height: 65px;
+    object-fit: cover;
+}
+
+.homeMenu{
+    margin-right: 2vw;
+}
+
+.card{
+    margin-bottom: 3vh;
+}
+
+#navbarSupportedContent{
+        display: flex !important;
+        flex-basis: auto;
+        justify-content: center;
+        width: 100%;
+}
+
+#listaNavHome{
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#navbarSupportedContent form{
+width: 70%;
+}
+
+#containerHomeMenu {
+    width: 100%;
+    margin: 5vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.homeFormDetails .mb-3{
+    margin-bottom: 3vh !important;
+}
+
+h3{
+    margin-bottom: 3vh;
+}
+
+/* FindGeo */
+

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoEasy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Script -->
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="logoCompanyHome">
+            <a href="./index.html"
+              ><img class="imgCompany" src="./Images/logo1.png"
+            /></a>
+          </span>
+          <ul class="navbar-nav" id="listaNavHome">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./findGeo.html"
+                >Find a Geo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./register.html">Find Work</a>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="userOn">
+            <img src="./Images/usuario.png" />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- First List Menu -->
+
+    <section class="homeMenu">
+      <div class="container-fluid">
+        <div class="row" id="containerHomeMenu">
+          <div class="col-12 col-md-5 col-lg-4">
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">Rio Tinto Project</h5>
+                <p class="card-text">
+                  Conduct geological surveys and analyze mineral deposits.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">BHP - Geologist</h5>
+                <p class="card-text">
+                  Analyze sediment samples and create stratigraphic profiles.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">HydroGEo Consultants</h5>
+                <p class="card-text">
+                  Conduct groundwater studies and develop models for aquifers.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">Geotech Services</h5>
+                <p class="card-text">
+                  Interpret seismic data and conduct geophysical surveys.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-7 col-lg-8">
+              <h3>Details</h3>
+              <form class="homeFormDetails">
+                <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Job Title</label>
+                      <input type="text" class="form-control" id="jobTitle" placeholder="">
+                </div>
+                <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Company</label>
+                      <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputSurname"
+                          aria-describedby="surname"/>
+                  </div>
+                  <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Job Location</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="exampleInputidCard"
+                    aria-describedby="idCard"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="disabledSelect" class="form-label">Job Location State</label>
+                  <select id="disabledSelect" class="form-select">
+                    <option>Brisbane</option>
+                    <option>Sydney</option>
+                    <option>Gold Coast</option>
+                    <option>Sunshine Coast</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Job Overview</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="exampleInputidCard"
+                    aria-describedby="idCard"
+                  />
+                </div>
+              </form>
+          </div>
+      
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="bg-light text-dark pt-5 pb-4">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              About Us
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
+              odit? Ex adipisci asperiores eaque, saepe dolor reprehenderit
+              optio cupiditate, nesciunt sunt velit quia non officiis corporis
+              error sapiente incidunt provident?
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Businesses and Services
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark">List your businesses and service</a>
+            </p>
+            H
+            <p>
+              <a href="#" class="text-dark">Geological Services</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">How this works</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">FAQs</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Testimonials</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Let us help you!
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark">Contact Us</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Terms and Conditions</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Help!</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Contact
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <li class="fas fa-home me-3"></li>
+              Brisbane, Australia
+            </p>
+            <p>
+              <li class="fas fa-envelope me-3"></li>
+              geoeasy@gmail.com
+            </p>
+            <p>
+              <li class="fas fa-phone me-3"></li>
+              +5555555555
+            </p>
+          </div>
+
+          <hr class="mb-4" />
+          <div class="text-center mb-2">
+            <p>
+              Copyright All rights reserved
+              <a href="#">
+                <strong class="text-primary"
+                  >Francisco Virgili y Daniel Virgili</strong
+                >
+              </a>
+            </p>
+          </div>
+
+          <div class="text-center">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-google-plus"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Swiper JS -->
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+  </body>
+</html>

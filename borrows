@@ -1,0 +1,20 @@
+ <section class="mainMenuMobile">
+      <div class="containerMenu"> 
+       <div class="row align-items-end" id="mainMenuBox">
+         <div class="col-12">
+           <div class="p-2 mb-2" id="menuTitle">
+           <h1 class="mainMenuTitle">Connect with trusted service!</h1>
+           </div>
+         </div>
+         <div class="col-12" id="menuSearch">
+           <div class="p-2 mb-2" id="menuSearchBox" >
+               <form class="d-flex" role="search" id="formSearch">
+                   <input class="form-control me-2" type="search" placeholder="e.g. Topography" aria-label="Search">
+                   <button class="btn btn-primary" type="submit">Go</button>
+             </form>
+           </div>  
+         </div>
+       </div>
+     </div>
+   </div>
+   </section>
