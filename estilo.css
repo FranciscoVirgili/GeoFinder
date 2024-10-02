@@ -1485,6 +1485,81 @@ input[type="checkbox"] {
     font-weight: 400;
     color: #333;
 }
-
-
 }
+
+
+ /* Container for the form input and the tick */
+ .form-section div {
+    position: relative;
+  }
+  
+  input {
+    padding-right: 30px; /* Leave space on the right for the tick */
+  }
+  
+  #emailTick, #passwordTick, #confirmEmailTick, #confirmPasswordTick {
+    position: absolute;
+    right: 10px; /* Position it inside the input field */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: green; /* Tick color */
+    pointer-events: none; /* So the tick doesn't interfere with input focus */
+  }
+  
+  /* Ensure the ticks only appear when needed */
+  #emailTick, #passwordTick, #confirmEmailTick, #confirmPasswordTick {
+    display: none;
+  }
+
+  button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccce9;
+  color: #666666;
+  
+}
+
+button:disabled,
+button[disabled]:hover disabled {
+    background-color: #cccc;
+}
+
+
+
+/* Pop ups */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1.5px solid rgb(31, 105, 189); /* Blue border */
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+}
+
+.close {
+    /*color: rgb(31, 105, 189); /* Blue close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: darkred; /* Dark red on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+

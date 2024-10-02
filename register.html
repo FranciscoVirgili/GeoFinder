@@ -99,50 +99,60 @@
     </header>
     <div class="form-container">
       <div class="form-toggle">
-        <button id="btnCompany" class="toggle-btn" aria-label="Select Company">I'm a Company</button>
+        <button id="btnCompany" class="toggle-btn action" aria-label="Select Company">I'm a Company</button>
         <button id="btnGeo" class="toggle-btn action" aria-label="Select Geo">I'm a Geo</button>
       </div>
-      <form class="registerForm">
+
+      <h2>Registration Form</h2>
+
+     <form class="registerForm"  >  <!--  method="post" action="Register.php" -->
         <div class="form-section">
           <div>
             <label for="firstNameRegister">First name</label>
-            <input type="text" id="firstNameRegister" name="firstName" placeholder="Mark" />
+            <input type="text" id="firstName-Register" name="firstName" placeholder="John" />
+            <div style="display: block; color: transparent;">Separator</div>
           </div>
           <div>
-            <label for="lastNameRegister">Last name</label>
-            <input type="text" id="lastNameRegister" name="lastName" placeholder="Otto" />
+            <label for="usernameRegister">Email Address</label>
+            <input type="email" id="email-Register" name="email" placeholder="email@example.com" />
+            <div style="display: block; color: transparent;">Separator</div>
           </div>
           <div>
-            <label for="usernameRegister">Username</label>
-            <input type="text" id="usernameRegister" name="username" placeholder="username" />
-          </div>
-          <div>
-            <label for="cityRegister">City</label>
-            <input type="text" id="cityRegister" name="city" />
-          </div>
-          <div>
-            <label for="stateRegister">State</label>
-            <input type="text" id="stateRegister" name="state" />
-          </div>
-          <div>
-            <label for="zipRegister">Zip</label>
-            <input type="text" id="zipRegister" name="zip" />
+            <label for="emailRegister">Passowrd</label>
+            <input type="password" id="password-Register" name="password" placeholder="Password" 
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <!-- START Password Validation -->
+                <div id="message">
+                  <h3>Password must contain the following:</h3>
+                  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                  <p id="number" class="invalid">A <b>number</b></p>
+                  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+                <!-- END Password Validation -->
           </div>
         </div>
         <div class="form-section">
           <div>
-            <label for="emailRegister">Email address</label>
-            <input type="email" id="emailRegister" name="email" placeholder="email@example.com" />
+            <label for="lastNameRegister">Last name</label>
+            <input type="text" id="lastName-Register" name="lastName" placeholder="Doe" />
+            <div style="display: block; color: transparent;">Separator</div>
           </div>
           <div>
-            <label for="passwordRegister">Password</label>
-            <input type="password" id="passwordRegister" name="password" placeholder="Password" />
+            <label for="emailRegister">Confirm Email address</label>
+            <input type="email" id="confirmEmail-Register" name="email" placeholder="Confirm Email" />
+            <div id="emailError" style="display: block; color: transparent;">Emails do not match</div>
+            <div id="emailTick" style="display: none; color: green;">✔</div>
           </div>
           <div>
-            <label for="confirmPasswordRegister">Confirm Password</label>
-            <input type="password" id="confirmPasswordRegister" name="confirmPassword" placeholder="Confirm Password" />
+            <label for="passwordRegister">Confirm Password</label>
+            <input type="password" id="confirmPassword-Register" name="password" placeholder="Confirm Password">
+            <div id="passwordError" style="display: block; color: transparent;">Passwords do not match</div>
+            <div id="passwordTick" style="display: none; color: green;">✔</div>
+            
           </div>
-          <div class="form-checkbox">
+        </div>
+          <!-- <div class="form-checkbox">
             <label class="checkboxTitle">Choose your services:</label>
             <div class="checkbox-group">
               <label><input type="checkbox" name="services" value="Topography"> Topography</label>
@@ -154,15 +164,30 @@
               <label><input type="checkbox" name="services" value="Environmental and Social Studies"> Environmental and Social Studies</label>
               <label><input type="checkbox" name="services" value="Environmental Monitoring Plan"> Environmental Monitoring Plan</label>
             </div>
-          </div>
-          <div class="form-signUp">
-            <label><input type="checkbox" name="terms"> Agree to terms and conditions</label><br />
-            <button style="background-color: rgb(31, 105, 189);" type="submit" class="submit-btn">Create Account</button>
-          </div>
+          </div> -->
         </div>
+        <div class="form-signUp">
+
+          <!-- START Pop-Up HTML -->
+          <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="closePopup" style="color: red;">&times;</span>
+                <p id="popupMessage" style="margin-top: 10px; color: black; font-weight: 500;"></p>
+            </div>
+          </div>
+            <!-- END Pop-Up HTML -->
+
+          <label><input type="checkbox" id="terms-Register" name="terms"> Agree to terms and conditions</label><br />
+          <div id="termsError" style="display: none; color: red;">Please accept Terms and Conditions to create the Account.</div>
+          <button id="submit-Register" type="submit" disabled class="submit-btn" >Create Account</button>
+        </div>
+        
       </form>
     </div>
-    
+
+
+
+
 
     <!-- Formulario para Company (oculto inicialmente) -->
 <div id="formCompany" class="form-content" style="display: none;">
@@ -178,6 +203,9 @@
       <!-- Otros campos del formulario para Company -->
   </form>
 </div>
+
+
+
 
 
       <!-- Footer -->
