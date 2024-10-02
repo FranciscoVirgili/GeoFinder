@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoEasy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Script -->
+
+  </head>
+  <body>
+    <header>
+      <section class="desktop">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <span class="logoCompany">
+              <a href="./index.html"
+                ><img class="imgCompany" src="./Images/logo1.png"
+              /></a>
+            </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav" id="listaNav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./signin.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./findGeo.html"
+                    >Find a Geo</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./findWork.html">Find Work</a>
+                </li>
+
+                <span class="btnSignIn">
+                  <a href="./signin.html"
+                    ><button class="btn btn-primary">Sign In</button></a
+                  >
+                </span>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <section class="mobile">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <span class="logoCompany">
+              <img class="imgCompany" src="./Images/logo1.png" />
+            </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >GeoEasy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./findGeo.html">Find a Geo</a>
+                </li>
+                <span>
+                  <a href="./signin.html"
+                    ><button class="btn btn-primary">Sign In</button></a
+                  >
+                </span>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+
+    <!-- FindWork Main -->
+    <section class="geoListMenuMobile">
+      <h1 style="font-size: 2rem;">How GeoFinder works!</h1>
+      <div class="containerGeoList">
+        <div class="containerSecondListDiv">
+            <div class="circleList">1</div>
+            <h3>Complete the following form</h3>
+        </div>
+            <p class="paragraphFindGeo">
+              Fill out the form with your data, your services and the necessary
+              contact information so that clients can connect to your cell phone
+              or email easily.
+            </p>
+          </div>
+          <div class="containerSecondListDiv">
+            <div class="circleList">2</div>
+            <h3>Advertise your services and work</h3>
+          </div>
+            <p class="paragraphFindGeo">
+              Thousands of clients throughout Australia use this page looking
+              for geological services
+            </p>
+          </div>
+          <div class="containerSecondListDiv">
+            <div class="circleList">3</div>
+            <h3>Manage the job from your phone</h3>
+          </div>
+            <p class="paragraphFindGeo">Communicate directly with the client in a simple and easy way.
+            Manage your schedules, payment and arrangements
+          </p>
+          </div>
+          <div class="containerSecondListDiv">
+            <div class="circleList">4</div>
+            <h3>Get recommendations</h3>
+          </div>
+            <p class="paragraphFindGeo">Potential clients will look at your profile, so GeoEasy collects
+            recommendations from past jobs to help you secure your next gig
+          </p>
+          </div>
+        </div>
+        <div class="listButton">
+          <button class="btn btn-primary" type="submit">
+            <a href="./geologistForm.html">Get started</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Gallery FindWork-->
+
+    <section class="galleryMenu">
+      <h1 style="font-size: 2rem;">Let your potencial employes know you!</h1>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="./Images/excavetorTradies.jpeg" alt="Geological Mapping" />
+          <div class="gallery-item-caption">Earth removal</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./Images/tradiesSpeacking.jpeg" alt="Mineral Exploration" />
+          <div class="gallery-item-caption">General services</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./Images/geologicalService.jpg" alt="Soil Testing" />
+          <div class="gallery-item-caption">Topography</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./Images/mobileToolsBackground.jpeg"
+            alt="Seismic Surveys"
+          />
+          <div class="gallery-item-caption">Services</div>
+        </div>
+        <!-- Añadir más servicios según sea necesario -->
+      </div>
+    </section>
+
+   <!-- Form -->
+   <h1 style="font-size: 2rem;">Advertise your geological services</h1>
+   <div class="container mt-5" id="target-container">
+     <h2 class="mb-4" style="font-size: 2rem; margin-left: 1vw; font-weight: 400;">Fill the Request</h2>
+     <form class="formFindWork" id="formFindWork">
+       <div class="row">
+         <div class="col-md-6">
+           <div class="form-group">
+             <label for="name">Full Name</label>
+             <input
+               type="text"
+               class="form-control"
+               id="fullNameFW"
+               name="name"
+               placeholder="John Doe"
+               required
+             />
+           </div>
+
+           <div class="form-group">
+             <label for="email">Email</label>
+             <input
+               type="email"
+               class="form-control"
+               id="emailFW"
+               name="email"
+               placeholder="john.doe@example.com"
+               required
+             />
+           </div>
+
+           <div class="form-group">
+             <label for="phone">Phone Number</label>
+             <input
+               type="tel"
+               class="form-control"
+               id="phoneFW"
+               name="phone"
+               placeholder="+123 456 7890"
+               required
+             />
+           </div>
+           <div class="form-group">
+             <label for="location">Project Location</label>
+             <input
+               type="text"
+               class="form-control"
+               id="locationFW"
+               name="location"
+               placeholder="City/State/Country"
+               required
+             />
+           </div>
+           <div class="form-checkbox" id="formCheckBoxFindGeo">
+             <label class="checkboxTitle">Choose your services:</label>
+             <div class="checkbox-group">
+                 <label><input type="checkbox" name="services" value="Topography"> Topography</label>
+                 <label><input type="checkbox" name="services" value="Geotechnical Studies"> Geotechnical Studies</label>
+                 <label><input type="checkbox" name="services" value="Hydrogeological Studies"> Hydrogeological Studies</label>
+                 <label><input type="checkbox" name="services" value="Risk and Danger Studies"> Risk and Danger Studies</label>
+                 <label><input type="checkbox" name="services" value="Cartography"> Cartography</label>
+                 <label><input type="checkbox" name="services" value="Laboratory Analysis"> Laboratory Analysis</label>
+                 <label><input type="checkbox" name="services" value="Environmental and Social Studies"> Environmental and Social Studies</label>
+                 <label><input type="checkbox" name="services" value="Environmental Monitoring Plan"> Environmental Monitoring Plan</label>
+             </div>
+         </div>
+         </div>
+          <div class="col-md-6" style="margin-top: 1rem;">
+            <div class="mb-3">
+              <label for="experience" class="form-label"
+                >Years of Experience</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="experienceFW"
+                name="experience"
+                placeholder="e.g., 5"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="certifications" class="form-label"
+                >Certifications</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="certificationsFW"
+                name="certifications"
+                placeholder="e.g., Professional Geologist (PG)"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="availability" class="form-label">Availability</label>
+              <select
+                class="form-select"
+                id="availabilityFW"
+                name="availability"
+                required
+              >
+                <option value="fulltime">Full-time</option>
+                <option value="parttime">Part-time</option>
+                <option value="consulting">Consulting</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="rate" class="form-label">Hourly Rate (USD)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="hourRateFW"
+                name="rate"
+                placeholder="e.g., 50"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="portfolio" class="form-label">Portfolio URL</label>
+              <input
+                type="url"
+                class="form-control"
+                id="portfolioFW"
+                name="portfolio"
+                placeholder="http://yourportfolio.com"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="additionalInfo" class="form-label"
+                >Additional Information</label
+              >
+              <textarea
+                class="form-control"
+                id="additionalInfoFW"
+                name="additionalInfo"
+                rows="3"
+                placeholder="Is there anything else we should know?"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div id="advertiseForm" action="/submit" method="post">
+          <!-- All the data of the form here -->
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="bg-light text-dark pt-5 pb-4">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              About Us
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
+              odit? Ex adipisci asperiores eaque, saepe dolor reprehenderit
+              optio cupiditate, nesciunt sunt velit quia non officiis corporis
+              error sapiente incidunt provident?
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Businesses and Services
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark">List your businesses and service</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Geological Services</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">How this works</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">FAQs</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Testimonials</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Let us help you!
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#" class="text-dark">Contact Us</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Terms and Conditions</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Help!</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Contact
+            </h5>
+            <hr class="mb-4" />
+            <div class="contact-section">
+              <div class="contact-item">
+                <img src="./Images/hogar.png" />
+                <span>Brisbane, Australia</span>
+              </div>
+              <div class="contact-item">
+                <img src="./Images/correo-electronico.png" />
+                <span>geofinder@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <img src="./Images/telefono.png" />
+                <span>+5555555555</span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="mb-4" />
+          <div class="text-center mb-2">
+            <p>
+              Copyright All rights reserved
+              <a href="#">
+                <strong class="text-primary"
+                  >Francisco Virgili y Daniel Virgili</strong
+                >
+              </a>
+            </p>
+          </div>
+
+          <div class="text-center">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-google-plus"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Swiper JS -->
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="./findWork.js"></script>
+  </body>
+</html>

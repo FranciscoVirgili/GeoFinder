@@ -17,7 +17,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <span class="logoCompany">
-              <img class="imgCompany" src="./Images/logo1.png" />
+              <a href="./index.html"
+              ><img class="imgCompany" src="./Images/logo1.png"
+            /></a>
             </span>
             <button
               class="navbar-toggler"
@@ -30,22 +32,23 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNavDesktop">
               <ul class="navbar-nav" id="listaNav">
                 <li class="nav-item">
                   <a class="nav-link" href="./home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="./findGeo.html"
-                    >Find a Geo</a
-                  >
+                  <a class="nav-link" href="./signin.html">Im a Company</a>
                 </li>
+                <li class="nav-item" href="./findGeo.html">
+                  <a class="nav-link" href="./findGeo.html">Im a Geo</a>
+                </li> 
                 <li class="nav-item">
-                  <a class="nav-link" href="./register.html">Find Work</a>
+                  <a class="nav-link" href="./findWork.html">Find Work</a>
                 </li>
-             
-                <span class="btnSignIn">
-                  <a href="./signin.html"><button  class="btn btn-primary">
+                <span class="btnSignInDesktop">
+                  <a href="./signin.html"><button style="font-size: 1.5rem;
+    width: 100%;" class="btn btn-primary">
                     Sign In</button></a>
                 </span>
               </ul>
@@ -57,7 +60,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-lg">
             <span class="logoCompany">
-              <img class="imgCompany" src="./Images/logo1.png" />
+              <a href="./index.html"
+              ><img class="imgCompany" src="./Images/logo1.png"
+            /></a>
             </span>
             <button
               class="navbar-toggler"
@@ -76,14 +81,14 @@
                   <a class="nav-link" href="./home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="./findGeo.html"
-                    >Find a Geo</a
-                  >
+                  <a class="nav-link" href="./signin.html">Im a Company</a>
                 </li>
+                <li class="nav-item" href="./signin.html">
+                    <a class="nav-link" href="./signin.html">Im a Geo</a>
+                  </li> 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Find Work</a>
+                  <a class="nav-link" href="./findWork.html">Find Work</a>
                 </li>
-             
                 <span>
                   <a href="./signin.html"><button  class="btn btn-primary">
                     Sign In</button></a>
@@ -101,13 +106,13 @@
         <div class="row align-items-end" id="mainMenuBox">
           <div class="col-12">
             <div class="p-2 mb-2" id="menuTitle">
-            <h1 class="mainMenuTitle">Connect with trusted service!</h1>
+            <h1 class="mainMenuTitle" style="font-size: calc(2rem + 1vw);">Connect with trusted service!</h1>
             </div>
           </div>
           <div class="col-12" id="menuSearch">
             <div class="p-2 mb-2" id="menuSearchBox" >
                 <form class="d-flex" role="search" id="formSearch">
-                    <input class="form-control me-2" type="search" placeholder="e.g. Topography" aria-label="Search">
+                    <input class="form-control me-2" id="formControl" type="search" placeholder="e.g. Topography" aria-label="Search">
                     <button class="btn btn-primary" type="submit">Go</button>
               </form>
             </div>  
@@ -123,7 +128,7 @@
        <div class="row align-items-end" id="mainMenuBoxMobile">
          <div class="col-12">
            <div class="p-2 mb-2" id="menuTitleMobile">
-           <h1 class="mainMenuTitleMobile">Connect with trusted service!</h1>
+           <h1 class="mainMenuTitleMobile" style="font-size: calc(2rem + 1vw); ">Connect with trusted service!</h1>
            </div>
          </div>
          <div class="col-12" id="menuSearchMobile">
@@ -141,7 +146,7 @@
 
    <!-- Second Menu Container -->
   
-  <h1>How GeoEasy works!</h1>
+  <h1 class="secondSectionMainMenuTittle">How GeoFinder works!</h1>
   <section class="secondMainMenu">
     <div class="containerSecondMenu">
       <div class="row">
@@ -171,11 +176,11 @@
         <div class="col" id="thirdMenuGrid">
           <h2>Do you provide geological services?</h2> 
           <h2>Want to increase your business?</h2>
-          <h3>Connect with more local clients</h3>
+          <h3>Connect with local clients</h3>
           <p>We send you job leads and you can manage them all in one app so you’ll save time on admin. We promote your profile and services by connecting you with more clients.</p><p>Publish what type of work and services you perform so that clients can contact you quickly and easily on your cell phone or email</p>
           <div class="thirdGridButton">
-            <a href="./register.html"><button class="btn btn-primary" type="submit">List your business</button></a>
-            <a href="./register.html"><button class="btn btn-primary" type="submit">See how it works</button></a>
+            <a href="./signin.html"><button class="btn btn-primary" type="submit">List your business</button></a>
+            <a href="./findWork.html"><button class="btn btn-primary" type="submit">See how it works</button></a>
           </div> 
         </div>
         <div class="col">
@@ -193,13 +198,13 @@
           <img src="./Images/search-engine-optimization.png">
           <h2>Geological Services</h2>
           <h3>Find what you are looking for</h3>
-          <button class="btn btn-primary" type="button">Look for a service (FREE)</button>
+          <a href="./findWork.html"><button class="btn btn-primary" type="button">Look for a service (FREE)</button></a>
         </div>
         <div class="col">
           <img src="./Images/work-tools.png">
           <h2 id="h3FourthMenu">Place your service here</h2>
           <h3 id="h2FourthMenu">Contact clients easily and quickly</h3>
-          <button class="btn btn-primary" type="button">Look for a service (FREE)</button>
+          <a href="./signin.html"><button class="btn btn-primary" type="button">Look for a service (FREE)</button></a>
         </div>
       </div>
     </div>
@@ -208,7 +213,12 @@
    
    <!-- Fifth Main Menu -->
    <section class="fifthMainMenu">
-    <h1>Customer recommendations</h1>
+    <h1 style="display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: x-large;">Customer recommendations</h1>
     <div class="carouselMenu">
       <ul class="carousel">
         <li class="card">
@@ -219,7 +229,7 @@
         </li>
         <li class="card">
           <h2>Transport</h2>
-          <p>Ethan provided the transportation in a timely manner. I was in charge of having the documentation ready and constantly informing the route</p>
+          <p>Ethan provided the transportation in a timely manner.</p>
           <img src="./Images/usuario.png">
           <span>John McMillan</span>
         </li>
@@ -235,7 +245,7 @@
 
   <!-- Footer -->
   
-  <footer class="bg-light text-dark pt-5 pb-4">
+  <footer class="bg-light text-dark pt-5 pb-4" id="footerDesign">
     <div class="container text-center text-md-start">
       <div class="row text-center text-md-start">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -278,15 +288,20 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
           <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contact</h5>
           <hr class="mb-4">
-          <p>
-            <li class="fas fa-home me-3"></li>Brisbane, Australia
-          </p>
-          <p>
-            <li class="fas fa-envelope me-3"></li>geoeasy@gmail.com
-          </p>
-          <p>
-            <li class="fas fa-phone me-3"></li>+5555555555
-          </p>
+          <div class="contact-section">
+            <div class="contact-item">
+                <img src="./Images/hogar.png">
+                <span>Brisbane, Australia</span>
+            </div>
+            <div class="contact-item">
+                <img src="./Images/correo-electronico.png">
+                <span>geofinder@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <img src="./Images/telefono.png">
+                <span>+5555555555</span>
+            </div>
+        </div>
         </div>
 
         <hr class="mb-4">

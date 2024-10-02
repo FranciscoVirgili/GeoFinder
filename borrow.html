@@ -1,0 +1,284 @@
+Dos paginas de formulario 
+1. Geologo
+2. Compañia
+
+Solo pagina entera de formulario submit y atras
+
+
+
+<form class="geologistFormRegister">
+    <section class="firstGeoFormSection">
+      <div class="firstGeoFormCol">
+        <!-- Name and Surname -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <!-- Fullname -->
+        <label for="fullname">Fullname:</label>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+          <!-- Phone -->
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required><br><br>
+      </div>  
+      <div class="secondGeoFormCol"> 
+
+        <!-- Primary Location -->
+        <label for="primary-location">Primary Location:</label>
+        <input type="text" id="primary-location" name="primary-location" required><br><br>
+
+        <!-- Age Group -->
+        <label for="age">Age:</label>
+        <select id="age" name="age" required>
+            <option value="18-25">18-25</option>
+            <option value="25-35">25-35</option>
+            <option value="35-45">35-45</option>
+            <option value="45-55">45-55</option>
+            <option value="55+">55+</option>
+        </select><br><br>
+
+        <!-- Gender -->
+        <label class="genderLabel" for="gender">Gender:</label>
+        <div class="geologistGender">
+          <label for="gender-male">Male</label>
+          <input type="radio" id="gender-male" name="gender" value="male">
+          <label for="gender-female">Female</label>
+          <input type="radio" id="gender-female" name="gender" value="female">   
+
+          <label for="gender-other">Other</label>
+          <input type="radio" id="gender-other" name="gender" value="other">
+        </div>
+        <!-- Country of Residence -->
+        <label for="country">Country of Residence:</label>
+        <input type="text" id="country" name="country" required><br><br>
+      </div>
+    </section>      
+        
+   <!-- Second Section Form -->
+   <div class="secondGeoFormTitle">
+    <div class="circleList">2</div>
+    <h3>Tell your potential clients about you</h3>
+  </div>
+  <section class="secondGeoFormSection">
+    <div class="firstColSecondForm">  
+        <!-- Type of Experience (checkbox) -->      
+          <fieldset>
+            <label>I am a:</label>
+            <div class="typeExperiencechck">
+            <input type="checkbox" id="new-geologist" name="experience[]" value="New Geologist">
+            <label for="new-geologist">New Geologist</label><br>
+
+            <input type="checkbox" id="experienced-fieldy" name="experience[]" value="Experienced Fieldy">
+            <label for="experienced-fieldy">Experienced Fieldy</label><br>
+
+            <input type="checkbox" id="new-fieldy" name="experience[]" value="New Fieldy">
+            <label for="new-fieldy">New Fieldy</label><br>
+
+            <input type="checkbox" id="general-hand" name="experience[]" value="General Hand">
+            <label for="general-hand">General Hand</label><br>
+          </div>
+        </fieldset>
+
+        
+          <label style="margin-top: 1rem">I have experience with:</label>
+          <fieldset class="experienceWithchck">
+          <input type="checkbox" id="exploration-greenfields" name="experience[]" value="Exploration Greenfields">
+            <label for="exploration-greenfields">Exploration Greenfields</label><br>
+
+            <input type="checkbox" id="exploration-brownfields" name="experience[]" value="Exploration Brownfields">
+            <label for="exploration-brownfields">Exploration Brownfields</label><br>
+
+            <input type="checkbox" id="mining" name="experience[]" value="Mining">
+            <label for="mining">Mining</label><br><br>
+        </fieldset>
+      
+
+        <!-- Commodity Experience -->
+        <label for="commodity-experience">Commodity Experience :</label>
+        <input type="text" id="commodity-experience" name="commodity-experience" required placeholder="e.g. Au, Cu, Pb, REE"><br><br>
+      
+        
+            <!-- Level of Education (dropdown) -->
+            <label for="education-level">Level of Education:</label>
+            <select id="education-level" name="education-level" required>
+                <option value="high-school">High School Diploma</option>
+                <option value="bachelors">Bachelor's Degree</option>
+                <option value="masters">Master's Degree</option>
+                <option value="phd">Ph.D.</option>
+            </select><br><br>
+
+        </div>
+        
+      <div class="secondColSecondForm">  
+        <!-- Work Preference (Checkboxes) -->
+        <label>Work Preference:</label>
+        <div class="workPreferencechck">
+          <input type="checkbox" id="casual" name="work-preference[]" value="Casual">
+          <label for="casual">Casual</label><br>
+
+          <input type="checkbox" id="part-time" name="work-preference[]" value="Part Time">
+          <label for="part-time">Part Time</label><br>
+
+          <input type="checkbox" id="potential-ongoing" name="work-preference[]" value="Potential for ongoing">
+          <label for="potential-ongoing">Potential for ongoing</label><br><br>
+          </div>
+          <!-- Years of experience (dropdown) -->
+          <label for="years-experience">Years of experience:</label>
+          <select id="years-experience" name="years-experience" required>
+                <option value="oneyear">0-1 years</option>
+                <option value="oneToThreeYears">1-3 years</option>
+                <option value="threeTosixYears">3-6 years</option>
+                <option value="sixToTenYears">6-10 years</option>
+                <option value="tenToFifteenYears">10-15 years</option>
+                <option value="fifteenToTwentyYears">15-20 years</option>
+                <option value="twentyToTwentyfiveYears">20-25 years</option>
+                <option value="moreTwentyfive">more than 25 years</option>
+            </select><br><br>
+          
+          <!-- Experience in (checkbox)  -->
+          <fieldset>
+            <label>Experience in:</label>
+            <div class="locationExperiencechck">
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="remote-field" name="remoteField[]" value="Remote Field">
+              <label for="remote-field">Remote Field</label>
+              <label>(camping/off grid accomodation)</label><br>
+            </div>
+            
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="field" name="field[]" value="Field">
+              <label for="field">Field </label>
+              <label>(town-based accomodation)</label><br>
+            </div> 
+
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="office-site" name="officeSite[]" value="office Site">
+              <label for="office-site">Office Site</label><br>
+            </div>
+            
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="open-pit" name="openPit[]" value="Open Pit">
+              <label for="open-pit">Open Pit</label><br>
+            </div>
+            
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="underground" name="underground[]" value="Underground">
+              <label for="underground">Underground</label><br>
+            </div>  
+          </div>
+        </fieldset>
+        </div>
+    </section>
+
+    <!-- Third Section Form -->
+    <div class="ThirdGeoFormTitle">
+      <div class="circleList">3</div>
+        <h3>Program your schedule</h3>
+      </div>
+
+    <section class="thirdGeoFormSection">
+      
+      <div class="firstColthirdForm">
+        <!-- Location of Work -->  
+        <label for="location-work">Location of work:</label>
+        <input type="text" id="location-work" name="location-work">
+
+        <!-- Work Time Preference -->
+        <label>Work time preference:</label>
+        <fieldset style="display: flex; align-items: baseline; gap: 20px;">
+          <input type="checkbox" id="on-site" name="onSite[]" value="On Site">
+          <label for="on-site">On-site</label><br>
+
+          <input type="checkbox" id="fifo" name="fifo[]" value="FIFO">
+          <label for="fifo">FIFO</label><br>
+        </fieldset>
+
+        <!-- Location of Work -->  
+        <label for="roster">I prefer a roster (days on/days off):</label>
+        <input type="text" id="roster" name="roster" placeholder="e.g. 5/2 or 8/6">
+
+        <!-- Availability (Date picker) -->
+        <label for="availability">Available From:</label>
+        <input type="date" id="availability" name="availability" required><br><br>
+        
+        <!-- Hours per day -->
+        <label for="hours-day">Hours per day:</label>
+          <select id="hours-day" name="hours-day">
+                <option value="lessSixHours">less than 6 hours-day</option>
+                <option value="sixHours">6 hours-day</option>
+                <option value="sevenHours">7 hours-day</option>
+                <option value="eightHours">8 hours-day</option>
+                <option value="tenHours">10 hours-day</option>
+                <option value="moreTenHours">more than 10 hours-day</option>
+          </select><br><br>
+
+      </div>
+      
+      <div class="secondColThirdForm">
+        <!-- Schedule Days -->
+        <div class="form-group">
+            <label for="day-start">Day start time (est):</label>
+            <input type="date" id="day-start" name="dayStartDate">
+            <input type="time" id="start-time" name="startTime">
+        </div>
+    
+        <div class="form-group">
+            <label for="day-end">Day end time (est):</label>
+            <input type="date" id="day-end" name="dayEndDate">
+            <input type="time" id="end-time" name="endTime">
+        </div>
+       
+        <!-- Driving Experience -->
+
+        <label style="margin-left: 1rem">Driving experience:</label>
+        <div class="drivingExperience" style="margin-left: 1rem; display: flex; align-items: baseline; gap: 20px;">
+          <input type="checkbox" id="4wdExperience" name="4wdExperience[]" value="4wdExperience">
+          <label for="casual">4WD Experience</label><br>
+ 
+          <input type="checkbox" id="4wdCertificate" name="4wdCertificate" value="4wdCertificate">
+          <label for="part-time">4WD Certificate</label><br>
+ 
+          <input type="checkbox" id="manual" name="manual[]" value="manual">
+          <label for="potential-ongoing">Manual</label><br><br>
+        </div>
+
+        <!-- Remote Experience -->
+        <label style="margin-left: 1rem" class="remoteExperienceLabel" for="remoteExperience">Remote Experience:</label>
+        <div class="remoteExperience">
+          <label for="remoteExperienceYes">Yes</label>
+          <input type="radio" id="remoteExperienceYes" name="remoteExperience" value="yes">
+          <label for="remoteExperienceNo">No</label>
+          <input type="radio" id="remoteExperienceNo" name="remoteExperience" value="no">
+        </div>
+        
+          <!-- Open pit Experience -->
+          <label style="margin-left: 1rem" class="openPitExperienceLabel" for="openPitExperience">Open pit experience:</label>
+          <div class="openPitExperience">
+            <label for="openPitExperienceYes">Yes</label>
+            <input type="radio" id="openPitExperienceYes" name="openPitExperience" value="yes">
+            <label for="openPitExperienceNo">No</label>
+            <input type="radio" id="openPitExperienceNo" name="openPitExperience" value="no">
+          </div>
+          
+           
+          <!-- Underground Mine Experience -->
+          <label style="margin-left: 1rem" class="undergroundMineExperienceLabel" for="undergroundMineExperience">Underground Mine Experience:</label>
+          <div class="undergroundMineExperience">
+            <label for="undergroundMineExperienceYes">Yes</label>
+            <input type="radio" id="undergroundMineExperienceYes" name="undergroundMineExperience" value="yes">
+            <label for="undergroundMineExperienceNo">No</label>
+            <input type="radio" id="undergroundMineExperienceNo" name="undergroundMineExperience" value="no">
+          </div>
+      </div> 
+    </section>   
+        
+
+<!-- Submit button -->
+<input type="submit" value="Submit">
+</form>

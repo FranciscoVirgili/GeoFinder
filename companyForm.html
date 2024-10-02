@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoFinder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="formStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="form-page-body">
+    <header>
+      <!-- Desktop Version -->
+      <section class="desktop">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <span class="logoCompany">
+              <a href="./index.html"><img class="imgCompany" src="./Images/logo1.png" /></a>
+            </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDesktop"
+              aria-controls="navbarNavDesktop"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDesktop">
+              <ul class="navbar-nav" id="listaNav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./signin.html">I'm a Company</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./findGeo.html">I'm a Geo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./findWork.html">Find Work</a>
+                </li>
+                <span class="btnSignInDesktop">
+                  <a href="./signin.html"><button class="btn btn-primary" style="font-size: 1.5rem; width: 100%;">Sign In</button></a>
+                </span>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+    
+      <!-- Mobile Version -->
+      <section class="mobile">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-lg">
+            <span class="logoCompany">
+              <a href="./index.html"><img class="imgCompany" src="./Images/logo1.png" /></a>
+            </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavMobile"
+              aria-controls="navbarNavMobile"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavMobile">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./signin.html">I'm a Company</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./findGeo.html">I'm a Geo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./findWork.html">Find Work</a>
+                </li>
+                <span>
+                  <a href="./signin.html"><button class="btn btn-primary">Sign In</button></a>
+                </span>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+    
+
+    <section class="firstGeoFormTitle">
+            <div class="circleList">1</div>
+            <h3 class="formTitles">Contact detils for direct and quick connection</h3>
+    </section>
+    <!-- Form -->
+</head>
+    <form class="companyFormRegister">
+      <!-- First Form Section -->
+      <section class="firstGeoFormSection">
+        <div class="firstGeoFormCol">
+          <!-- Company Name-->
+          <label for="company-name">Company name:</label>
+          <input type="text" id="company-name" name="name" required>
+
+          <!--ABN/ABC-->
+          <label for="abn-abc">ABN/ACB:</label>
+            <div style="    display: flex; gap: 20px; align-items: center;">
+              <label for="abn">ABN:</label>
+              <input type="text" id="abn" name="abn" required>
+              <label for="abc">ACB:</label>
+              <input type="text" id="acb" name="abc" required>  
+            </div> 
+
+          <!-- Email -->
+          <label for="email">Contact email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <!-- Phone -->
+          <label for="phone">Mobile phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>  
+        <div class="secondGeoFormCol">
+
+          <!-- Primary office location -->
+          <label for="primary-office-location">Primary office location:</label>
+          <input type="text" id="primary-office-location" name="primary-office-location" required>
+
+          <!-- Primary state of operation -->
+          <label for="primary-state-operation">Primary state of operation:</label>
+          <select id="primary-state-operation" name="primary-state-operation" required>
+            <option value="" disabled selected>Select your state</option>
+            <option value="queensland">Queensland</option>
+            <option value="new-south-wales">New South Wales</option>
+            <option value="victoria">Victoria</option>
+            <option value="south-australia">South Australia</option>
+            <option value="western-australia">Western Australia</option>
+            <option value="northern-territory">Northern Territory</option>
+            <option value="tasmania">Tasmania</option>
+          </select>
+          
+          <!-- Other state of operation -->
+          <label for="other-state-operation">Other state of operation:</label>
+          <select id="other-state-operation" name="other-state-operation" required>
+            <option value="" disabled selected>Select other state operation</option>
+            <option value="quensland">Queensland</option>
+            <option value="new-south-wales">New South Wales</option>
+            <option value="victoria">Victoria</option>
+            <option value="south-australia">South Australia</option>
+            <option value="western-australia">Western Australia</option>
+            <option value="northern-territory">Northern Territory</option>
+            <option value="tasmania">Tasmania</option>
+          </select>
+
+          <!-- Number of employees -->
+          <label for="number-employees">Number of full time employees</label>
+          <select id="number-employees" name="number-employees" required>
+            <option value="" disabled selected>Select number of full time employees</option>
+            <option value="one-five">1-5</option>
+            <option value="five-ten">5-10</option>
+            <option value="ten-fifty">10-50</option>
+            <option value="fifty-hundred">50-100</option>
+            <option value="hundred-thousand">100-1000</option>
+            <option value="more-thousand">>1000</option>
+          </select>
+
+        </div>
+        <div class="thirdGeoFormCol">
+          <!-- Type of company -->
+          <label for="type-company">Type of company:</label>
+          <select id="type-company" name="type-company" required style="margin-bottom: 1rem;">
+              <option value="" disabled selected>Select type of company</option>
+              <option value="private">Private</option>
+              <option value="public">Public</option>
+              <option value="mix">Mix</option>
+          </select>
+          <!-- Commodity experience -->
+          <label for="commodity-experience">Commodity experience:</label>
+          <input style="margin-bottom: 1rem;" type="text" id="commodity-experience" name="commodity-experience" required placeholder="e.g. Au, Cu, Pb, REE">
+
+          <!-- Years of experience -->
+          <label for="years-experience">Years of experience:</label>
+          <select id="years-experience" name="years-experience" required style="margin-bottom: 1rem;">
+            <option value="" disabled selected>Select years of experience</option>
+            <option value="oneyear">0-1 years</option>
+            <option value="one-three-years">1-3 years</option>
+            <option value="three-six-years">3-6 years</option>
+            <option value="six-ten-years">6-10 years</option>
+            <option value="ten-fifteen-years">10-15 years</option>
+            <option value="fifteen-twenty-years">15-20 years</option>
+            <option value="twenty-twentyfive-years">20-25 years</option>
+            <option value="more-twentyfive">More than 25 years</option>
+          </select>         
+        </div>
+      </section>
+    
+      <!-- Second Form Section -->
+      <div class="secondGeoFormTitle">
+        <div class="circleList">2</div>
+        <h3 class="formTitles">Tell your potential clients about your company</h3>
+      </div>
+      
+      <section class="secondGeoFormSection">
+        <div class="firstColSecondForm">
+          
+          <!-- Type of experience-->
+          <legend>Experience in:</legend>
+          <fieldset class="typeExperiencechck">
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="new-geologist" name="experience-as[]" value="New Geologist">
+                <label for="new-geologist">New Geologist</label>
+            </div>
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="experienced-fieldy" name="experience-as[]" value="Experienced Fieldy">
+                <label for="experienced-fieldy">Experienced Fieldy</label>
+            </div>
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="experienced-geologist" name="experience-as[]" value="Experienced Geologist">
+                <label for="experienced-geologist">Experienced Geologist</label>
+            </div>
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="new-fieldy" name="experience-as[]" value="New Fieldy">
+                <label for="new-fieldy">New Fieldy</label>
+            </div>
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="general-hand" name="experience-as[]" value="General Hand">
+                <label for="general-hand">General Hand</label>
+            </div>
+          </fieldset>
+
+          <!-- Work preference -->
+          <legend>Work time preference:</legend>
+          <fieldset class="workPreferencechck">
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="casual" name="work-preference[]" value="Casual">
+                <label for="casual">Casual</label>
+            </div>
+
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="part-time" name="work-preference[]" value="Part Time">
+                <label for="part-time">Part Time</label>
+            </div>
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="potential-ongoing" name="work-preference[]" value="Potential for ongoing">
+                <label for="potential-ongoing">Potential for ongoing</label>
+            </div>
+          </fieldset>
+  
+          
+        </div>
+    
+        <div class="secondColSecondForm">
+          <!-- Experience in (checkbox) -->
+          <fieldset style="margin-bottom: 1rem;">
+            <label>Experience in:</label>
+            <div class="locationExperiencechck">
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="remote-field" name="experience-in[]" value="Remote Field">
+              <label for="remote-field">Remote Field</label>
+              <label>(camping/off grid accomodation)</label><br>
+            </div>
+            
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="field" name="experience-in[]" value="Field">
+              <label for="field">Field </label>
+              <label>(town-based accomodation)</label><br>
+            </div>  
+
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="office-site" name="experience-in[]" value="office Site">
+              <label for="office-site">Office site</label><br>
+            </div>
+            
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="open-pit" name="experience-in[]" value="Open Pit">
+              <label for="open-pit">Open pit</label><br>
+            </div>
+            
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="underground" name="experience-in[]" value="Underground">
+              <label for="underground">Underground</label><br>
+            </div>  
+          </div>
+          </fieldset>
+
+          <!-- Work time preference -->
+          <legend>Work site preference:</legend>
+          <fieldset class="workTimePreference"  style="align-items: baseline; gap: 20px;">
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="on-site" name="site-preference[]" value="On Site">
+              <label for="on-site">On-site</label>
+            </div>
+            <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="fifo" name="site-preference[]" value="FIFO">
+                <label for="fifo">FIFO</label>
+            </div>
+          </fieldset>
+        
+        </div>
+        <div class="thirdColSecondForm">
+          <!-- Principal activity -->
+          <legend>Principal activity:</legend>
+            <fieldset class="experienceWithchck">
+              <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="exploration-greenfields" name="experience-with[]" value="Exploration Greenfields">
+                <label for="exploration-greenfields">Exploration greenfields</label>
+              </div>
+              <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="exploration-brownfields" name="experience-with[]" value="Exploration Brownfields">
+                  <label for="exploration-brownfields">Exploration brownfields</label>
+              </div>
+              <div style="display: flex; align-items:baseline">
+                  <input type="checkbox" id="mining" name="experience-with[]" value="Mining">
+                  <label for="mining">Mining</label>
+              </div>  
+            </fieldset>
+              <!-- Driving Experience -->
+              <label>Driving experience:</label>
+              <div class="drivingExperience">
+                <div style="display: flex; align-items:baseline">
+                  <input type="checkbox" id="4wdExperience" name="driving-experience[]" value="4wdExperience">
+                  <label for="casual">4WD Experience</label><br>
+                </div>
+              <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="4wdCertificate" name="driving-experience[]" value="4wdCertificate">
+                <label for="part-time">4WD Certificate</label><br>
+              </div>
+              <div style="display: flex; align-items:baseline">
+                <input type="checkbox" id="manual" name="driving-experience[]" value="manual">
+                <label for="potential-ongoing">Manual</label><br><br>
+              </div>
+          </div> 
+      </section>
+    
+      <!-- Third Geo Form Section Mobile -->
+      <section class="thirdGeoFormSectionMobile">
+        <!-- Third Form Section -->
+      <div class="ThirdGeoFormTitle">
+        <div class="circleList">3</div>
+        <h3 class="formTitles">Program your schedule</h3>
+      </div>
+        <div class="firstColThirdForm">
+            <!-- Location of Work -->
+            <label for="location-work">Location of work:</label>
+            <input type="text" id="location-work" name="location-work" style="margin-bottom: 1rem;" required>
+            <!-- Available from -->
+            <label for="availability">Availability:</label>
+            <input type="date" id="availability" name="availability" required style="margin-bottom: 1rem;">
+          </div>
+        </div>
+
+        <div class="secondColThirdForm">
+        <div style="    display: flex; align-items: center; justify-content: space-between; gap: 20px;">  
+        <!-- Start Time -->
+        <div class="dayTimeForm" style="width: 50%;">
+          <label for="day-start">Day start time (est):</label>
+          <input type="date" id="day-start" name="dayStartDate">
+        </div>
+
+          <!-- Finish Date -->
+          <div class="dayTimeForm" style="width: 50%;">
+            <label for="day-end">Day end time (est):</label>
+            <input type="date" id="day-end" name="dayEndDate">
+          </div>
+        </div>
+        <!-- Hours per day -->
+        <label for="hours-day">Hours per day:</label>
+        <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
+          <option value="" disabled selected>Select hours per day work</option>
+          <option value="lessSixHours">less than 6 hours-day</option>
+          <option value="sixHours">6 hours-day</option>
+          <option value="sevenHours">7 hours-day</option>
+          <option value="eightHours">8 hours-day</option>
+          <option value="tenHours">10 hours-day</option>
+          <option value="moreTenHours">more than 10 hours-day</option>
+        </select> 
+
+        <!--I prefer: -->
+        <label for="roster" >I prefer a roster (days on/days off):</label>
+        <select id="roster-hours" name="roster-hours" style="margin-bottom: 1rem;">
+            <option value="" disabled selected>Select roster</option>
+            <option value="five-two">5/2</option>
+            <option value="six-three">6/3</option>
+            <option value="seven-four">7/4</option>
+            <option value="eight-five">8/5</option>
+            <option value="fourteen-fourteen">14/14</option> 
+        </select>
+
+        <div class="thirdColThirdForm">
+          <!-- Open pit Experience -->
+          <label class="openPitExperienceLabel" for="openPitExperience">Open pit experience:</label>
+          <div class="openPitExperience"> 
+            <input type="radio" id="openPitExperienceYes" name="openPitExperience" value="yes">
+            <label for="openPitExperienceYes">Yes</label>
+            <input type="radio" id="openPitExperienceNo" name="openPitExperience" value="no">
+            <label for="openPitExperienceNo">No</label>
+          </div>
+          <!-- Remote Experience -->
+            <label class="remoteExperienceLabel" for="remoteExperience">Remote experience:</label>
+            <div class="remoteExperience">
+              <input type="radio" id="remoteExperienceYes" name="remoteExperience" value="yes">
+              <label for="remoteExperienceYes">Yes</label>
+              <input type="radio" id="remoteExperienceNo" name="remoteExperience" value="no">
+            </div>
+          <!-- Underground Mine Experience -->
+          <label class="undergroundMineExperienceLabel" for="undergroundMineExperience">Underground Mine Experience:</label>
+          <div class="undergroundMineExperience">
+            <input type="radio" id="undergroundMineExperienceYes" name="undergroundMineExperience" value="yes">
+            <label for="undergroundMineExperienceYes">Yes</label>
+            <input type="radio" id="undergroundMineExperienceNo" name="undergroundMineExperience" value="no">
+            <label for="undergroundMineExperienceNo">No</label>
+          </div>  
+        </div>
+      </section>
+      <!-- Fourth Section -->
+
+      <div class="fourthGeoFormTitle">
+        <div class="circleList">4</div>
+        <h3 class="formTitles">And last but not least... about your work </h3>
+      </div>
+
+      <section class="fourthGeoFormSection">
+        <div class="firstColFourthForm">
+          <h3>Drilling (field/underground/pit)</h3>
+          <label><input type="checkbox" name="drilling_field" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="drilling_field" value="experienced_geologist"> RC/AC drilling assistance – experienced geologist</label><br>
+          <label><input type="checkbox" name="drilling_field" value="geologist"> RC/AC drilling assistance – geologist</label><br>
+          <label><input type="checkbox" name="drilling_field" value="fieldy_general_help"> RC/AC drilling assistance – Fieldy/general help</label><br>
+          <label><input type="checkbox" name="drilling_field" value="diamond_experienced_geologist"> Diamond/mixed drilling assistance – experienced geologist</label><br>
+          <label><input type="checkbox" name="drilling_field" value="diamond_geologist"> Diamond/mixed drilling assistance – geologist</label><br>
+          <label><input type="checkbox" name="drilling_field" value="diamond_fieldy_general_help"> Diamond/mixed drilling assistance – Fieldy/general help</label><br>
+
+          <h3>Drilling (logging and sampling)</h3>
+          <label><input type="checkbox" name="drilling_logging" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="drilling_logging" value="rc_ac_logging_sampling"> RC/AC chip logging and sampling</label><br>
+          <label><input type="checkbox" name="drilling_logging" value="diamond_logging_simple"> Diamond drill core logging and markup – simple drill site markup and cataloging</label><br>
+          <label><input type="checkbox" name="drilling_logging" value="diamond_logging_detailed"> Diamond drill core logging and markup – detailed e.g. rock ID, sample markup.</label><br>
+          <label><input type="checkbox" name="drilling_logging" value="core_structural_assessment"> Diamond drill core structural assessment/technical assessment</label><br>
+          <label><input type="checkbox" name="drilling_logging" value="drill_core_photography"> Drill core photography (equipment provided)</label><br>
+          <label><input type="checkbox" name="drilling_logging" value="drill_core_markup"> Drill core markup (meter marking, ori marking, QAQC)</label><br>
+
+          <h3>Drill core/Rock chip and sample preparation</h3>
+          <label><input type="checkbox" name="drill_core_prep" value="rock_chip_management"> Rock chip sampling program management</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="rock_chip_prep"> Rock chip prep (crushing, milling, splitting, bagging, cataloging)</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="core_sampling_management"> Diamond drill core sampling program management</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="core_cutting"> Diamond drill core cutting</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="drill_photography"> Diamond drill photography</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="sample_markup"> Sample photography, markup, bagging and cataloging for lab</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="rock_chip_cutting"> Rock chip cutting for petrography (e.g. thin section blocks)</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="sample_dispatch_forms"> Sample submission form(s)/dispatch form(s)</label><br>
+          <label><input type="checkbox" name="drill_core_prep" value="sample_delivery"> Sample delivery to lab</label><br>
+
+          <h3>Vehicle Driver/Transport</h3>
+          <label><input type="checkbox" name="vehicle_driver_transport" value="4wd_transport"> 4WD transport (e.g. equipment/personnel transport to site)</label><br>
+          <label><input type="checkbox" name="vehicle_driver_transport" value="2wd_transport"> 2WD transport only (e.g. sample to lab delivery)</label><br>
+        </div>
+
+        <div class="secondColFourthForm">
+          <h3>General help (in-field)</h3>
+          <label><input type="checkbox" name="general_in_field" value="experienced_geologist"> Assorted tasks – experienced geologist</label><br>
+          <label><input type="checkbox" name="general_in_field" value="geologist"> Assorted tasks – geologist</label><br>
+          <label><input type="checkbox" name="general_in_field" value="fieldy_general_help"> Assorted tasks – fieldy/general help</label><br>
+
+          <h3>General help (office/on-site)</h3>
+          <label><input type="checkbox" name="general_office_site" value="experienced_geologist"> Assorted tasks – experienced geologist</label><br>
+          <label><input type="checkbox" name="general_office_site" value="geologist"> Assorted tasks – geologist</label><br>
+          <label><input type="checkbox" name="general_office_site" value="fieldy_general_help"> Assorted tasks – fieldy/general help</label><br>
+
+          <h3>Field mapping</h3>
+          <label><input type="checkbox" name="field_mapping" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="field_mapping" value="complex_geology"> Field geology mapping – complex geology</label><br>
+          <label><input type="checkbox" name="field_mapping" value="simple_geology"> Field geology mapping – simple geology</label><br>
+          <label><input type="checkbox" name="field_mapping" value="structural"> Field geology mapping – structural</label><br>
+          <label><input type="checkbox" name="field_mapping" value="alteration"> Field geology mapping – alteration</label><br>
+
+          <h3>Rock chip sampling</h3>
+          <label><input type="checkbox" name="rock_chip_sampling" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="rock_chip_sampling" value="experienced_geologist"> Rock chip sampling – experienced geologist</label><br>
+          <label><input type="checkbox" name="rock_chip_sampling" value="assistant_geologist"> Rock Chip sampling – assistant geologist</label><br>
+          <label><input type="checkbox" name="rock_chip_sampling" value="fieldy_general_help"> Rock Chip sampling – fieldy/general help</label><br>
+
+          <h3>Soil sampling</h3>
+          <label><input type="checkbox" name="soil_sampling" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="principal_geologist"> Soil sampling – principal geologist</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="assistant_geologist"> Soil sampling – assistant geologist</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="fieldy_general_help"> Soil sampling – fieldy/general help</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="mmi"> MMI</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="ultrafine"> Ultrafine</label><br>
+    
+          <h3>Geophysics survey</h3>
+          <label><input type="checkbox" name="geophysics_survey" value="experienced_geologist"> Field assistant – experienced geologist for geophysics survey</label><br>
+          <label><input type="checkbox" name="geophysics_survey" value="non_geologist"> Field assistant – non geologist for geophysics survey help</label><br>
+      </div>
+        <div class="thirdColFourthForm">
+          <h3>GIS</h3>
+          <label><input type="checkbox" name="gis" value="assorted_tasks_experienced_geologist"> Assorted tasks – experienced geologist</label><br>
+          <label><input type="checkbox" name="gis" value="assorted_tasks_geologist"> Assorted tasks – geologist</label><br>
+      
+          <h3>GIS Mapping (2D)</h3>
+          <label><input type="checkbox" name="gis_mapping" value="complex_geology"> GIS digital mapping – complex geology</label><br>
+          <label><input type="checkbox" name="gis_mapping" value="simple_geology"> GIS digital mapping – simple geology</label><br>
+          <label><input type="checkbox" name="gis_mapping" value="structural"> GIS digital mapping – structural</label><br>
+          <label><input type="checkbox" name="gis_mapping" value="interpretation"> GIS digital mapping – interpretation</label><br>
+      
+          <h3>Data entry</h3>
+          <label><input type="checkbox" name="data_entry" value="experienced_geologist"> Geology data entry/cataloging – experienced geologist</label><br>
+          <label><input type="checkbox" name="data_entry" value="assistant_geologist"> Geology data entry/cataloging – assistant geologist</label><br>
+          <label><input type="checkbox" name="data_entry" value="fieldy_general_help"> Geology data entry/cataloging – fieldy/general help</label><br>
+      
+          <h3>Equipment operation</h3>
+          <label><input type="checkbox" name="equipment_operation" value="excavator_0_4t"> Excavator – 0-4t</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="excavator_4t"> Excavator – >4t</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="dozer"> Dozer</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="front_end_loader"> Front end loader</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="truck"> Truck</label><br>
+      
+          <h3>Other activities</h3>
+          <label><input type="checkbox" name="other_activities" value="trench_sampling"> Trench sampling</label><br>
+          <label><input type="checkbox" name="other_activities" value="trench_logging_mapping"> Trench logging and mapping</label><br>
+          <label><input type="checkbox" name="other_activities" value="drone"> Drone (registered pilot/can fly)</label><br>
+          <label><input type="checkbox" name="other_activities" value="photography"> Photography</label><br>
+          <label><input type="checkbox" name="other_activities" value="biogeochemistry_sampling"> Biogeochemistry sampling (e.g., leaf/termite mound)</label><br>
+          <label><input type="checkbox" name="other_activities" value="bore_water_sampling"> Bore water sampling</label><br>
+          <label><input type="checkbox" name="other_activities" value="pilot_helicopter"> Pilot – Helicopter</label><br>
+          <label><input type="checkbox" name="other_activities" value="pilot_fixed_wing"> Pilot – Fixed Wing</label><br>
+      
+          <h3>Other NOT LISTED</h3>
+          <label>Freeform field to be added here to allow some words</label><br>
+          <textarea name="other_not_listed" rows="4" cols="50" placeholder="Please specify other activities here..."></textarea><br>
+        </div>
+      </section>
+
+      <div class="fifthGeoFormTitle">
+        <div class="circleList">5</div>
+        <h3 class="formTitles">We finish! Now submit your form </h3>
+      </div>
+
+      <div class="submitGeoFormBtn">
+          <input class="btnGeoForm" type="submit" value="Submit">
+      </div>
+    </form>
+      <!-- Footer -->
+
+      <footer class="bg-light text-dark pt-5 pb-4">
+        <div class="container text-center text-md-start">
+          <div class="row text-center text-md-start">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-primary">About Us</h5>
+              <hr class="mb-4">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, odit? Ex adipisci asperiores eaque, saepe dolor reprehenderit optio cupiditate, nesciunt sunt velit quia non officiis corporis error sapiente incidunt provident?</p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Businesses and Services</h5>
+              <hr class="mb-4">
+              <p>
+                <a href="#" class="text-dark">List your businesses and service</a>
+              </p>
+              <p>
+                <a href="#" class="text-dark">Geological Services</a>
+              </p>
+              <p>
+                <a href="#" class="text-dark">How this works</a>
+              </p>
+              <p>
+                <a href="#" class="text-dark">FAQs</a>
+              </p>
+              <p>
+                <a href="#" class="text-dark">Testimonials</a>
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Let us help you!</h5>
+              <hr class="mb-4">
+              <p>
+                <a href="#" class="text-dark">Contact Us</a>
+              </p>
+              <p>
+                <a href="#" class="text-dark">Terms and Conditions</a>
+              </p>
+              <p>
+                <a href="#" class="text-dark">Help!</a>
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contact</h5>
+              <hr class="mb-4">
+              <div class="contact-section">
+                <div class="contact-item">
+                    <img src="./Images/hogar.png">
+                    <span>Brisbane, Australia</span>
+                </div>
+                <div class="contact-item">
+                    <img src="./Images/correo-electronico.png">
+                    <span>geofinder@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <img src="./Images/telefono.png">
+                    <span>+5555555555</span>
+                </div>
+            </div>
+            </div>
+    
+            <hr class="mb-4">
+            <div class="text-center mb-2">
+              <p>
+                Copyright All rights reserved
+                <a href="#">
+                  <strong class="text-primary">Francisco Virgili y Daniel Virgili</strong>
+                </a>
+              </p>
+            </div>
+    
+            <div class="text-center">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+        </div>
+    
+      </footer>
+      <script src="companyFormRegister.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>

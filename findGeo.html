@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GeoEasy</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="estilo.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>GeoEasy</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet" href="estilo.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
     <!-- Icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -28,7 +25,6 @@
     />
 
     <!-- Script -->
-    <script src="./script.js" defer></script>
   </head>
   <body>
     <header>
@@ -54,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav" id="listaNav">
                 <li class="nav-item">
-                  <a class="nav-link" href="./home.html">Home</a>
+                  <a class="nav-link" href="./signin.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a
@@ -65,7 +61,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./register.html">Find Work</a>
+                  <a class="nav-link" href="./findWork.html">Find Work</a>
                 </li>
 
                 <span class="btnSignIn">
@@ -122,98 +118,158 @@
 
     <!-- First List Menu -->
 
-    <h1>How GeoEasy works!</h1>
+    <h1 class="findGeoTitle">How GeoFinder works!</h1>
     <section class="secondListMenu">
       <div class="containerSecondList">
         <div class="row">
           <div class="col">
             <div class="circleList">1</div>
-            <h3>Job alerts direct to your cell phone</h3>
-            <p>
-              When clients post a job, you get that lead straight to your phone.
-              No need to spend hours chasing new work
-            </p>
+            <h3>Find the right professional for your project</h3>
+            <div class="paragraphFindGeo">
+              <p>
+                Geological Services are listed here. When you need geological
+                services, simply post the details of your project. Our platform
+                connects your request with geologists and related professionals
+                who match your needs.
+              </p>
+            </div>
           </div>
           <div class="col">
             <div class="circleList">2</div>
-            <h3>Choose the job that suits you</h3>
-            <p>
-              Fancy a particular job? Accept it! Get in touch with the potential
-              client and arrange a time to quote
-            </p>
+            <h3>Review the proposals</h3>
+            <div class="paragraphFindGeo">
+              <p>
+                Interested professionals will send you their proposals. You can
+                choose who to hire based on their profiles, experience, and
+                reviews from previous clients.
+              </p>
+            </div>
           </div>
           <div class="col">
             <div class="circleList">3</div>
-            <h3>Manage the job from your phone</h3>
-            Quote, schedule, invoice, and accept payments with job management
-            features in the one app
+            <h3>
+              Manage the project directly from the platform and your phone
+            </h3>
+            <div class="paragraphFindGeo">
+              <p>
+                Once you choose a professional, you can communicate with them,
+                manage the project, schedule visits through our platform, all in
+                one place.
+              </p>
+            </div>
           </div>
           <div class="col">
             <div class="circleList">4</div>
-            <h3>Get recommendations</h3>
-            Potential clients will look at your profile, so hipages collates
-            recommendations from past jobs to help you secure your next gig
+            <h3>Leave a review</h3>
+            <p>
+              After the project is completed, you can leave a review of the
+              professional's work. This helps other users make informed
+              decisions and strengthens the professional's reputation within our
+              community.
+            </p>
           </div>
         </div>
         <div class="listButton">
-          <a class="nav-link" href="./home.html"
-            ><button class="btn btn-primary" type="submit">
-              Get started
-            </button></a
-          >
+          <button class="btn btn-primary" type="submit">
+            <a href="./geologistForm.html">Get started</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="secondListMenuMobile">
+      <div class="containerSecondList">
+        <div class="containerSecondListDiv">
+          <div class="circleList">1</div>
+          <h3>Find the right professional for your project</h3>
+        </div>
+            <div class="paragraphFindGeo">
+              <p>
+                Geological Services are listed here. When you need geological
+                services, simply post the details of your project. Our platform
+                connects your request with geologists and related professionals
+                who match your needs.
+              </p>
+            </div>
+          </div>
+          <div class="containerSecondListDiv">
+            <div class="circleList">2</div>
+            <h3>Review the proposals</h3>
+          </div>
+            <div class="paragraphFindGeo">
+              <p>
+                Interested professionals will send you their proposals. You can
+                choose who to hire based on their profiles, experience, and
+                reviews from previous clients.
+              </p>
+            </div>
+          </div>
+          <div class="containerSecondListDiv">
+            <div class="circleList">3</div>
+            <h3>
+              Manage the project directly from the platform and your phone
+            </h3>
+          </div>
+            <div class="paragraphFindGeo">
+              <p>
+                Once you choose a professional, you can communicate with them,
+                manage the project, schedule visits through our platform, all in
+                one place.
+              </p>
+            </div>
+          </div>
+          <div class="containerSecondListDiv">
+            <div class="circleList">4</div>
+            <h3>Leave a review</h3>
+          </div>  
+            <p class="paragraphFindGeo">
+              After the project is completed, you can leave a review of the
+              professional's work. This helps other users make informed
+              decisions and strengthens the professional's reputation within our
+              community.
+            </p>
+          </div>
+        </div>
+        <div class="listButton">
+          <button class="btn btn-primary" type="submit">
+            <a href="./geologistForm.html">Get started</a>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Second List Menu -->
 
-    <section class="thirdMainMenu">
-      <div class="containerThirdMenu">
-        <div class="row">
-          <div class="col" id="thirdMenuGrid">
-            <h2>Do you provide geological services?</h2>
-            <h2>Want to increase your business?</h2>
-            <h3>Connect with more local clients</h3>
-            <p>
-              We send you job leads and you can manage them all in one app so
-              you’ll save time on admin. We promote your profile and services by
-              connecting you with more clients.
-            </p>
-            <p>
-              Publish what type of work and services you perform so that clients
-              can contact you quickly and easily on your cell phone or email
-            </p>
-            <div class="thirdGridButton">
-              <a href="./register.html"
-                ><button class="btn btn-primary" type="submit">
-                  List your business
-                </button></a
-              >
-              <a href="./register.html"
-                ><button class="btn btn-primary" type="submit">
-                  See how it works
-                </button></a
-              >
-            </div>
-          </div>
-          <div class="col">
-            <img
-              src="./Images/geologicalService.jpg"
-              class="geologicalServiceImage"
-            />
-          </div>
+    <section class="galleryMenu">
+      <h1 class="secondFindGeoTitle">Geological services are posted here daily</h1>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="./Images/geologicalMapping.jpg" alt="Geological Mapping" />
+          <div class="gallery-item-caption">Geological Mapping</div>
         </div>
+        <div class="gallery-item">
+          <img src="./Images/mineralExpo.jpg" alt="Mineral Exploration" />
+          <div class="gallery-item-caption">Mineral Exploration</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./Images/soilTesting.jpg" alt="Soil Testing" />
+          <div class="gallery-item-caption">Soil Testing</div>
+        </div>
+        <div class="gallery-item">
+          <img src="./Images/seismicSurveys.jpg" alt="Seismic Surveys" />
+          <div class="gallery-item-caption">Seismic Surveys</div>
+        </div>
+        <!-- Añadir más servicios según sea necesario -->
       </div>
     </section>
 
-    <!-- Third List Menu -->
-    <h1>Reviews</h1>
+    <!-- Reviews -->
     <section class="containerReview swiper">
       <div class="testimonial slider-wrapper" id="testimonailReview">
         <div class="testimonialContent swiper-wrapper">
           <div class="slideReview swiper-slide">
             <img
-              src="./Images/tradie1Review.jpg"
+              src="./Images/customer1.jpg"
               alt="tradiwReview1"
               class="imageReview"
             />
@@ -225,13 +281,13 @@
             </p>
             <i class="bx bxs-quote-alt-left quote-icon"></i>
             <div class="detailsReview">
-              <span class="nameReview">Josh Mistral</span>
+              <span class="nameReview">Rebeca Murphy</span>
               <span class="jobReview">Topography</span>
             </div>
           </div>
           <div class="slideReview swiper-slide">
             <img
-              src="./Images/tradie2Review.jpg"
+              src="./Images/customer2.jpg"
               alt="tradiwReview1"
               class="imageReview"
             />
@@ -244,12 +300,12 @@
             <i class="bx bxs-quote-alt-left quote-icon"></i>
             <div class="detailsReview">
               <span class="nameReview">Josh Mistral</span>
-              <span class="jobReview">Topography</span>
+              <span class="jobReview">excavation</span>
             </div>
           </div>
           <div class="slideReview swiper-slide">
             <img
-              src="./Images/tradie3Review.jpg"
+              src="./Images/customer3.jpg"
               alt="tradiwReview1"
               class="imageReview"
             />
@@ -261,14 +317,14 @@
             </p>
             <i class="bx bxs-quote-alt-left quote-icon"></i>
             <div class="detailsReview">
-              <span class="nameReview">Josh Mistral</span>
-              <span class="jobReview">Topography</span>
+              <span class="nameReview">Owen Wilson</span>
+              <span class="jobReview">Transportation</span>
             </div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev" style="margin: 2vw;"></div>
+        <div class="swiper-button-next" style="margin: 2vw;"></div>
       </div>
     </section>
 
@@ -330,18 +386,20 @@
               Contact
             </h5>
             <hr class="mb-4" />
-            <p>
-              <li class="fas fa-home me-3"></li>
-              Brisbane, Australia
-            </p>
-            <p>
-              <li class="fas fa-envelope me-3"></li>
-              geoeasy@gmail.com
-            </p>
-            <p>
-              <li class="fas fa-phone me-3"></li>
-              +5555555555
-            </p>
+            <div class="contact-section">
+              <div class="contact-item">
+                <img src="./Images/hogar.png" />
+                <span>Brisbane, Australia</span>
+              </div>
+              <div class="contact-item">
+                <img src="./Images/correo-electronico.png" />
+                <span>geofinder@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <img src="./Images/telefono.png" />
+                <span>+5555555555</span>
+              </div>
+            </div>
           </div>
 
           <hr class="mb-4" />
@@ -391,6 +449,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- JavaScript -->
-    <script src="./script.js"></script>
+    <script src="./findgeo.js"></script>
   </body>
 </html>

@@ -19,7 +19,5 @@ const swiper = new Swiper('.slider-wrapper', {
     },
   
 // Responsive Breakpoints
-
- 
-
   });
+
