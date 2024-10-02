@@ -1,3 +1,4 @@
+
 // Friendly Names
 const friendlyNames = {
   'company-name': 'Company Name',
@@ -46,6 +47,7 @@ function validateForm() {
   const gender = document.querySelector('input[name="gender"]:checked');
   if (!gender) {
     alert('Please select a gender.');
+    gender.focus();
     valid = false;
   }
 
@@ -123,6 +125,7 @@ if(!availability.value){
   if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
     alert('The start date cannot be later than the end date.');
     valid = false;
+    dayEnd.focus();
   }
 
   return valid;

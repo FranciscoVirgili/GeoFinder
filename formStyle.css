@@ -61,6 +61,10 @@
     font-weight: 400;
 }
 
+.thirdGeoFormCol select{
+    margin-bottom: 1rem;
+}
+
 .geologistGender{
     display: flex; 
     align-items: normal;
@@ -102,7 +106,7 @@
 
 .secondGeoFormSection label{
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .secondGeoFormSection legend{
@@ -192,6 +196,11 @@
     font-weight: 400;
 }
 
+.workTimePreference label{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 /* Third Form */
 
 .thirdGeoFormSection label{
@@ -277,6 +286,32 @@
     gap: 50px;
     margin-top: 1rem;
 }
+
+.firstColThirdForm{
+    width: 33%;
+}
+/* Responsive third Col Form */
+.thirdBisSection{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 4rem;
+}
+
+.divBis{
+    width: 33%;
+}
+
+.undergroundMineExperienceLabel,
+.undergroundMineExperience label,
+.openPitExperienceLabel,
+.openPitExperience label,
+.remoteExperienceLabel,
+.remoteExperience label {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 
 
 /* Fourth Section Form */
@@ -390,6 +425,7 @@
     }
     .secondColSecondForm{
         width: 80%;
+        margin-bottom: 1rem;
     }
     .thirdColSecondForm{
         width: 80%;
@@ -465,10 +501,10 @@
     .fourthGeoFormSection{
         width: 80%;
     }
-}
-
-.thirdGeoFormSectionMobile {
-    display: none;
+    .thirdBisSection{
+        display: flex!important;
+        flex-direction: column!important;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -479,17 +515,6 @@
         display: none;
     }
 
-    .thirdGeoFormSectionMobile {
-        display: block;
-    }
-
-    .thirdGeoFormSection{
-        display: none;
-    }
-
-    .ThirdGeoFormTitleDesktop{
-        display: none;
-    }
 }
 
 @media (max-width: 980px) {
@@ -499,6 +524,12 @@
     .fourthGeoFormSection {
     flex-direction: column;
     gap: 0px;
+    }
+
+    .thirdGeoFormSection{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0;
     }
     
     .firstGeoFormTitle
@@ -533,6 +564,7 @@
     }
     .secondColSecondForm{
         width: 80%;
+        margin-bottom: 1rem;
     }
 
     .secondColThirdForm {
@@ -549,7 +581,9 @@
         margin-left: 4rem;
     }
     .thirdColThirdForm{
-        width: 100%;
+        width: 80%;
+        margin-right: 0;
+        margin-left: 4rem;
     }
     .firstColFourthForm{
         width: 80%;
@@ -567,6 +601,7 @@
     .thirdGeoFormCol {
         width: 33%;
         margin-right: 0rem;
+        margin-top: 1rem;
     }
 
     .firstGeoFormTitle {
@@ -626,5 +661,9 @@
         padding: 20px;
     }
 
+    .thirdBisSection{
+        display: flex!important;
+        flex-direction: column!important;
+    }
 }
 

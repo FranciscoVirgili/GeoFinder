@@ -111,24 +111,23 @@
           <label for="company-name">Company name:</label>
           <input type="text" id="company-name" name="name" required>
 
-          <!--ABN/ABC-->
-          <label for="abn-abc">ABN/ACB:</label>
-            <div style="    display: flex; gap: 20px; align-items: center;">
-              <label for="abn">ABN:</label>
-              <input type="text" id="abn" name="abn" required>
-              <label for="abc">ACB:</label>
-              <input type="text" id="acb" name="abc" required>  
-            </div> 
+          <!--ABN-->
+          <label for="abn-abc">ABN:</label>
+          <input type="text" id="abn" name="abn" required>
+          
+          <!-- ABC -->
+          <label for="abc">ACB:</label>
+          <input type="text" id="acb" name="abc" required>   
 
           <!-- Email -->
           <label for="email">Contact email:</label>
           <input type="email" id="email" name="email" required>
+        </div>  
+        <div class="secondGeoFormCol">
 
           <!-- Phone -->
           <label for="phone">Mobile phone:</label>
           <input type="tel" id="phone" name="phone" required>
-        </div>  
-        <div class="secondGeoFormCol">
 
           <!-- Primary office location -->
           <label for="primary-office-location">Primary office location:</label>
@@ -160,20 +159,19 @@
             <option value="tasmania">Tasmania</option>
           </select>
 
-          <!-- Number of employees -->
-          <label for="number-employees">Number of full time employees</label>
-          <select id="number-employees" name="number-employees" required>
-            <option value="" disabled selected>Select number of full time employees</option>
-            <option value="one-five">1-5</option>
-            <option value="five-ten">5-10</option>
-            <option value="ten-fifty">10-50</option>
-            <option value="fifty-hundred">50-100</option>
-            <option value="hundred-thousand">100-1000</option>
-            <option value="more-thousand">>1000</option>
-          </select>
-
         </div>
         <div class="thirdGeoFormCol">
+            <!-- Number of employees -->
+            <label for="number-employees">Number of full time employees</label>
+            <select id="number-employees" name="number-employees" required>
+              <option value="" disabled selected>Select number of full time employees</option>
+              <option value="one-five">1-5</option>
+              <option value="five-ten">5-10</option>
+              <option value="ten-fifty">10-50</option>
+              <option value="fifty-hundred">50-100</option>
+              <option value="hundred-thousand">100-1000</option>
+              <option value="more-thousand">>1000</option>
+            </select>
           <!-- Type of company -->
           <label for="type-company">Type of company:</label>
           <select id="type-company" name="type-company" required style="margin-bottom: 1rem;">
@@ -340,86 +338,95 @@
           </div> 
       </section>
     
-      <!-- Third Geo Form Section Mobile -->
-      <section class="thirdGeoFormSectionMobile">
-        <!-- Third Form Section -->
-      <div class="ThirdGeoFormTitle">
-        <div class="circleList">3</div>
-        <h3 class="formTitles">Program your schedule</h3>
+     <!-- Third Form Section -->
+     <div class="ThirdGeoFormTitleDesktop">
+      <div class="circleList">3</div>
+      <h3 class="formTitles">Program your schedule</h3>
+    </div>
+
+    <section class="thirdGeoFormSection">
+      <div class="firstColThirdForm">
+      <!-- Available from -->
+      <label for="availability">Available from:</label>
+      <input type="date" id="availability" name="availability" required style="margin-bottom: 1rem;">
+      
+      <!-- Location of Work -->
+      <label for="location-work">Location of work:</label>
+      <input type="text" id="location-work" name="location-work" style="margin-bottom: 1rem;" required>
       </div>
-        <div class="firstColThirdForm">
-            <!-- Location of Work -->
-            <label for="location-work">Location of work:</label>
-            <input type="text" id="location-work" name="location-work" style="margin-bottom: 1rem;" required>
-            <!-- Available from -->
-            <label for="availability">Availability:</label>
-            <input type="date" id="availability" name="availability" required style="margin-bottom: 1rem;">
-          </div>
-        </div>
 
-        <div class="secondColThirdForm">
-        <div style="    display: flex; align-items: center; justify-content: space-between; gap: 20px;">  
-        <!-- Start Time -->
-        <div class="dayTimeForm" style="width: 50%;">
-          <label for="day-start">Day start time (est):</label>
-          <input type="date" id="day-start" name="dayStartDate">
-        </div>
+      <div class="secondColThirdForm">
+      <!-- Start Time -->
+      <div class="dayTimeForm">
+        <label for="day-start">Day start time (est):</label>
+        <input type="date" id="day-start" name="dayStartDate">
+      </div>
+      
+      <!-- Hours per day -->
+      <label for="hours-day">Hours per day:</label>
+      <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
+        <option value="" disabled selected>Select hours per day work</option>
+        <option value="lessSixHours">less than 6 hours-day</option>
+        <option value="sixHours">6 hours-day</option>
+        <option value="sevenHours">7 hours-day</option>
+        <option value="eightHours">8 hours-day</option>
+        <option value="tenHours">10 hours-day</option>
+        <option value="moreTenHours">more than 10 hours-day</option>
+      </select>  
+      </div>
 
-          <!-- Finish Date -->
-          <div class="dayTimeForm" style="width: 50%;">
-            <label for="day-end">Day end time (est):</label>
-            <input type="date" id="day-end" name="dayEndDate">
-          </div>
+      <div class="thirdColThirdForm">
+        <!-- Finish Date -->
+        <div class="dayTimeForm">
+          <label for="day-end">Day end time (est):</label>
+          <input type="date" id="day-end" name="dayEndDate">
         </div>
-        <!-- Hours per day -->
-        <label for="hours-day">Hours per day:</label>
-        <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
-          <option value="" disabled selected>Select hours per day work</option>
-          <option value="lessSixHours">less than 6 hours-day</option>
-          <option value="sixHours">6 hours-day</option>
-          <option value="sevenHours">7 hours-day</option>
-          <option value="eightHours">8 hours-day</option>
-          <option value="tenHours">10 hours-day</option>
-          <option value="moreTenHours">more than 10 hours-day</option>
-        </select> 
 
         <!--I prefer: -->
         <label for="roster" >I prefer a roster (days on/days off):</label>
         <select id="roster-hours" name="roster-hours" style="margin-bottom: 1rem;">
-            <option value="" disabled selected>Select roster</option>
-            <option value="five-two">5/2</option>
-            <option value="six-three">6/3</option>
-            <option value="seven-four">7/4</option>
-            <option value="eight-five">8/5</option>
-            <option value="fourteen-fourteen">14/14</option> 
+          <option value="" disabled selected>Select roster</option>
+          <option value="five-two">5/2</option>
+          <option value="six-three">6/3</option>
+          <option value="seven-four">7/4</option>
+          <option value="eight-five">8/5</option>
+          <option value="fourteen-fourteen">14/14</option> 
         </select>
+      </div>
+    </section>
 
-        <div class="thirdColThirdForm">
-          <!-- Open pit Experience -->
-          <label class="openPitExperienceLabel" for="openPitExperience">Open pit experience:</label>
-          <div class="openPitExperience"> 
-            <input type="radio" id="openPitExperienceYes" name="openPitExperience" value="yes">
-            <label for="openPitExperienceYes">Yes</label>
-            <input type="radio" id="openPitExperienceNo" name="openPitExperience" value="no">
-            <label for="openPitExperienceNo">No</label>
-          </div>
-          <!-- Remote Experience -->
-            <label class="remoteExperienceLabel" for="remoteExperience">Remote experience:</label>
-            <div class="remoteExperience">
-              <input type="radio" id="remoteExperienceYes" name="remoteExperience" value="yes">
-              <label for="remoteExperienceYes">Yes</label>
-              <input type="radio" id="remoteExperienceNo" name="remoteExperience" value="no">
-            </div>
-          <!-- Underground Mine Experience -->
-          <label class="undergroundMineExperienceLabel" for="undergroundMineExperience">Underground Mine Experience:</label>
-          <div class="undergroundMineExperience">
-            <input type="radio" id="undergroundMineExperienceYes" name="undergroundMineExperience" value="yes">
-            <label for="undergroundMineExperienceYes">Yes</label>
-            <input type="radio" id="undergroundMineExperienceNo" name="undergroundMineExperience" value="no">
-            <label for="undergroundMineExperienceNo">No</label>
-          </div>  
+    <section class="thirdBisSection">
+      <!-- Underground Mine Experience -->
+      <div class="divBis">
+      <label class="undergroundMineExperienceLabel" for="undergroundMineExperience">Underground Mine Experience:</label>
+        <div class="undergroundMineExperience">
+          <input type="radio" id="undergroundMineExperienceYes" name="undergroundMineExperience" value="yes">
+          <label for="undergroundMineExperienceYes">Yes</label>
+          <input type="radio" id="undergroundMineExperienceNo" name="undergroundMineExperience" value="no">
+          <label for="undergroundMineExperienceNo">No</label>
         </div>
-      </section>
+      </div>
+      <!-- Open pit Experience -->
+      <div class="divBis">
+      <label class="openPitExperienceLabel" for="openPitExperience">Open pit experience:</label>
+      <div class="openPitExperience">
+        <input type="radio" id="openPitExperienceYes" name="openPitExperience" value="yes">
+        <label for="openPitExperienceYes">Yes</label>
+        <input type="radio" id="openPitExperienceNo" name="openPitExperience" value="no">
+        <label for="openPitExperienceNo">No</label>
+      </div>
+      </div>
+      <!-- Remote Experience -->
+      <div class="divBis">
+      <label class="remoteExperienceLabel" for="remoteExperience">Remote experience:</label>
+      <div class="remoteExperience">
+        <input type="radio" id="remoteExperienceYes" name="remoteExperience" value="yes">
+        <label for="remoteExperienceYes">Yes</label>
+        <input type="radio" id="remoteExperienceNo" name="remoteExperience" value="no">
+        <label for="remoteExperienceNo">No</label>
+      </div>
+      </div>
+    </section>
       <!-- Fourth Section -->
 
       <div class="fourthGeoFormTitle">

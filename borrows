@@ -673,3 +673,230 @@ Armar javascript por cada página
           </nav>
         </section>
       </header>
+
+
+      Third Section mobile
+
+      <!-- Third Geo Form Section Mobile -->
+      <section class="thirdGeoFormSectionMobile">
+        <!-- Third Form Section -->
+      <div class="ThirdGeoFormTitle">
+        <div class="circleList">3</div>
+        <h3 class="formTitles">Program your schedule</h3>
+      </div>
+        <div class="firstColThirdForm">
+            <!-- Location of Work -->
+            <label for="location-work">Location of work:</label>
+            <input type="text" id="location-work" name="location-work" style="margin-bottom: 1rem;" required>
+            <!-- Available from -->
+            <label for="availability">Availability:</label>
+            <input type="date" id="availability" name="availability" required style="margin-bottom: 1rem;">
+          </div>
+        </div>
+
+        <div class="secondColThirdForm">
+        <div style="    display: flex; align-items: center; justify-content: space-between; gap: 20px;">  
+        <!-- Start Time -->
+        <div class="dayTimeForm" style="width: 50%;">
+          <label for="day-start">Day start time (est):</label>
+          <input type="date" id="day-start" name="dayStartDate">
+        </div>
+
+          <!-- Finish Date -->
+          <div class="dayTimeForm" style="width: 50%;">
+            <label for="day-end">Day end time (est):</label>
+            <input type="date" id="day-end" name="dayEndDate">
+          </div>
+        </div>
+        <!-- Hours per day -->
+        <label for="hours-day">Hours per day:</label>
+        <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
+          <option value="" disabled selected>Select hours per day work</option>
+          <option value="lessSixHours">less than 6 hours-day</option>
+          <option value="sixHours">6 hours-day</option>
+          <option value="sevenHours">7 hours-day</option>
+          <option value="eightHours">8 hours-day</option>
+          <option value="tenHours">10 hours-day</option>
+          <option value="moreTenHours">more than 10 hours-day</option>
+        </select> 
+
+        <!--I prefer: -->
+        <label for="roster" >I prefer a roster (days on/days off):</label>
+        <select id="roster-hours" name="roster-hours" style="margin-bottom: 1rem;">
+            <option value="" disabled selected>Select roster</option>
+            <option value="five-two">5/2</option>
+            <option value="six-three">6/3</option>
+            <option value="seven-four">7/4</option>
+            <option value="eight-five">8/5</option>
+            <option value="fourteen-fourteen">14/14</option> 
+        </select>
+
+        <div class="thirdColThirdForm">
+          <!-- Open pit Experience -->
+          <label class="openPitExperienceLabel" for="openPitExperience">Open pit experience:</label>
+          <div class="openPitExperience"> 
+            <input type="radio" id="openPitExperienceYes" name="openPitExperience" value="yes">
+            <label for="openPitExperienceYes">Yes</label>
+            <input type="radio" id="openPitExperienceNo" name="openPitExperience" value="no">
+            <label for="openPitExperienceNo">No</label>
+          </div>
+          <!-- Remote Experience -->
+            <label class="remoteExperienceLabel" for="remoteExperience">Remote experience:</label>
+            <div class="remoteExperience">
+              <input type="radio" id="remoteExperienceYes" name="remoteExperience" value="yes">
+              <label for="remoteExperienceYes">Yes</label>
+              <input type="radio" id="remoteExperienceNo" name="remoteExperience" value="no">
+            </div>
+          <!-- Underground Mine Experience -->
+          <label class="undergroundMineExperienceLabel" for="undergroundMineExperience">Underground Mine Experience:</label>
+          <div class="undergroundMineExperience">
+            <input type="radio" id="undergroundMineExperienceYes" name="undergroundMineExperience" value="yes">
+            <label for="undergroundMineExperienceYes">Yes</label>
+            <input type="radio" id="undergroundMineExperienceNo" name="undergroundMineExperience" value="no">
+            <label for="undergroundMineExperienceNo">No</label>
+          </div>  
+        </div>
+      </section>
+
+
+      DESKTOP 3 NORMAL
+
+        <!-- Third Form Section -->
+        <div class="ThirdGeoFormTitleDesktop">
+          <div class="circleList">3</div>
+          <h3 class="formTitles">Program your schedule</h3>
+        </div>
+  
+        <section class="thirdGeoFormSection">
+          <div class="firstColThirdForm">
+          <!-- Available from -->
+          <label for="availability">Available from:</label>
+          <input type="date" id="availability" name="availability" required style="margin-bottom: 1rem;">
+          
+          <!-- Location of Work -->
+          <label for="location-work">Location of work:</label>
+          <input type="text" id="location-work" name="location-work" style="margin-bottom: 1rem;" required>
+  
+          <!-- Remote Experience -->
+            <label class="remoteExperienceLabel" for="remoteExperience">Remote experience:</label>
+            <div class="remoteExperience">
+              <input type="radio" id="remoteExperienceYes" name="remoteExperience" value="yes">
+              <label for="remoteExperienceYes">Yes</label>
+              <input type="radio" id="remoteExperienceNo" name="remoteExperience" value="no">
+              <label for="remoteExperienceNo">No</label>
+            </div>
+          </div>
+  
+          <div class="secondColThirdForm">
+          <!-- Start Time -->
+          <div class="dayTimeForm">
+            <label for="day-start">Day start time (est):</label>
+            <input type="date" id="day-start" name="dayStartDate">
+          </div>
+          
+          <!-- Hours per day -->
+          <label for="hours-day">Hours per day:</label>
+          <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
+            <option value="" disabled selected>Select hours per day work</option>
+            <option value="lessSixHours">less than 6 hours-day</option>
+            <option value="sixHours">6 hours-day</option>
+            <option value="sevenHours">7 hours-day</option>
+            <option value="eightHours">8 hours-day</option>
+            <option value="tenHours">10 hours-day</option>
+            <option value="moreTenHours">more than 10 hours-day</option>
+          </select>  
+  
+            <!-- Open pit Experience -->
+              <label class="openPitExperienceLabel" for="openPitExperience">Open pit experience:</label>
+              <div class="openPitExperience">
+                <input type="radio" id="openPitExperienceYes" name="openPitExperience" value="yes">
+                <label for="openPitExperienceYes">Yes</label>
+                <input type="radio" id="openPitExperienceNo" name="openPitExperience" value="no">
+                <label for="openPitExperienceNo">No</label>
+              </div>
+          </div>
+  
+          <div class="thirdColThirdForm">
+            <!-- Finish Date -->
+            <div class="dayTimeForm">
+              <label for="day-end">Day end time (est):</label>
+              <input type="date" id="day-end" name="dayEndDate">
+            </div>
+  
+            <!--I prefer: -->
+            <label for="roster" >I prefer a roster (days on/days off):</label>
+            <select id="roster-hours" name="roster-hours" style="margin-bottom: 1rem;">
+              <option value="" disabled selected>Select roster</option>
+              <option value="five-two">5/2</option>
+              <option value="six-three">6/3</option>
+              <option value="seven-four">7/4</option>
+              <option value="eight-five">8/5</option>
+              <option value="fourteen-fourteen">14/14</option> 
+            </select>
+  
+          <!-- Underground Mine Experience -->
+          <label class="undergroundMineExperienceLabel" for="undergroundMineExperience">Underground Mine Experience:</label>
+            <div class="undergroundMineExperience">
+              <input type="radio" id="undergroundMineExperienceYes" name="undergroundMineExperience" value="yes">
+              <label for="undergroundMineExperienceYes">Yes</label>
+              <input type="radio" id="undergroundMineExperienceNo" name="undergroundMineExperience" value="no">
+              <label for="undergroundMineExperienceNo">No</label>
+            </div>
+          </div>
+        </section>
+
+           <!-- First List Menu -->
+
+    <h1 class="findGeoTitle">How GeoFinder works!</h1>
+    <section class="secondListMenu">
+      <div class="containerSecondList">
+        <div class="row">
+          <div class="col">
+            <div class="circleList">1</div>
+            <h3>Complete the following form</h3>
+            <div class="paragraphFindGeo">
+              <p>
+                Fill out the form with your data, your services and the necessary
+                contact information so that clients can connect to your cell phone
+                or email easily.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="circleList">2</div>
+            <h3>Advertise your services and work</h3>
+            <div class="paragraphFindGeo">
+              <p>
+                Thousands of clients throughout Australia use this page looking
+                for geological service
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="circleList">3</div>
+            <h3>
+              Manage the job from your phone
+            </h3>
+            <div class="paragraphFindGeo">
+              <p>
+                Communicate directly with the client in a simple and easy way.
+            Manage your schedules, payment and arrangements
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="circleList">4</div>
+            <h3>Get recommendations</h3>
+            <p>
+              Potential clients will look at your profile, so GeoEasy collects
+            recommendations from past jobs to help you secure your next gig
+            </p>
+          </div>
+        </div>
+        <div class="listButton">
+          <button class="btn btn-primary" type="submit">
+            <a href="./geologistForm.html">Get started</a>
+          </button>
+        </div>
+      </div>
+    </section>

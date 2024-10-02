@@ -161,10 +161,6 @@ body {
     display: none;
 }
 
-.geoListMenuMobile {
-    display: none;
-}
-
 
 @media only screen and (max-width: 992px) {
     .mainMenuMobile {
@@ -177,12 +173,6 @@ body {
         display: block;
     }
     .secondListMenu{
-        display: none;
-    }
-    .geoListMenuMobile{
-        display: block;
-    }
-    .geoListMenu{
         display: none;
     }
 }
