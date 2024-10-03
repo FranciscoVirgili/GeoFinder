@@ -1,7 +1,6 @@
 <?php
 // Include database connection
 include 'connect.php';
-session_start();
 
 // Enable error reporting for debugging
 ini_set('display_errors', 1);
@@ -31,6 +30,15 @@ if ($result->num_rows > 0) {
     
     // Verify password
     if (password_verify($password, $user['password'])) {
+
+        session_start();
+        // Success: Set session variables
+        $_SESSION['user_id'] = $user['ID']; // Assuming UserId is a column in your users table
+        $_SESSION['user_type'] = $user['userType']; // Geologist or Company
+        $_SESSION['user_firstname'] = $user['firstName']; // You can store the user's name or email as well
+        $_SESSION['user_lastname'] = $user['lastName']; // You can store the user's name or email as well
+        $_SESSION['user_email'] = $user['email']; // You can store the user's name or email as well
+
         // Success: Respond with userType to redirect accordingly
         echo json_encode([
             'status' => 'success',
