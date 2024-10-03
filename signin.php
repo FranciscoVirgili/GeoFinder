@@ -1,6 +1,7 @@
 <?php
 // Include database connection
 include 'connect.php';
+session_start();
 
 // Enable error reporting for debugging
 ini_set('display_errors', 1);
