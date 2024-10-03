@@ -172,7 +172,7 @@ document.querySelector('.registerForm').addEventListener('submit', function(even
             // You can redirect or clear the form here if needed
             // Redirect to the login page after a brief delay
             setTimeout(() => {
-              window.location.href = 'Signin.html'; // Change 'login.html' to your actual login page URL
+              window.location.href = 'signin.html'; // Change 'login.html' to your actual login page URL
           }, 1000); // 2-second delay before redirect (optional)
 
         } else {
