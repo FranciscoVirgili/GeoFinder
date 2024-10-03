@@ -170,6 +170,11 @@ document.querySelector('.registerForm').addEventListener('submit', function(even
             //alert(data.message); // Show success message
             showPopup('User registered successfully!');
             // You can redirect or clear the form here if needed
+            // Redirect to the login page after a brief delay
+            setTimeout(() => {
+              window.location.href = 'Signin.html'; // Change 'login.html' to your actual login page URL
+          }, 1000); // 2-second delay before redirect (optional)
+
         } else {
             
             showPopup(data.message); // Show error message
