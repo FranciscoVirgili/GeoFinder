@@ -1,0 +1,16 @@
+Para hacer un commit local:
+git -commit -a -m "mensaje"
+
+Para subirlo al repositorio github:
+
+git push origin main 
+
+Para hacer el pull request en el servidor
+
+1. Abrir putty
+2. Log in en putty (Load GeoFinder Session) 
+    c2tfgywwlwbu
+    Developer2024!
+3. Ir a la carpeta GeoFinder -> cd public_html/GeoFinder
+4. git pull origin main
+
