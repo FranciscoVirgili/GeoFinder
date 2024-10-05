@@ -243,14 +243,37 @@ fetch('countries.json')
 
 // Dropdown of town Aus
 const citiesDropdown = document.getElementById('citiesDropdown');
+const stateDropdown = document.getElementById('state-residence');
+
 fetch('australianCities.json')
   .then(response => response.json())
   .then(cities => {
+    // Almacena las ciudades agrupadas por estado
+    const citiesByState = {};
+
     cities.forEach(city => {
-      const option = document.createElement('option');
-      option.value = city.city;
-      option.textContent = city.city;
-      citiesDropdown.appendChild(option);
+      if (!citiesByState[city.admin_name]) {
+        citiesByState[city.admin_name] = [];
+      }
+      citiesByState[city.admin_name].push(city.city);
+    });
+
+    // Maneja el cambio en el dropdown de estados
+    stateDropdown.addEventListener('change', (event) => {
+      const selectedState = event.target.value;
+      
+      // Limpia el dropdown de ciudades
+      citiesDropdown.innerHTML = '<option value="" disabled selected>Select town of residence</option>';
+
+      // Si hay ciudades para el estado seleccionado, las añade
+      if (citiesByState[selectedState]) {
+        citiesByState[selectedState].forEach(city => {
+          const option = document.createElement('option');
+          option.value = city;
+          option.textContent = city;
+          citiesDropdown.appendChild(option);
+        });
+      }
     });
   })
   .catch(error => console.error('Error loading the JSON file:', error));

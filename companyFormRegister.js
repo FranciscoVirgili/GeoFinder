@@ -47,27 +47,41 @@ const friendlyNames = {
       });
 
   // Dropdown of town Aus
-  // Seleccionamos el elemento <select>
-  const citiesDropdown = document.getElementById('citiesDropdown');
+const citiesDropdown = document.getElementById('citiesDropdown');
+const stateDropdown = document.getElementById('state-residence');
 
-  // Cargamos el archivo JSON con Fetch API
-  fetch('australianCities.json')
-      .then(response => response.json()) // Convertimos la respuesta a JSON
-      .then(cities => {
-          // Iteramos sobre las ciudades del JSON
-          cities.forEach(cityData => {
-              // Creamos una nueva opción <option> para cada ciudad
-              const option = document.createElement('option');
-              option.value = cityData.city;  // Asignamos el valor "city"
-              option.textContent = cityData.city;  // Mostramos el texto de la ciudad
-              
-              // Agregamos la opción al dropdown
-              citiesDropdown.appendChild(option);
-          });
-      })
-      .catch(error => {
-          console.error('Error loading the JSON file:', error);
-      });
+fetch('australianCities.json')
+  .then(response => response.json())
+  .then(cities => {
+    // Almacena las ciudades agrupadas por estado
+    const citiesByState = {};
+
+    cities.forEach(city => {
+      if (!citiesByState[city.admin_name]) {
+        citiesByState[city.admin_name] = [];
+      }
+      citiesByState[city.admin_name].push(city.city);
+    });
+
+    // Maneja el cambio en el dropdown de estados
+    stateDropdown.addEventListener('change', (event) => {
+      const selectedState = event.target.value;
+      
+      // Limpia el dropdown de ciudades
+      citiesDropdown.innerHTML = '<option value="" disabled selected>Select town of residence</option>';
+
+      // Si hay ciudades para el estado seleccionado, las añade
+      if (citiesByState[selectedState]) {
+        citiesByState[selectedState].forEach(city => {
+          const option = document.createElement('option');
+          option.value = city;
+          option.textContent = city;
+          citiesDropdown.appendChild(option);
+        });
+      }
+    });
+  })
+  .catch(error => console.error('Error loading the JSON file:', error)); 
 
 // Función de validación
 function validateForm() {
