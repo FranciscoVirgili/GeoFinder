@@ -1,5 +1,10 @@
 Para hacer un commit local:
-git -commit -a -m "mensaje"
+
+Si creo un nuevo archivo que no existe tengo que agregarlo al git para que lo tome en cuenta para eso hago un:
+
+git add "el nombre del archivo" por ej: git add testing.html
+
+git commit -a -m "mensaje"
 
 Para subirlo al repositorio github:
 

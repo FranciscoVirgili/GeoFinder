@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <span class="logoCompany">
-              <a href="./index.html"><img class="imgCompany" src="./Images/logo1.png" /></a>
+              <a href="./index.html"><img class="imgCompany" src="./Images/geoFinderLogo.png" /></a>
             </span>
             <button
               class="navbar-toggler"
@@ -59,7 +59,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-lg">
             <span class="logoCompany">
-              <a href="./index.html"><img class="imgCompany" src="./Images/logo1.png" /></a>
+              <a href="./index.html"><img class="imgCompany" src="./Images/geoFinderLogo.png" /></a>
             </span>
             <button
               class="navbar-toggler"
@@ -122,20 +122,24 @@
           <!-- Email -->
           <label for="email">Contact email:</label>
           <input type="email" id="email" name="email" required>
+          
+          <!-- Phone -->
+          <label for="phone">Mobile/Contact phone:</label>
+          <input type="tel" id="phone" name="phone" required>
         </div>  
+
         <div class="secondGeoFormCol">
 
-          <!-- Phone -->
-          <label for="phone">Mobile phone:</label>
-          <input type="tel" id="phone" name="phone" required>
+          <!-- Country of residence -->
+          <label for="country">Country of residence:</label>
+          <select id="countriesDropdown" name="countriesDropdown" required>
+            <option value="" disabled selected>Select country of residence</option>
+          </select>
+        
 
-          <!-- Primary office location -->
-          <label for="primary-office-location">Primary office location:</label>
-          <input type="text" id="primary-office-location" name="primary-office-location" required>
-
-          <!-- Primary state of operation -->
-          <label for="primary-state-operation">Primary state of operation:</label>
-          <select id="primary-state-operation" name="primary-state-operation" required>
+          <!-- State of residence -->
+          <label for="state-residence">Primary state of operation:</label>
+          <select id="state-residence" name="state-residence" required>
             <option value="" disabled selected>Select your state</option>
             <option value="queensland">Queensland</option>
             <option value="new-south-wales">New South Wales</option>
@@ -145,21 +149,46 @@
             <option value="northern-territory">Northern Territory</option>
             <option value="tasmania">Tasmania</option>
           </select>
-          
-          <!-- Other state of operation -->
-          <label for="other-state-operation">Other state of operation:</label>
-          <select id="other-state-operation" name="other-state-operation" required>
-            <option value="" disabled selected>Select other state operation</option>
-            <option value="quensland">Queensland</option>
-            <option value="new-south-wales">New South Wales</option>
-            <option value="victoria">Victoria</option>
-            <option value="south-australia">South Australia</option>
-            <option value="western-australia">Western Australia</option>
-            <option value="northern-territory">Northern Territory</option>
-            <option value="tasmania">Tasmania</option>
-          </select>
 
+          <!-- Primary Town of residence -->
+          <label for="primary-location">Primary town of operation (Aus):</label>
+          <select id="citiesDropdown" name="citiesDropdown" required>
+            <option value="" disabled selected>Select town of residence</option>
+          </select>
+        
+        <!-- other town of operation -->
+        <label for="other-towns">Other towns of operation (Aus):</label>
+        <fieldset class="othersTownOperationchck">
+          <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="queensland" name="otherTown-operation[]" value="Queensland">
+              <label for="queensland">Queensland</label>
+          </div>
+          <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="new-south-wales" name="otherTown-operation[]" value="New South Wales">
+              <label for="new-south-wales">New South Wales</label>
+          </div>
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="victoria" name="otherTown-operation[]" value="Victoria">
+            <label for="victoria">Victoria</label>
+          </div>  
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="south-australia" name="otherTown-operation[]" value="South Australia">
+            <label for="south-australia">South Australia</label>
         </div>
+        <div style="display: flex; align-items:baseline">
+          <input type="checkbox" id="western-australia" name="otherTown-operation[]" value="Western Australia">
+          <label for="western-australia">Western Australia</label>
+        </div>
+        <div style="display: flex; align-items:baseline">
+          <input type="checkbox" id="northern-territory" name="otherTown-operation[]" value="Northern Territory">
+          <label for="northern-territory">Northern Territory</label>
+        </div>
+        <div style="display: flex; align-items:baseline">
+          <input type="checkbox" id="tasmania" name="otherTown-operation[]" value="Tasmania">
+          <label for="tasmania">Tasmania</label>
+        </div>
+        </fieldset>
+      </div>
         <div class="thirdGeoFormCol">
             <!-- Number of employees -->
             <label for="number-employees">Number of full time employees</label>
@@ -182,7 +211,33 @@
           </select>
           <!-- Commodity experience -->
           <label for="commodity-experience">Commodity experience:</label>
-          <input style="margin-bottom: 1rem;" type="text" id="commodity-experience" name="commodity-experience" required placeholder="e.g. Au, Cu, Pb, REE">
+          <select id="commodity-experience" name="commodity-experience" required style="margin-bottom: 1rem;">
+            <option value="" disabled selected>Select commodity</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="copper">Copper</option>
+            <option value="iron-ore">Iron Ore</option>
+            <option value="coal">Coal</option>
+            <option value="aluminum">Aluminum</option>
+            <option value="zinc">Zinc</option>
+            <option value="nickel">Nickel</option>
+            <option value="lithium">Lithium</option>
+            <option value="lead">Lead</option>
+            <option value="platinum">Platinum</option>
+            <option value="diamonds">Diamonds</option>
+            <option value="cobalt">Cobalt</option>
+            <option value="manganese">Manganese</option>
+            <option value="uranium">Uranium</option>
+            <option value="tin">Tin</option>
+            <option value="tungsten">Tungsten</option>
+            <option value="rare-earth-elements">Rare Earth Elements</option>
+            <option value="phosphate">Phosphate</option>
+            <option value="bauxite">Bauxite</option>
+            <option value="graphite">Graphite</option>
+            <option value="salt">Salt</option>
+            <option value="gypsum">Gypsum</option>
+            <option value="potash">Potash</option>
+          </select>
 
           <!-- Years of experience -->
           <label for="years-experience">Years of experience:</label>
@@ -338,100 +393,76 @@
           </div> 
       </section>
     
-     <!-- Third Form Section -->
-     <div class="ThirdGeoFormTitleDesktop">
+    <!-- Third Form Section -->
+    <div class="ThirdGeoFormTitleDesktop">
       <div class="circleList">3</div>
       <h3 class="formTitles">Program your schedule</h3>
     </div>
 
     <section class="thirdGeoFormSection">
       <div class="firstColThirdForm">
-      <!-- Available from -->
-      <label for="availability">Available from:</label>
-      <input type="date" id="availability" name="availability" required style="margin-bottom: 1rem;">
-      
-      <!-- Location of Work -->
-      <label for="location-work">Location of work:</label>
-      <input type="text" id="location-work" name="location-work" style="margin-bottom: 1rem;" required>
-      </div>
-
-      <div class="secondColThirdForm">
-      <!-- Start Time -->
-      <div class="dayTimeForm">
-        <label for="day-start">Day start time (est):</label>
-        <input type="date" id="day-start" name="dayStartDate">
-      </div>
-      
-      <!-- Hours per day -->
-      <label for="hours-day">Hours per day:</label>
-      <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
-        <option value="" disabled selected>Select hours per day work</option>
-        <option value="lessSixHours">less than 6 hours-day</option>
-        <option value="sixHours">6 hours-day</option>
-        <option value="sevenHours">7 hours-day</option>
-        <option value="eightHours">8 hours-day</option>
-        <option value="tenHours">10 hours-day</option>
-        <option value="moreTenHours">more than 10 hours-day</option>
-      </select>  
-      </div>
-
-      <div class="thirdColThirdForm">
+        <!-- Start Time -->
+        <div class="dayTimeForm">
+          <label for="day-start">Available from (est):</label>
+          <input type="date" id="day-start" name="dayStartDate">
+        </div>
         <!-- Finish Date -->
         <div class="dayTimeForm">
-          <label for="day-end">Day end time (est):</label>
+          <label for="day-end">Available to (est):</label>
           <input type="date" id="day-end" name="dayEndDate">
         </div>
-
-        <!--I prefer: -->
-        <label for="roster" >I prefer a roster (days on/days off):</label>
-        <select id="roster-hours" name="roster-hours" style="margin-bottom: 1rem;">
-          <option value="" disabled selected>Select roster</option>
-          <option value="five-two">5/2</option>
-          <option value="six-three">6/3</option>
-          <option value="seven-four">7/4</option>
-          <option value="eight-five">8/5</option>
-          <option value="fourteen-fourteen">14/14</option> 
-        </select>
-      </div>
-    </section>
-
-    <section class="thirdBisSection">
-      <!-- Underground Mine Experience -->
-      <div class="divBis">
-      <label class="undergroundMineExperienceLabel" for="undergroundMineExperience">Underground Mine Experience:</label>
-        <div class="undergroundMineExperience">
-          <input type="radio" id="undergroundMineExperienceYes" name="undergroundMineExperience" value="yes">
-          <label for="undergroundMineExperienceYes">Yes</label>
-          <input type="radio" id="undergroundMineExperienceNo" name="undergroundMineExperience" value="no">
-          <label for="undergroundMineExperienceNo">No</label>
+      </div>  
+      <div class="secondColThirdForm">
+        <!-- Hours per day -->
+        <label for="hours-day">Hours per day:</label>
+        <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
+          <option value="" disabled selected>Select hours per day work</option>
+          <option value="lessSixHours">less than 6 hours-day</option>
+          <option value="sixHours">6 hours-day</option>
+          <option value="sevenHours">7 hours-day</option>
+          <option value="eightHours">8 hours-day</option>
+          <option value="tenHours">10 hours-day</option>
+          <option value="moreTenHours">more than 10 hours-day</option>
+        </select>  
+        <!-- Prefer roster -->
+        <label>I prefer a roster (days on/days off):</label>
+        <fieldset class="rosterchck">
+          <div>
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="anyRoster" name="roster[]" value="Any">
+            <label for="any">Any</label><br>
+          </div>
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="five-two" name="roster[]" value="5/2">
+            <label for="five-two">5/2</label><br>
+          </div>
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="six-three" name="roster[]" value="6/3">
+            <label for="six-three">6/3</label><br>
+          </div>
+          </div>
+          <div>
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="seven-four" name="roster[]" value="7/4">
+            <label for="seven-four">7/4</label><br>
+          </div>
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="eight-five" name="roster[]" value="8/5">
+            <label for="eight-five">8/5</label><br>
+          </div>
+          <div style="display: flex; align-items:baseline">
+            <input type="checkbox" id="fourteen-fourteen" name="roster[]" value="14/14">
+            <label for="fourteen-fourteen">14/14</label><br>
+          </div>
         </div>
-      </div>
-      <!-- Open pit Experience -->
-      <div class="divBis">
-      <label class="openPitExperienceLabel" for="openPitExperience">Open pit experience:</label>
-      <div class="openPitExperience">
-        <input type="radio" id="openPitExperienceYes" name="openPitExperience" value="yes">
-        <label for="openPitExperienceYes">Yes</label>
-        <input type="radio" id="openPitExperienceNo" name="openPitExperience" value="no">
-        <label for="openPitExperienceNo">No</label>
-      </div>
-      </div>
-      <!-- Remote Experience -->
-      <div class="divBis">
-      <label class="remoteExperienceLabel" for="remoteExperience">Remote experience:</label>
-      <div class="remoteExperience">
-        <input type="radio" id="remoteExperienceYes" name="remoteExperience" value="yes">
-        <label for="remoteExperienceYes">Yes</label>
-        <input type="radio" id="remoteExperienceNo" name="remoteExperience" value="no">
-        <label for="remoteExperienceNo">No</label>
-      </div>
+        </fieldset>
       </div>
     </section>
-      <!-- Fourth Section -->
 
+      <!-- Fourth Section -->
       <div class="fourthGeoFormTitle">
         <div class="circleList">4</div>
-        <h3 class="formTitles">And last but not least... about your work </h3>
+        <h3 class="formTitles">And last but not least... about your work experience and capabilities</h3>
       </div>
 
       <section class="fourthGeoFormSection">
