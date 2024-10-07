@@ -22,8 +22,12 @@ $email = $conn->real_escape_string($data['email']);
 $password = $conn->real_escape_string($data['password']);
 
 // Check if the user exists in the database
-$query = "SELECT * FROM users WHERE email = '$email'";
-$result = $conn->query($query);
+// Prepare a statement to prevent SQL injection
+$query = "SELECT * FROM users WHERE email = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();

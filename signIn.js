@@ -16,6 +16,7 @@ document.getElementById("form-signin").addEventListener("submit", function(event
     })
     .then(response => response.json()) // Parse the response as JSON
     .then(data => {
+        console.log(data);  // <-- This will log the entire JSON response to the console
         if (data.status === 'success') {
             // Redirect based on user type
             if (data.userType === 'Geologist') {
