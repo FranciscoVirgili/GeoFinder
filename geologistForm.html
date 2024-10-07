@@ -10,6 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      // Function to load the modal
+      function loadModal() {
+          fetch('userModal.html')
+              .then(response => response.text())
+              .then(html => {
+                  document.getElementById('modalContainer').innerHTML = html;
+              })
+              .catch(error => console.error('Error loading modal:', error));
+      }
+    
+      // Call the function to load the modal on page load
+      document.addEventListener('DOMContentLoaded', loadModal);
+    </script>
     <script src="sessionCheck.js"></script> <!-- Include the external JS file -->
   </head>
   <body class="form-page-body">
@@ -104,44 +118,9 @@
           </nav>
         </section>
       </header>
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="sub-menu">
-                            <div class="user-info">
-                              <img src="./Images/user.png">
-                              <h3>Francisco Virgili</h3>
-                            </div>
-                        </div>
-                      
-                          <a href="#" class="sub-menu-link">
-                            <img src="./Images/profile.png">
-                            <p>Edit Profile</p>
-                            <span>></span>
-                          </a>
-                          <a href="#" class="sub-menu-link">
-                            <img src="./Images/setting.png">
-                            <p>Settings & Privacy</p>
-                            <span>></span>
-                          </a>
-                          <a href="#" class="sub-menu-link">
-                            <img src="./Images/help.png">
-                            <p>Help & Support</p>
-                            <span>></span>
-                          </a>
-                          
-                          <a href="#" class="sub-menu-link" id="logoutLink">
-                            <img src="./Images/logout.png">
-                            <p>Logout</p>
-                            <span>></span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                    <!-- END Modal -->
 
+                      <!-- Modal Container -->
+                      <div id="modalContainer"></div> <!-- Placeholder for modal -->
 
     <section class="firstGeoFormTitle">
             <div class="circleList">1</div>
