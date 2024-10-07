@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     // Set user information in the modal
                     const userInfo = document.querySelector('.user-info');
-                    userInfo.querySelector('h3').innerText = `${data.first_name} ${data.last_name}`;
+                    userInfo.querySelector('h3').innerText = `${data.user_firstname} ${data.user_lastName}`;
                 }
 
                 // Handle logout
