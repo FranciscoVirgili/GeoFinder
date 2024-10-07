@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check user session and handle logout
     function checkSessionAndHandleLogout() {
         // Check user session via AJAX
-        fetch('session_check.php')
+        fetch('sessionCheck.php')
             .then(response => response.json())
             .then(data => {
                 const authSection = document.getElementById('authSection');
