@@ -19,20 +19,46 @@ function checkUserSession(userTypeRequired, redirectIfNotMatch = 'unauthorized.h
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Check user session via AJAX
-    fetch('sessionCheck.php')
-        .then(response => response.json())
-        .then(data => {
-            const authSection = document.getElementById('authSection');
+    // Check user session and handle logout
+    function checkSessionAndHandleLogout() {
+        // Check user session via AJAX
+        fetch('session_check.php')
+            .then(response => response.json())
+            .then(data => {
+                const authSection = document.getElementById('authSection');
 
-            if (data.status === 'logged_in') {
-                // User is logged in, replace sign-in button with user icon
-                authSection.innerHTML = `
-                    <div class="userOn">
-                        <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
-                    </div>
-                `;
-            }
-        })
-        .catch(error => console.error('Error:', error));
+                if (data.status === 'logged_in') {
+                    // User is logged in, replace sign-in button with user icon
+                    authSection.innerHTML = `
+                        <div class="userOn">
+                            <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
+                        </div>
+                    `;
+
+                    // Set user information in the modal
+                    const userInfo = document.querySelector('.user-info');
+                    userInfo.querySelector('h3').innerText = `${data.first_name} ${data.last_name}`;
+                }
+
+                // Handle logout
+                const logoutLink = document.querySelector('.sub-menu-link:last-child'); // Select the last link in the submenu
+                logoutLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+
+                    fetch('logout.php')
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.status === 'success') {
+                                // Redirect to the sign-in page or home page
+                                window.location.href = 'signin.html'; // Change this to your desired redirect page
+                            }
+                        })
+                        .catch(error => console.error('Error during logout:', error));
+                });
+            })
+            .catch(error => console.error('Error during session check:', error));
+    }
+
+    // Call the function to check the session and handle logout
+    checkSessionAndHandleLogout();
 });
