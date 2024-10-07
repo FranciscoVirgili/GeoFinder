@@ -1,7 +1,7 @@
 // sessionCheck.js
 
 // Check user session via AJAX
-function checkUserSession(userTypeRequired, redirectIfNotMatch = 'not_authorized.html') {
+function checkUserSession(userTypeRequired, redirectIfNotMatch = 'signin.html') {
     fetch('sessionCheck.php')
         .then(response => response.json())
         .then(data => {
