@@ -41,8 +41,8 @@ if ($result->num_rows > 0) {
         // Success: Set session variables
         $_SESSION['user_id'] = $user['ID']; // Assuming UserId is a column in your users table
         $_SESSION['user_type'] = $user['userType']; // Geologist or Company
-        $_SESSION['user_firstname'] = $user['firstName']; // You can store the user's name or email as well
-        $_SESSION['user_lastname'] = $user['lastName']; // You can store the user's name or email as well
+        $_SESSION['user_firstName'] = $user['firstName']; // You can store the user's name or email as well
+        $_SESSION['user_lastName'] = $user['lastName']; // You can store the user's name or email as well
         $_SESSION['user_email'] = $user['email']; // You can store the user's name or email as well
 
         // Success: Respond with userType to redirect accordingly
