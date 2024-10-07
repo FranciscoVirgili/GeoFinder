@@ -17,3 +17,22 @@ function checkUserSession(userTypeRequired, redirectIfNotMatch = 'unauthorized.h
         })
         .catch(error => console.error('Error:', error));
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check user session via AJAX
+    fetch('session_check.php')
+        .then(response => response.json())
+        .then(data => {
+            const authSection = document.getElementById('authSection');
+
+            if (data.status === 'logged_in') {
+                // User is logged in, replace sign-in button with user icon
+                authSection.innerHTML = `
+                    <div class="userOn">
+                        <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
+                    </div>
+                `;
+            }
+        })
+        .catch(error => console.error('Error:', error));
+});
