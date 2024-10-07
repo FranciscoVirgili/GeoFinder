@@ -13,6 +13,10 @@
     <script src="sessionCheck.js"></script> <!-- Include the external JS file -->
   </head>
   <body class="form-page-body">
+    <script>
+      // Call the session-checking function for a geologist user type
+      checkUserSession('Geologist');
+    </script>
       <header>
         <section class="desktop">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -57,12 +61,6 @@
             </div>
           </nav>
         </section>
-
-        <script>
-          // Call the session-checking function for a geologist user type
-          checkUserSession('Geologist');
-        </script>
-
         <section class="mobile">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-lg">
