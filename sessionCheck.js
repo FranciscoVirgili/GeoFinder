@@ -5,6 +5,8 @@ function checkUserSession(userTypeRequired, redirectIfNotMatch = 'signin.html') 
     fetch('sessionCheck.php')
         .then(response => response.json())
         .then(data => {
+            
+            console.log(data);  // <-- This will log the entire JSON response to the console
             if (data.status === 'not_logged_in') {
                 // Redirect to the sign-in page if not logged in
                 window.location.href = 'signin.html';
