@@ -7,6 +7,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+session_start();
+
+
 // Get the raw POST data
 $jsonData = file_get_contents('php://input');
 $data = json_decode($jsonData, true);
@@ -35,7 +38,6 @@ if ($result->num_rows > 0) {
     // Verify password
     if (password_verify($password, $user['password'])) {
 
-        session_start();
         // Success: Set session variables
         $_SESSION['user_id'] = $user['ID']; // Assuming UserId is a column in your users table
         $_SESSION['user_type'] = $user['userType']; // Geologist or Company
