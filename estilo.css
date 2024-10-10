@@ -133,8 +133,10 @@ body {
 }
 
 #formSearch{
-    width: 40%;
-    height: 3rem;
+    width: 50%;
+    height: 3.5rem;
+    align-items: baseline;
+
 }
 
 #formControl{
@@ -215,6 +217,10 @@ body {
 
 #formSearchMobile{
     width: 100%;
+}
+
+#goButton{
+    height: 3.5rem;
 }
 
 /* SecondMainMenu */

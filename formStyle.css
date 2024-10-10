@@ -18,6 +18,19 @@
     gap: 80px;
 }
 
+#dropdownMenuButton{
+    width: 100%;
+    color: black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-menu{
+    width: 100%;
+}
+
 .firstGeoFormCol{
     width: 28%;
     margin-left: 4rem;
@@ -392,7 +405,7 @@
     justify-content: center;
 }
 
-.btnGeoForm{
+#btnGeoForm{
     font-size: 1.5rem;
     font-weight: 400;
     width: 40%;

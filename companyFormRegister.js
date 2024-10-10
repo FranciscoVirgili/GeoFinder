@@ -10,7 +10,6 @@ const friendlyNames = {
   'gender': 'Gender',
   'commodity-experience': 'Commodity experience',
   'age': 'Age',
-  'countriesDropdown': 'Country of residence',
   'state-residence': 'State of residence',
   'gender': 'Gender',
   'citiesDropdown': 'City',
@@ -22,7 +21,7 @@ const friendlyNames = {
   'hours-day': 'Hours per day',
 };
 
-
+/*
  // Dropdown of countries
   // Seleccionamos el elemento <select>
   const countriesDropdown = document.getElementById('countriesDropdown');
@@ -45,7 +44,7 @@ const friendlyNames = {
       .catch(error => {
           console.error('Error loading the JSON file:', error);
       });
-
+*/
   // Dropdown of town Aus
 const citiesDropdown = document.getElementById('citiesDropdown');
 const stateDropdown = document.getElementById('state-residence');
@@ -99,7 +98,7 @@ function validateForm() {
   });
   
   // Validación de campos select
-  const selectFields = ['countriesDropdown', 'state-residence', 'citiesDropdown', 'number-employees', 'type-company', 'commodity-experience', 'years-experience', 'hours-day'];
+  const selectFields = ['state-residence', 'citiesDropdown', 'number-employees', 'type-company', 'years-experience', 'hours-day'];
   selectFields.forEach(field => {
     const select = document.getElementById(field);
     if (!select.value) {
@@ -110,49 +109,23 @@ function validateForm() {
     }
   });
 
-// Validar checkboxes (experiencia con campos de trabajo, preferencias de sitio y location experience)
-const experienceCheckboxes = document.querySelectorAll('input[name="experience-as[]"]:checked');
-if (experienceCheckboxes.length === 0) {
-  alert('Please select at least one type of experience.');
-  valid = false;
-  return valid;
-}
-const workPreferenceCheckboxes = document.querySelectorAll('input[name="work-preference[]"]:checked');
-if (workPreferenceCheckboxes.length === 0) {
-  alert('Please select at least one work time preference.');
-  valid = false;
-  return valid;
-}
-const locationExperienceCheckboxes = document.querySelectorAll('input[name="experience-in[]"]:checked');
-if (locationExperienceCheckboxes.length === 0) {
-  alert('Please select at least one location experience.');
-  valid = false;
-  return valid;
-}
-const workSitePreference = document.querySelectorAll('input[name="site-preference[]"]:checked');
-if (workSitePreference.length === 0) {
-  alert('Please select at least one work site preference.');
-  valid = false;
-  return valid;
-}
-const experienceWithCheckboxes = document.querySelectorAll('input[name="experience-with[]"]:checked');
-if (experienceWithCheckboxes.length === 0) {
-  alert('Please select at least one principal activity.');
-  valid = false;
-  return valid;
-}
-const drivingExperienceCheckboxes = document.querySelectorAll('input[name="driving-experience[]"]:checked');
-if (drivingExperienceCheckboxes.length === 0) {
-  alert('Please select at least one driving experience.');
-  valid = false;
-  return valid;
-}
-const rosterCheckboxes = document.querySelectorAll('input[name="roster[]"]:checked');
-if (rosterCheckboxes.length === 0) {
-  alert('Please select at least roster preference.');
-  valid = false;
-  return valid;
-} 
+  // Validar checkboxes (experiencias)
+  const checkboxesToValidate = [
+    { name: 'experience-as[]', message: 'Please select at least one type of experience.' },
+    { name: 'work-time[]', message: 'Please select at least one work time preference.' },
+    { name: 'work-site[]', message: 'Please select at least one work site.' },
+    { name: 'experience-with[]', message: 'Please select at least one experience with.' },
+    { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
+    { name: 'commodity-experience[]', message: 'Please select at least one commodity experience.'}
+  ];
+
+  checkboxesToValidate.forEach(item => {
+    const checkboxes = document.querySelectorAll(`input[name="${item.name}"]:checked`);
+    if (checkboxes.length === 0) {
+      alert(item.message);
+      valid = false;
+    }
+  });
 
 // Validar campos de fechas
 const dayStart = document.getElementById('day-start');

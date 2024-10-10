@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script>
       // Function to load the modal
       function loadModal() {
@@ -54,7 +55,7 @@
               <div class="collapse navbar-collapse" id="navbarNavDesktop">
                 <ul class="navbar-nav" id="listaNav">
                   <li class="nav-item">
-                    <a class="nav-link" href="./home.html">Home</a>
+                    <a class="nav-link" href="./home.html">Main</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./signin.html">Im a Company</a>
@@ -62,9 +63,6 @@
                   <li class="nav-item" href="./findGeo.html">
                     <a class="nav-link" href="./findGeo.html">Im a Geo</a>
                   </li> 
-                  <li class="nav-item">
-                    <a class="nav-link" href="./findWork.html">Find Work</a>
-                  </li>
                   <span id="authSection" class="btnSignInDesktop">
                     <a href="./signin.html"><button style="font-size: 1.5rem;
       width: 100%;" class="btn btn-primary">
@@ -97,7 +95,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="./home.html">Home</a>
+                    <a class="nav-link" href="./home.html">Main</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./signin.html">Im a Company</a>
@@ -105,9 +103,6 @@
                   <li class="nav-item" href="./signin.html">
                       <a class="nav-link" href="./signin.html">Im a Geo</a>
                     </li> 
-                  <li class="nav-item">
-                    <a class="nav-link" href="./findWork.html">Find Work</a>
-                  </li>
                   <span>
                     <a href="./signin.html"><button  class="btn btn-primary">
                       Sign In</button></a>
@@ -174,13 +169,13 @@
 
           <!-- Country of residence -->
           <label for="countriesDropdown">Country of residence:</label>
-          <select id="countriesDropdown" name="countriesDropdown" required>
-            <option value="" disabled selected>Select country of residence</option>
+          <select id="countriesDropdown" name="countriesDropdown" disabled>
+            <option value="" disabled selected>Australia</option>
           </select>
         
 
           <!-- State of residence -->
-          <label for="state-residence">State of residence:</label>
+          <label for="state-residence">Select state or territory of residence:</label>
           <select id="state-residence" name="state-residence" required>
             <option value="" disabled selected>Select your state</option>
             <option value="Queensland">Queensland</option>
@@ -192,6 +187,7 @@
             <option value="Tasmania">Tasmania</option>
           </select>
 
+
           <!-- Primary Town of residence -->
           <label for="primary-location">Primary town of residence (Aus):</label>
           <select id="citiesDropdown" name="citiesDropdown" required>
@@ -200,37 +196,6 @@
         </div>
 
         <div class="thirdGeoFormCol">
-          <!-- Commodity experience -->
-          <label for="commodity-experience">Commodity experience:</label>
-          <select id="commodity-experience" name="commodity-experience" required style="margin-bottom: 1rem;">
-            <option value="" disabled selected>Select commodity</option>
-            <option value="gold">Gold</option>
-            <option value="silver">Silver</option>
-            <option value="copper">Copper</option>
-            <option value="iron-ore">Iron Ore</option>
-            <option value="coal">Coal</option>
-            <option value="aluminum">Aluminum</option>
-            <option value="zinc">Zinc</option>
-            <option value="nickel">Nickel</option>
-            <option value="lithium">Lithium</option>
-            <option value="lead">Lead</option>
-            <option value="platinum">Platinum</option>
-            <option value="diamonds">Diamonds</option>
-            <option value="cobalt">Cobalt</option>
-            <option value="manganese">Manganese</option>
-            <option value="uranium">Uranium</option>
-            <option value="tin">Tin</option>
-            <option value="tungsten">Tungsten</option>
-            <option value="rare-earth-elements">Rare Earth Elements</option>
-            <option value="phosphate">Phosphate</option>
-            <option value="bauxite">Bauxite</option>
-            <option value="graphite">Graphite</option>
-            <option value="salt">Salt</option>
-            <option value="gypsum">Gypsum</option>
-            <option value="potash">Potash</option>
-          </select>
-
-
           <!-- Years of experience -->
           <label for="years-experience">Years of experience:</label>
           <select id="years-experience" name="years-experience" required style="margin-bottom: 1rem;">
@@ -254,6 +219,137 @@
             <option value="masters">Master's Degree</option>
             <option value="phd">Ph.D.</option>
           </select>
+
+          <!-- Dropdown Multi-Selection with Checkboxes -->
+          <label>Commodity experience:</label>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Select commodity
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 300px; overflow-y: auto;">
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="gold"> Gold
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="silver"> Silver
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="copper"> Copper
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="iron-ore"> Iron Ore
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="coal"> Coal
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="aluminum"> Aluminum
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="zinc"> Zinc
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="nickel"> Nickel
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="lithium"> Lithium
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="lead"> Lead
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="platinum"> Platinum
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="diamonds"> Diamonds
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="cobalt"> Cobalt
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="manganese"> Manganese
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="uranium"> Uranium
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="tin"> Tin
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="tungsten"> Tungsten
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="rare-earth-elements"> Rare Earth Elements
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="phosphate"> Phosphate
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="bauxite"> Bauxite
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="graphite"> Graphite
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="salt"> Salt
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="gypsum"> Gypsum
+                </label>
+              </li>
+              <li>
+                <label class="dropdown-item">
+                  <input type="checkbox" name="commodity-experience[]" value="potash"> Potash
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>  
       </section>
     
       <!-- Second Form Section -->
@@ -293,16 +389,16 @@
           <legend>Work time preference:</legend>
           <fieldset class="workPreferencechck">
             <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="casual" name="work-preference[]" value="Casual">
+                <input type="checkbox" id="casual" name="work-time[]" value="Casual">
                 <label for="casual">Casual</label>
             </div>
 
             <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="part-time" name="work-preference[]" value="Part Time">
+                <input type="checkbox" id="part-time" name="work-time[]" value="Part Time">
                 <label for="part-time">Part Time</label>
             </div>
             <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="potential-ongoing" name="work-preference[]" value="Potential for ongoing">
+                <input type="checkbox" id="potential-ongoing" name="work-time[]" value="Potential for ongoing">
                 <label for="potential-ongoing">Potential for ongoing</label>
             </div>
           </fieldset>
@@ -313,50 +409,42 @@
         <div class="secondColSecondForm">
           <!-- Experience in (checkbox) -->
           <fieldset style="margin-bottom: 1rem;">
-            <label>Select location experience:</label>
+            <label>Work site preference:</label>
             <div class="locationExperiencechck">
             <div style="display: flex; align-items:baseline">
               <input type="checkbox" id="remote-field" name="experience-in[]" value="Remote Field">
-              <label for="remote-field">Remote Field</label>
-              <label>(camping/off grid accomodation)</label><br>
+              <label for="remote-field">Remote field work with camping/off-grid accommodation</label><br>
             </div>
-            
             <div style="display: flex; align-items:baseline">
               <input type="checkbox" id="field" name="experience-in[]" value="Field">
-              <label for="field">Field </label>
-              <label>(town-based accomodation)</label><br>
+              <label for="field">Field work with town-based accommodation</label><br>
             </div>  
-
             <div style="display: flex; align-items:baseline">
               <input type="checkbox" id="office-site" name="experience-in[]" value="office Site">
-              <label for="office-site">Office Site</label><br>
+              <label for="office-site">Office based work (major city/town) Site</label><br>
             </div>
-            
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="office-mine" name="experience-in[]" value="office mine">
+              <label for="office-mine">Office based work (mine site)</label><br>
+            </div>
             <div style="display: flex; align-items:baseline">
               <input type="checkbox" id="open-pit" name="experience-in[]" value="Open Pit">
               <label for="open-pit">Open Pit</label><br>
             </div>
-            
             <div style="display: flex; align-items:baseline">
               <input type="checkbox" id="underground" name="experience-in[]" value="Underground">
               <label for="underground">Underground</label><br>
+            </div>
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="fifo" name="experience-in[]" value="fifo">
+              <label for="fifo">FIFO</label><br>
+            </div>
+            <div style="display: flex; align-items:baseline">
+              <input type="checkbox" id="dido" name="experience-in[]" value="dido">
+              <label for="dido">DIDO</label><br>
             </div>  
           </div>
           </fieldset>
-
-          <!-- Work time preference -->
-          <legend>Work site preference:</legend>
-          <fieldset class="workSitePreference"  style="align-items: baseline; gap: 20px;">
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="on-site" name="site-preference[]" value="On Site">
-              <label for="on-site">On-site</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="fifo" name="site-preference[]" value="FIFO">
-                <label for="fifo">FIFO</label>
-            </div>
-          </fieldset>
-        
         </div>
         <div class="thirdColSecondForm">
           <!-- Have experience with -->
@@ -465,7 +553,7 @@
 
       <div class="fourthGeoFormTitle">
         <div id="circleList4" class="circleList">4</div>
-        <h3 class="formTitles">And last but not least... about your work experience and capabilities</h3>
+        <h3 class="formTitles">Experience and capabilities</h3>
       </div>
 
       <section class="fourthGeoFormSection">
@@ -551,14 +639,13 @@
       </div>
 
       <div class="submitGeoFormBtn">
-          <input class="btnGeoForm" type="submit" value="Submit">
+          <input class="btn btn-primary" id="btnGeoForm" type="submit" value="Submit">
       </div>
     </form>
     
 
-    <!-- PRUEBA FORMULARIO -->
 
-   <!-- Footer -->
+  <!-- Footer -->
   
   <footer class="bg-light text-dark pt-5 pb-4" id="footerDesign">
     <div class="container-fluid text-center text-md-start">
@@ -653,8 +740,8 @@
     </div>
 
   </footer>
- 
       <script src="geologistFormRegister.js"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
