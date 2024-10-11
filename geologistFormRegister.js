@@ -91,13 +91,11 @@ function validateForm() {
   // Validar checkboxes (experiencias)
   const checkboxesToValidate = [
     { name: 'experience-as[]', message: 'Please select at least one type of experience.' },
-    { name: 'work-preference[]', message: 'Please select at least one work time preference.' },
-    { name: 'experience-in[]', message: 'Please select at least one location experience.' },
+    { name: 'work-time[]', message: 'Please select at least one work time preference.' },
+    { name: 'experience-in[]', message: 'Please select at least one work site.' },
     { name: 'experience-with[]', message: 'Please select at least one experience with.' },
     { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
-    { name: 'roster[]', message: 'Please select at least one roster preference.',
-      name: 'commodity-experience[]', message: 'Please select at least one commodity experience.'
-     }
+    { name: 'commodity-experience[]', message: 'Please select at least one commodity experience.'}
   ];
 
   checkboxesToValidate.forEach(item => {

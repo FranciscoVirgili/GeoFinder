@@ -459,7 +459,7 @@ height: 50vh;
     display: flex;
     align-items: center;
     padding-bottom: 40px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 
@@ -468,37 +468,38 @@ height: 50vh;
     max-width: 30%;
     padding: 15px;
     margin: auto;
-  }
-  
-  .form-signin .checkbox {
+}
+
+.form-signin .checkbox {
     font-weight: 400;
-  }
-  
-  .form-signin .form-floating:focus-within {
+}
+
+.form-signin .form-floating:focus-within {
     z-index: 2;
-  }
-  
-  .form-signin input[type="email"] {
+}
+
+.form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
-  
-  .form-signin input[type="password"] {
+}
+
+.form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-  }
-  
-  #btnSignIn{
+}
+
+#btnSignIn{
     width: 80%;
     margin-top: 2vh;
     font-size: smaller;
-  }
+}
 
 #signInH1{
     margin-top: 2vh;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .desktopSign{
@@ -557,6 +558,86 @@ height: 50vh;
 }
 .forgetPassword{
     font-size: 1.5vh;
+}
+
+
+/* Sign In First Section */
+
+.firstSigInSection{
+    width: 100%;
+}
+
+
+.firstGallerySignIn{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+
+.firstGalleryImage{
+    width: 100%;
+}
+
+.firstImageGallery{
+    width: 100%;
+    padding: 20px;
+}
+
+.firstGalleryGeologistTitle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.firstGalleryGeologistTitle button{
+    width: 40%;
+}
+
+.secondGallerySignIn{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.secondGalleryImage{
+    width: 100%;
+    padding: 20px;
+}
+
+.secondImageGallery{
+    width: 100%;
+}
+
+.secondGalleryGeologistTitle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.secondGalleryGeologistTitle h1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+}
+
+.secondGalleryGeologistTitle button{
+    width: 40%;
 }
 
 /* Test Register Page */
@@ -1405,9 +1486,6 @@ user-info  img{
     max-width: 60%;
 }
 
-#signInH1 {
-    font-size: calc(1vw + 1rem);
-}
 .form-signin label {
     font-size: 1rem !important;
     font-weight: 300;
