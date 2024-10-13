@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDesktop">
               <ul class="navbar-nav" id="listaNav">
                 <li class="nav-item">
-                  <a class="nav-link" href="./index.html">Home</a>
+                  <a class="nav-link" href="./home.html">Main</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./company.html">Im a Company</a>
+                  <a class="nav-link" href="./signin.html">Im a Company</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./geologist.html">Im a Geo</a>
+                <li class="nav-item" href="./findGeo.html">
+                  <a class="nav-link" href="./signin.html">Im a Geo</a>
                 </li> 
                 <span class="btnSignInDesktop">
                   <a href="./signin.html"><button style="font-size: 1.5rem;
@@ -75,13 +75,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="./index.html">Home</a>
+                  <a class="nav-link" href="./home.html">Main</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./company.html">Im a Company</a>
+                  <a class="nav-link" href="./signin.html">Im a Company</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./geologist.html">Im a Geo</a>
+                <li class="nav-item" href="./signin.html">
+                    <a class="nav-link" href="./signin.html">Im a Geo</a>
                   </li> 
                 <span>
                   <a href="./signin.html"><button  class="btn btn-primary">
@@ -95,163 +95,73 @@
     </header>
     
     <!-- Menu -->
-    <section class="firstMenuSection">
-        <div class="firstGalleryMenu">
-          <div class="firstGalleryImage">
-            <img class="firstImageGallery" src="./Images/geologist2.jpg">
-          </div>
-          <div class="firstGalleryGeologistTitle">
-            <h1>Are you a geologist?</h1>
-            <h3>Follow these steps to find clients looking for your profile</h3>
-            <p>Looking for your next big opportunity? Share your experience and get matched with companies in need of your expertise. Find your perfect project and advance your career!</p>
-            <a href="./geologist.html"><button class="btn btn-primary">Get Started!</button></a> 
-          </div>  
-        </div>
-        <div class="secondGalleryMenu">
-          <div class="secondGalleryImage">
-            <img class="secondImageGallery" src="./Images/company2.jpg">
-          </div>
-          <div class="secondGalleryGeologistTitle">
-            <h1>Are you a company?</h1>
-            <h2>Need to find a geologist for specifics jobs?</h2>
-            <p>Find the geologist your company needs! Fill in your project details and connect with skilled professionals ready to tackle your geological challenges. Start matching with the right talent today.</p>
-            <a href="./company.html"><button class="btn btn-primary" >Get Started!</button></a>
-          </div>
-        </div>  
-    </section>
-    
-    <section class="firstMenuMobile">
-      <div class="firstGalleryMenuMobile">
-        <div class="firstGalleryImage">
-          <img class="firstImageGallery" src="./Images/geologist2.jpg">
-        </div>
-        <div class="firstGalleryGeologistTitle">
-          <h1>Are you a geologist?</h1>
-          <h3>Follow these steps to find clients looking for your profile</h3>
-          <p>Looking for your next big opportunity? Share your experience and get matched with companies in need of your expertise. Find your perfect project and advance your career!</p>
-          <a href="./geologist.html"><button class="btn btn-primary">Get Started!</button></a>  
-        </div>  
-      </div>
-      <div class="secondGalleryMenuMobile">
-        <div class="secondGalleryImage">
-          <img class="secondImageGallery" style="height: 450px;" src="./Images/company2.jpg">
-        </div>
-        <div class="secondGalleryGeologistTitle">
-          <h1>Are you a company?</h1>
-          <h2>Need to find a geologist for specifics jobs?</h2>
-          <p>Find the geologist your company needs! Fill in your project details and connect with skilled professionals ready to tackle your geological challenges. Start matching with the right talent today.</p>
-          <a href="./company.html"><button class="btn btn-primary" >Get Started!</button></a>
-        </div>
-      </div>  
-    </section>
-    <!-- Second Menu Container -->
-    <h1 class="findGeoTitle">How GeoFinder works!</h1>
-    <section class="secondListMenu">
-      <div class="containerSecondList">
-        <div class="row">
-          <div class="col">
-            <div class="circleList">1</div>
-            <h3>Sign In and fill out the form</h3>
-            <div class="paragraphFindGeo">
-              <p>
-                Fill in your contact details and share your professional experience. Whether you’re a geologist with unique skills or a company seeking specialized talent, here you’ll find your next key partner in geological projects.
-              </p>
+    <section class="mainMenuDesktop">
+       <div class="containerMenu"> 
+        <div class="row align-items-end" id="mainMenuBox">
+          <div class="col-12">
+            <div class="p-2 mb-2" id="menuTitle">
+            <h1 class="mainMenuTitle" style="font-size: calc(2rem + 1vw);">Connect with trusted service!</h1>
             </div>
           </div>
-          <div class="col">
-            <div class="circleList">2</div>
-            <h3>Review the proposals</h3>
-            <div class="paragraphFindGeo">
-              <p>
-                Interested professionals will send you their proposals. You can
-                choose who to hire based on their profiles, experience, and
-                reviews from previous clients.
-              </p>
-            </div>
+          <div class="col-12" id="menuSearch">
+            <div class="p-2 mb-2" id="menuSearchBox" >
+                <form class="d-flex" role="search" id="formSearch">
+                    <input class="form-control me-2" id="formControl" type="search" placeholder="e.g. Topography" aria-label="Search">
+                    <button class="btn btn-primary" id="goButton" type="submit">Go</button>
+              </form>
+            </div>  
           </div>
-          <div class="col">
-            <div class="circleList">3</div>
-            <h3>
-              Manage the project directly from the platform and your phone
-            </h3>
-            <div class="paragraphFindGeo">
-              <p>
-                Once you choose a professional or a company, you can communicate with them,
-                manage the project, schedule visits through our platform, all in
-                one place.
-              </p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="circleList">4</div>
-            <h3>Leave a review</h3>
-            <p>
-              After the project is completed, you can leave a review of the
-              professional's work. This helps other users make informed
-              decisions and strengthens the professional's reputation within our
-              community.
-            </p>
-          </div>
-        </div>
-    </section>
-    <section class="secondListMenuMobile">
-      <div class="containerSecondList">
-        <div class="containerSecondListDiv">
-          <div class="circleList">1</div>
-          <h3>Sign In and fill out the form</h3>
-        </div>
-            <div class="paragraphFindGeo">
-              <p>
-                Fill in your contact details and share your professional experience. Whether you’re a geologist with unique skills or a company seeking specialized talent, here you’ll find your next key partner in geological projects.
-              </p>
-            </div>
-          </div>
-          <div class="containerSecondListDiv">
-            <div class="circleList">2</div>
-            <h3>Review the proposals</h3>
-          </div>
-            <div class="paragraphFindGeo">
-              <p>
-                Interested professionals will send you their proposals. You can
-                choose who to hire based on their profiles, experience, and
-                reviews from previous clients.
-              </p>
-            </div>
-          </div>
-          <div class="containerSecondListDiv">
-            <div class="circleList">3</div>
-            <h3>
-              Manage the project directly from the platform and your phone
-            </h3>
-          </div>
-            <div class="paragraphFindGeo">
-              <p>
-                Once you choose a professional, you can communicate with them,
-                manage the project, schedule visits through our platform, all in
-                one place.
-              </p>
-            </div>
-          </div>
-          <div class="containerSecondListDiv">
-            <div class="circleList">4</div>
-            <h3>Leave a review</h3>
-          </div>  
-            <p class="paragraphFindGeo">
-              After the project is completed, you can leave a review of the
-              professional's work. This helps other users make informed
-              decisions and strengthens the professional's reputation within our
-              community.
-            </p>
-          </div>
-        </div>
-        <div class="listButton">
-          <button class="btn btn-primary" type="submit">
-            <a href="./geologistForm.html">Get started</a>
-          </button>
         </div>
       </div>
+    </div>
     </section>
 
+    <!-- Main Menu Mobile -->
+    <section class="mainMenuMobile">
+      <div class="containerMenuMobile"> 
+      <div class="row align-items-end" id="mainMenuBoxMobile">
+        <div class="col-12">
+          <div class="p-2 mb-2" id="menuTitleMobile">
+          <h1 class="mainMenuTitleMobile" style="font-size: calc(2rem + 1vw); ">Connect with trusted service!</h1>
+          </div>
+        </div>
+        <div class="col-12" id="menuSearchMobile">
+          <div class="p-2 mb-2" id="menuSearchBoxMobile" >
+              <form class="d-flex" role="search" id="formSearchMobile">
+                  <input class="form-control me-2" type="search" placeholder="e.g. Topography" aria-label="Search">
+                  <button class="btn btn-primary" type="submit">Go</button>
+            </form>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Second Menu Container -->
+  
+  <h1 class="secondSectionMainMenuTittle">How GeoFinder works!</h1>
+  <section class="secondMainMenu">
+    <div class="containerSecondMenu">
+      <div class="row">
+        <div class="col">
+          <img src="./Images/mobileToolsBackground.jpeg" class="firstimageGrid">
+          <h3>1. Tell us what you need</h3>
+          <p>Answer a few quick questions and even upload a photo of your needs</p>
+        </div>
+        <div class="col">
+          <img src="./Images/tradiesSpeacking.jpeg" class="secondImageGrid">
+          <h3>2. Get quotes from professionals geologists</h3>
+          <p>Our free service instantly alerts local geologists for quotes to get your job done</p>
+        </div>
+        <div class="col">
+          <img src="./Images/excavetorTradies.jpeg" class="thirdImageGrid">
+          <h3>3. Choose the best for the job</h3>
+          <p>Compare profiles and verified recommendatios to get started</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Third Main Menu -->
   <section class="thirdMainMenu">
@@ -262,6 +172,10 @@
           <h2>Want to increase your business?</h2>
           <h3>Connect with local clients</h3>
           <p>We send you job leads and you can manage them all in one app so you’ll save time on admin. We promote your profile and services by connecting you with more clients.</p><p>Publish what type of work and services you perform so that clients can contact you quickly and easily on your cell phone or email</p>
+          <div class="thirdGridButton">
+            <a href="./signin.html"><button class="btn btn-primary" type="submit">List your business</button></a>
+            <a href="./signin.html"><button class="btn btn-primary" type="submit">See how it works</button></a>
+          </div> 
         </div>
         <div class="col">
           <img src="./Images/geologicalService.jpg" class="geologicalServiceImage">
@@ -270,8 +184,8 @@
     </div>
   </section>
 
-  <!-- Fourth Main Menu -->
-  <section class="FourthMainMenu">
+   <!-- Fourth Main Menu -->
+   <section class="FourthMainMenu">
     <div class="containerFourthMenu">
       <div class="row">
         <div class="col">

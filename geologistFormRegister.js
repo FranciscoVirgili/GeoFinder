@@ -7,7 +7,7 @@ const friendlyNames = {
   'phone': 'Mobile Phone',
   'state-residence': 'State of Residence',
   'gender': 'Gender',
-  'commodity-experience': 'Commodity Experience', 
+  'commodities-experience': 'Commodity Experience', 
   'age': 'Age',
   'citiesDropdown': 'City',
   'years-experience': 'Years Experience',
@@ -68,17 +68,6 @@ function validateForm() {
     }
   });
 
-  // Validación de campos select
-  const selectFields = ['age', 'education-level', 'hours-day', 'state-residence', 'citiesDropdown', 'years-experience'];
-  selectFields.forEach(field => {
-    const select = document.getElementById(field);
-    if (!select.value) {
-      alert(`Please select a value for ${friendlyNames[field]}.`);
-      select.focus();
-      valid = false;
-    }
-  });
-
   // Validar género (radio buttons)
   const gender = document.querySelector('input[name="gender"]:checked');
   if (!gender) {
@@ -88,15 +77,28 @@ function validateForm() {
     valid = false;
   }
 
-  // Validar checkboxes (experiencias)
-  const checkboxesToValidate = [
-    { name: 'experience-as[]', message: 'Please select at least one type of experience.' },
-    { name: 'work-time[]', message: 'Please select at least one work time preference.' },
-    { name: 'experience-in[]', message: 'Please select at least one work site.' },
-    { name: 'experience-with[]', message: 'Please select at least one experience with.' },
-    { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
-    { name: 'commodity-experience[]', message: 'Please select at least one commodity experience.'}
-  ];
+// Validación de campos select
+const selectFields = ['age', 'education-level', 'hours-day', 'state-residence', 'citiesDropdown', 'years-experience', 'commodities-experience'];
+selectFields.forEach(field => {
+  const select = document.getElementById(field);
+  if (!select.value) {
+    alert(`Please select a value for ${friendlyNames[field]}.`);
+    select.focus();
+    valid = false;
+    return; // Añadir return aquí para detener la validación
+  }
+});
+
+
+// Validar checkboxes (experiencias)
+const checkboxesToValidate = [
+  { name: 'experience-as[]', message: 'Please select at least one type of experience.' },
+  { name: 'work-time[]', message: 'Please select at least one work time preference.' },
+  { name: 'experience-in[]', message: 'Please select at least one work site experience.' },
+  { name: 'experience-with[]', message: 'Please select at least one experience with.' },
+  { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
+];
+
 
   checkboxesToValidate.forEach(item => {
     const checkboxes = document.querySelectorAll(`input[name="${item.name}"]:checked`);

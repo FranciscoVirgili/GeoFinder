@@ -98,7 +98,7 @@ function validateForm() {
   });
   
   // Validación de campos select
-  const selectFields = ['state-residence', 'citiesDropdown', 'number-employees', 'type-company', 'years-experience', 'hours-day'];
+  const selectFields = ['state-residence', 'citiesDropdown', 'number-employees', 'type-company', 'years-experience', 'hours-day', 'commodities-experience'];
   selectFields.forEach(field => {
     const select = document.getElementById(field);
     if (!select.value) {
@@ -116,7 +116,6 @@ function validateForm() {
     { name: 'work-site[]', message: 'Please select at least one work site.' },
     { name: 'experience-with[]', message: 'Please select at least one experience with.' },
     { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
-    { name: 'commodity-experience[]', message: 'Please select at least one commodity experience.'}
   ];
 
   checkboxesToValidate.forEach(item => {
