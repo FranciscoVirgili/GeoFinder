@@ -32,14 +32,13 @@ document.getElementById('formFindGeo').addEventListener('submit', function(event
         start_date: document.getElementById('startDate').value,
         contact_preference: document.querySelector('input[name="contact_preference"]:checked').value,
         comments: document.getElementById('comments').value
-    };
+}});
 
     // Convertir a JSON
     const jsonData = JSON.stringify(formData);
     
     // Mostrar JSON en consola
     console.log(jsonData);
-
     // Aquí es donde enviarías los datos a un servidor usando fetch
     /*
     fetch('https://tu-servidor.com/api', {

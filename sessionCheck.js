@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Set user information in the modal
                     const userInfo = document.querySelector('.user-info');
                     userInfo.querySelector('h3').innerText = `${data.user_firstName} ${data.user_lastName}`;
+                    // Agregar linea de codigo para nombre de usuarios en los formularios y tipo
+                    const userWelcome = document.getElementById('welcomeUser');
+                    userWelcome.innerText = `Bienvenido, ${data.user_firstName} ${data.user_lastName}`; 
                 }
 
                 // Handle logout

@@ -14,18 +14,22 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
-    <!-- Script -->
+    
   </head>
   <body>
+    <!-- Script -->
+    <script>
+      // Call the session-checking function for a company user type
+      checkUserSession('Company');
+    </script>
     <header>
       <section class="desktop">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <span class="logoCompany">
               <a href="./index.html"
-                ><img class="imgCompany" src="./Images/geoFinderLogo.png"
-              /></a>
+              ><img class="imgCompany" src="./Images/geoFinderLogo.png"
+            /></a>
             </span>
             <button
               class="navbar-toggler"
@@ -38,60 +42,17 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <form class="d-flex">
-                        <input
-                          class="form-control me-2"
-                          type="search"
-                          placeholder="Search"
-                          aria-label="Search"
-                        />
-                        <button class="btn btn-primary" type="submit">Search</button>
-                      </form>
-                    </div>
-                    <div class="userOn" >
-                      <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </div>
-            </div>
-          </div>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="sub-menu">
-                            <div class="user-info">
-                              <img src="./Images/user.png">
-                              <h3>Francisco Virgili</h3>
-                            </div>
-                        </div>
-                      
-                          <a href="#" class="sub-menu-link">
-                            <img src="./Images/profile.png">
-                            <p>Edit Profile</p>
-                            <span>></span>
-                          </a>
-                          <a href="#" class="sub-menu-link">
-                            <img src="./Images/setting.png">
-                            <p>Settings & Privacy</p>
-                            <span>></span>
-                          </a>
-                          <a href="#" class="sub-menu-link">
-                            <img src="./Images/help.png">
-                            <p>Help & Support</p>
-                            <span>></span>
-                          </a>
-                          
-                          <a href="#" class="sub-menu-link" id="logoutLink">
-                            <img src="./Images/logout.png">
-                            <p>Logout</p>
-                            <span>></span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="collapse navbar-collapse" id="navbarNavDesktop">
+              <ul class="navbar-nav" id="listaNav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <span class="btnSignInDesktop">
+                  <a href="./signin.html"><button style="font-size: 1.5rem;
+    width: 100%;" class="btn btn-secondary">
+                    Log out</button></a>
+                </span>
+              </ul>
             </div>
           </div>
         </nav>
@@ -101,8 +62,8 @@
           <div class="container-lg">
             <span class="logoCompany">
               <a href="./index.html"
-                ><img class="imgCompany" src="./Images/geoFinderLogo.png"
-              /></a>
+              ><img class="imgCompany" src="./Images/geoFinderLogo.png"
+            /></a>
             </span>
             <button
               class="navbar-toggler"
@@ -117,62 +78,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
-                <li class="nav-item" id="nav-itemSearchHome">
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="d-flex">
-                      <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                      />
-                      <button class="btn btn-primary" type="submit">Search</button>
-                    </form>
-                  </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
                 </li>
-                <li class="nav-item" id="nav-itemUserHome">
-                  <div class="modal-content">
-                    <div class="sub-menu">
-                      <div class="user-info">
-                        <img src="./Images/user.png">
-                        <h3>Francisco Virgili</h3>
-                      </div>
-                  </div>
-                  <hr>
-                    <a href="#" class="sub-menu-link">
-                      <img src="./Images/profile.png">
-                      <p>Edit Profile</p>
-                      <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                      <img src="./Images/setting.png">
-                      <p>Settings & Privacy</p>
-                      <span>></span>
-                    </a>
-                    <a href="#" class="sub-menu-link">
-                      <img src="./Images/help.png">
-                      <p>Help & Support</p>
-                      <span>></span>
-                    </a>
-                    
-                    <a href="#" class="sub-menu-link">
-                      <img src="./Images/logout.png">
-                      <p>Logout</p>
-                      <span>></span>
-                    </a>
-                  </div>
-                </li>
+                <span>
+                  <a href="./signin.html"><button  class="btn btn-secondary">
+                    Log out</button></a>
+                </span>
               </ul>
             </div>
           </div>
         </nav>
       </section>
-      
     </header>
 
-
+    <!-- Modal Container -->
+    <div id="modalContainer"></div> <!-- Placeholder for modal -->
     <!-- First List Menu -->
-
+    <h1 id="welcomeUser"></h1>
     <section class="homeMenu">
       <div class="container-fluid">
         <div class="row" id="containerHomeMenu">
@@ -410,5 +333,20 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- JavaScript -->
     <script src="./script2.js"></script>
+    <script src="./sessionCheck.js"></script>
+    <script>
+      // Function to load the modal
+      function loadModal() {
+          fetch('userModal.html')
+              .then(response => response.text())
+              .then(html => {
+                  document.getElementById('modalContainer').innerHTML = html;
+              })
+              .catch(error => console.error('Error loading modal:', error));
+      }
+    
+      // Call the function to load the modal on page load
+      document.addEventListener('DOMContentLoaded', loadModal);
+    </script>
   </body>
 </html>
