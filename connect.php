@@ -1,5 +1,5 @@
 <?php
-$host = aaaaaaaaaaaaaaaaa.website";
+$host = "o9m.972.mytemp.website";
 $user = "geofinder_admin";
 $pass =  "W72!pGIpYBiH"; // Your actual password 
 $db = "GeoFinder";
