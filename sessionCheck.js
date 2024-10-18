@@ -5,8 +5,7 @@ function checkUserSession(userTypeRequired, redirectIfNotMatch = 'unauthorized.h
     fetch('sessionCheck.php')
         .then(response => response.json())
         .then(data => {
-
-            console.log(data);  // <-- This will log the entire JSON response to the console
+            console.log(data);  // Log the JSON response to the console
             if (data.status === 'not_logged_in') {
                 // Redirect to the sign-in page if not logged in
                 window.location.href = redirectIfNotMatch;
@@ -18,33 +17,39 @@ function checkUserSession(userTypeRequired, redirectIfNotMatch = 'unauthorized.h
         .catch(error => console.error('Error:', error));
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Check user session and handle logout
-    function checkSessionAndHandleLogout() {
-        // Check user session via AJAX
-        fetch('sessionCheck.php')
-            .then(response => response.json())
-            .then(data => {
-                const authSection = document.getElementById('authSection');
+// Check user session and handle logout
+function checkSessionAndHandleLogout() {
+    // Check user session via AJAX
+    fetch('sessionCheck.php')
+        .then(response => response.json())
+        .then(data => {
+            // Wait until the auth section and modal are available in the DOM
+            const authSection = document.getElementById('authSection');
 
-                if (data.status === 'logged_in') {
-                    // User is logged in, replace sign-in button with user icon
-                    authSection.innerHTML = `
-                        <div class="userOn">
-                            <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
-                        </div>
-                    `;
+            if (authSection && data.status === 'logged_in') {
+                // User is logged in, replace sign-in button with user icon
+                authSection.innerHTML = `
+                    <div class="userOn">
+                        <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
+                    </div>
+                `;
 
-                    // Set user information in the modal
-                    const userInfo = document.querySelector('.user-info');
+                // Set user information in the modal
+                const userInfo = document.querySelector('.user-info');
+                if (userInfo) {
                     userInfo.querySelector('h3').innerText = `${data.user_firstName} ${data.user_lastName}`;
-                    // Agregar linea de codigo para nombre de usuarios en los formularios y tipo
-                    const userWelcome = document.getElementById('welcomeUser');
-                    userWelcome.innerText = `Bienvenido, ${data.user_firstName} ${data.user_lastName}`; 
                 }
 
-                // Handle logout
-                const logoutLink = document.querySelector('.sub-menu-link:last-child'); // Select the last link in the submenu
+                // Welcome message for the user
+                const userWelcome = document.getElementById('welcomeUser');
+                if (userWelcome) {
+                    userWelcome.innerText = `Bienvenido, ${data.user_firstName} ${data.user_lastName}`; 
+                }
+            }
+
+            // Handle logout
+            const logoutLink = document.querySelector('.sub-menu-link:last-child'); // Select the last link in the submenu
+            if (logoutLink) {
                 logoutLink.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevent default link behavior
 
@@ -52,16 +57,32 @@ document.addEventListener('DOMContentLoaded', function() {
                         .then(response => response.json())
                         .then(data => {
                             if (data.status === 'success') {
-                                // Redirect to the sign-in page or home page
+                                // Redirect to the sign-in page
                                 window.location.href = 'signin.html'; // Change this to your desired redirect page
                             }
                         })
                         .catch(error => console.error('Error during logout:', error));
                 });
+            }
+        })
+        .catch(error => console.error('Error during session check:', error));
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Load the modal first, then check the session
+    function loadModalAndCheckSession() {
+        fetch('userModal.html')
+            .then(response => response.text())
+            .then(html => {
+                // Load the modal into the DOM
+                document.getElementById('modalContainer').innerHTML = html;
+
+                // Once the modal is loaded, check the session and handle logout
+                checkSessionAndHandleLogout();
             })
-            .catch(error => console.error('Error during session check:', error));
+            .catch(error => console.error('Error loading modal:', error));
     }
 
-    // Call the function to check the session and handle logout
-    checkSessionAndHandleLogout();
+    // Call the function to load the modal and then check the session
+    loadModalAndCheckSession();
 });
