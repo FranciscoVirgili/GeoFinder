@@ -44,14 +44,14 @@
                   <a class="nav-link" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./home.html">Posted jobs</a>
+                  <a class="nav-link" href="./postedJobs.html">Posted jobs</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./geologist.html">I'm a Geo</a>
-                </li>
-                <div class="userOn" >
-                  <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                </div>
+                <span class="btnSignInDesktop">
+                  <a href="./signin.html"><button style="font-size: 1.5rem; width: 100%;" class="btn btn-secondary">
+                    Log out</button></a>
+                </span>
+                <!-- Modal Container -->
+                <div id="modalContainer"></div> <!-- Placeholder for modal -->
               </ul>
             </div>
           </div>
@@ -84,9 +84,12 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./home.html">Posted jobs</a>
                 </li>
-                <div class="userOn" >
-                      <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                </div>
+                <span class="btnSignInDesktop">
+                  <a href="./signin.html"><button style="font-size: 1.5rem; width: 100%;" class="btn btn-secondary">
+                    Log out</button></a>
+                </span>
+                <!-- Modal Container -->
+                <div id="modalContainer"></div> <!-- Placeholder for modal -->
               </ul>
             </div>
           </div>
@@ -94,8 +97,7 @@
       </section>
     </header>
 
-    <!-- Modal Container -->
-    <div id="modalContainer"></div> <!-- Placeholder for modal -->
+    
 
     <section class="firstGeoFormTitle">
             <div class="circleList">1</div>
@@ -226,7 +228,7 @@
 
           <!-- Dropdown Multi-Selection with Checkboxes -->
           <div class="commodityExperience">
-          <label>Commodity experience:</label>
+          <label>Commod ity experience:</label>
           <select id="commodities-experience" multiple name="commodities-experience" placeholder="Select commodity" data-search="true" data-silent-initial-value-set="true">
             <option value="gold">Gold</option>
             <option value="silver">Silver</option>
