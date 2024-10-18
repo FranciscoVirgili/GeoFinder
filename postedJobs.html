@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoEasy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <!-- Script -->
+    <script>
+      // Call the session-checking function for a company user type
+      checkUserSession('Company');
+    </script>
+    <header>
+      <section class="desktop">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <span class="logoCompany">
+              <a href="./index.html"
+              ><img class="imgCompany" src="./Images/geoFinderLogo.png"
+            /></a>
+            </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDesktop">
+              <ul class="navbar-nav" id="listaNav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <span class="btnSignInDesktop">
+                  <a href="./signin.html"><button style="font-size: 1.5rem;
+    width: 100%;" class="btn btn-secondary">
+                    Log out</button></a>
+                </span>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <section class="mobile">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-lg">
+            <span class="logoCompany">
+              <a href="./index.html"
+              ><img class="imgCompany" src="./Images/geoFinderLogo.png"
+            /></a>
+            </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <span>
+                  <a href="./signin.html"><button  class="btn btn-secondary">
+                    Log out</button></a>
+                </span>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </header>
+
+    <!-- Modal Container -->
+    <div id="modalContainer"></div> <!-- Placeholder for modal -->
+    <!-- First List Menu -->
+    <h1 id="welcomeUser"></h1>
+    <section class="homeMenu">
+      <div class="container-fluid">
+        <div class="row" id="containerHomeMenu">
+          <div class="col-12 col-md-5 col-lg-4">
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">Rio Tinto Project</h5>
+                <p class="card-text">
+                  Conduct geological surveys and analyze mineral deposits.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">BHP - Geologist</h5>
+                <p class="card-text">
+                  Analyze sediment samples and create stratigraphic profiles.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">HydroGEo Consultants</h5>
+                <p class="card-text">
+                  Conduct groundwater studies and develop models for aquifers.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Posted Jobs</div>
+              <div class="card-body">
+                <h5 class="card-title">Geotech Services</h5>
+                <p class="card-text">
+                  Interpret seismic data and conduct geophysical surveys.
+                </p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-7 col-lg-8">
+              <h3>Details</h3>
+              <form class="homeFormDetails">
+                <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Job Title</label>
+                      <input type="text" class="form-control" id="jobTitle" placeholder="">
+                </div>
+                <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Company</label>
+                      <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputSurname"
+                          aria-describedby="surname"/>
+                  </div>
+                  <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Job Location</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="exampleInputidCard"
+                    aria-describedby="idCard"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="disabledSelect" class="form-label">Job Location State</label>
+                  <select id="disabledSelect" class="form-select">
+                    <option>Brisbane</option>
+                    <option>Sydney</option>
+                    <option>Gold Coast</option>
+                    <option>Sunshine Coast</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Job Overview</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="exampleInputidCard"
+                    aria-describedby="idCard"
+                  />
+                </div>
+              </form>
+          </div>
+      
+          </div>
+        </div>
+      </div>
+    </section>
+    <h1>List another job</h1>
+      <section class="geoFormHome">
+        <form id="formHome">
+          <div class="mb-3">
+              <label for="citySelectLabel" class="form-label">City</label>
+              <select id="citySelect" class="form-select">
+                  <option value="Brisbane">Brisbane</option>
+                  <option value="Sydney">Sydney</option>
+                  <option value="Gold Coast">Gold Coast</option>
+                  <option value="Sunshine Coast">Sunshine Coast</option>
+              </select>
+          </div>
+          <div class="mb-3">
+              <label for="phoneInputNumber" class="form-label">Phone Number</label>
+              <input type="number" class="form-control" id="phoneInputNumber" aria-describedby="number">
+          </div>
+          <div class="mb-3">
+              <label for="serviceSelectLabel" class="form-label">Type of Service</label>
+              <select id="serviceSelect" class="form-select">
+                  <option value="Topography">Topography</option>
+                  <option value="Geotechnical Studies">Geotechnical Studies</option>
+                  <option value="Hydrogeological Studies">Hydrogeological Studies</option>
+                  <option value="Risk and Danger Studies">Risk and Danger Studies</option>
+                  <option value="Cartography">Cartography</option>
+                  <option value="Laboratory Analysis">Laboratory Analysis</option>
+                  <option value="Environmental and social studies">Environmental and social studies</option>
+                  <option value="Environmental Monitoring Plan">Environmental Monitoring Plan</option>
+              </select>
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+  
+  <footer class="bg-light text-dark pt-5 pb-4" id="footerDesign">
+    <div class="container-fluid text-center text-md-start">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">About Us</h5>
+          <hr class="mb-4">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, odit? Ex adipisci asperiores eaque, saepe dolor reprehenderit optio cupiditate, nesciunt sunt velit quia non officiis corporis error sapiente incidunt provident?</p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Businesses and Services</h5>
+          <hr class="mb-4">
+          <p>
+            <a href="#" class="text-dark">List your businesses and service</a>
+          </p>
+          <p>
+            <a href="#" class="text-dark">Geological Services</a>
+          </p>
+          <p>
+            <a href="#" class="text-dark">How this works</a>
+          </p>
+          <p>
+            <a href="#" class="text-dark">FAQs</a>
+          </p>
+          <p>
+            <a href="#" class="text-dark">Testimonials</a>
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Let us help you!</h5>
+          <hr class="mb-4">
+          <p>
+            <a href="#" class="text-dark">Contact Us</a>
+          </p>
+          <p>
+            <a href="#" class="text-dark">Terms and Conditions</a>
+          </p>
+          <p>
+            <a href="#" class="text-dark">Help!</a>
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contact</h5>
+          <hr class="mb-4">
+          <div class="contact-section">
+            <div class="contact-item">
+                <img src="./Images/hogar.png">
+                <span>Brisbane, Australia</span>
+            </div>
+            <div class="contact-item">
+                <img src="./Images/correo-electronico.png">
+                <span>geofinder@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <img src="./Images/telefono.png">
+                <span>+5555555555</span>
+            </div>
+        </div>
+        </div>
+
+        <hr class="mb-4">
+        <div class="text-center mb-2">
+          <p>
+            Copyright All rights reserved
+            <a href="#">
+              <strong class="text-primary">Francisco Virgili y Daniel Virgili</strong>
+            </a>
+          </p>
+        </div>
+
+        <div class="text-center">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+ 
+    <!-- Swiper JS -->
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="./script2.js"></script>
+    <script src="./sessionCheck.js"></script>
+    <script>
+      // Function to load the modal
+      function loadModal() {
+          fetch('userModal.html')
+              .then(response => response.text())
+              .then(html => {
+                  document.getElementById('modalContainer').innerHTML = html;
+              })
+              .catch(error => console.error('Error loading modal:', error));
+      }
+    
+      // Call the function to load the modal on page load
+      document.addEventListener('DOMContentLoaded', loadModal);
+    </script>
+  </body>
+</html>
