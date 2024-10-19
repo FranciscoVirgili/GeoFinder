@@ -3,8 +3,25 @@
     margin-right: 4rem;
 }
 
-.input-error {
-    border: 2px solid red;
+input {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:invalid {
+    border: 2px solid tomato;
+    animation: 0.2s valid 3;
+}
+
+@keyframes valid {
+    to {
+        transform: translateX(0);
+    }
+
+    from {
+        transform: translateX(10px);
+    }
 }
 
 .formTitles {
