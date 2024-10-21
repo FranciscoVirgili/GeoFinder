@@ -1,34 +1,13 @@
 /* Header Forms */
-.userOn {
+/* .userOn {
     margin-right: 4rem;
-}
-
-input {
-    padding: 10px;
-    border-radius: 5px;
-    outline: none;
-}
-
-input:invalid {
-    border: 2px solid tomato;
-    animation: 0.2s valid 3;
-}
-
-@keyframes valid {
-    to {
-        transform: translateX(0);
-    }
-
-    from {
-        transform: translateX(10px);
-    }
 }
 
 .formTitles {
     font-size: 1.3rem;
-}
+} */
 
-.firstGeoFormTitle {
+/* .firstGeoFormTitle {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -133,18 +112,18 @@ input:invalid {
     width: 10%;
     gap: 50px;
     margin-top: 1rem;
-}
+} */
 
 /* Second Form */
 
-.commodityExperience {
+/* .commodityExperience {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
+} */
 
 
-.secondGeoFormTitle {
+/* .secondGeoFormTitle {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -256,11 +235,11 @@ input:invalid {
 .workTimePreference label {
     font-size: 1rem;
     font-weight: 400;
-}
+} */
 
 /* Third Form */
 
-.thirdGeoFormSection label {
+/* .thirdGeoFormSection label {
     font-size: 1rem;
     font-weight: 400;
 }
@@ -352,9 +331,9 @@ input:invalid {
 
 .firstColThirdForm {
     width: 50%;
-}
+} */
 
-/* Responsive third Col Form */
+/* Responsive third Col Form
 .thirdBisSection {
     display: flex;
     flex-direction: row;
@@ -374,13 +353,13 @@ input:invalid {
 .remoteExperience label {
     font-size: 1rem;
     font-weight: 400;
-}
+} */
 
 
 
 /* Fourth Section Form */
 
-.fourthGeoFormTitle {
+/* .fourthGeoFormTitle {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -427,11 +406,11 @@ input:invalid {
 .fourthGeoFormSection h3 {
     margin-bottom: 1rem;
     font-size: 1.2rem;
-}
+} */
 
 /* Geo Form Btn */
 
-.submitGeoFormBtn {
+/* .submitGeoFormBtn {
     margin: 4rem;
     display: flex;
     align-items: center;
@@ -444,6 +423,135 @@ input:invalid {
     width: 40%;
     background-color: #3279c5;
     color: #fbf8f8;
+} */
+
+
+.formTitles {
+    font-size: 1.3rem;
+} 
+
+/* Flexbox container for the form */
+.firstGeoFormContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-left: 40px;  /* Adjust this value as needed */
+    padding-right: 40px; /* Adjust this value as needed */
+}
+
+/* Flex columns for form fields */
+.form-column {
+    flex: 1 1 30%; /* Ensures equal width across all columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensures content is aligned at the top */
+    margin-right: 10px;
+}
+
+/* Label and input adjustments for consistent height and spacing */
+.form-column label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    line-height: 1.5; /* Ensures consistent spacing around text */
+}
+
+.form-column input, 
+.form-column select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Prevents padding from breaking the layout */
+}
+
+/* Adjustments for specific columns */ 
+.form-column.thirdGeoFormCol {
+    margin-top: 0; /* Remove any extra margins causing misalignment */
+}
+
+/* Styling for the second column */
+.form-column.secondGeoFormCol {
+    flex: 1 1 30%; /* Adjust as needed for the second column */
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+/* Align fieldset checkboxes in a column layout */
+.othersTownOperationchck {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Reduced gap between the checkboxes for a tighter layout */
+    margin-bottom: 15px; /* Bottom margin for the entire section */
+}
+
+/* Style each checkbox and its label */
+.othersTownOperationchck div {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px; /* Reduce margin between each option */
+}
+
+.othersTownOperationchck label {
+    font-weight: 300; /* Ensure the checkbox labels are not bold */
+    margin-left: 5px; /* Space between the checkbox and label text */
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Individual label and input styling */
+.form-column label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-column input, 
+.form-column select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Error message styling */
+.error-message, .commodities-error {
+    color: red;
+    font-size: 12px;
+    display: none; /* Hidden by default */
+    margin-top: 5px; /* Adjusted for consistency */
+    margin-bottom: 8px;
+}
+
+/* Button styling below all columns */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%; /* Full width to ensure it's centered below all columns */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .form-column {
+        flex: 1 1 100%; /* Full width for columns on smaller screens */
+    }
+
+    .button-container {
+        margin-top: 30px;
+    }
+}
+
+/* Input field error styling */
+.input-error {
+    border: 2px solid red; /* Red border */
+    background-color: #ffe6e6; /* Light red background (optional) */
+    border-radius: 4px; /* Rounded corners */
 }
 
 /* Mobile */
@@ -748,4 +856,25 @@ input:invalid {
         display: flex !important;
         flex-direction: column !important;
     }
+
+    .input-error {
+        border: 2px solid red;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #ffe6e6;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 120px;
+        /* Smaller font for the error message */
+        display: block;
+        /* Make sure it occupies its own line */
+        margin-top: 200px;
+        /* Space between the input and the error message */
+        margin-bottom: 160px;
+        /* Space between the error message and the next field */
+    }
+
+
 }

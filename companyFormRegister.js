@@ -49,156 +49,157 @@ fetch('australianCities.json')
   })
   .catch(error => console.error('Error loading the JSON file:', error));
 
-/*// Validar selección múltiple de commodities
-const commoditiesSelect = document.getElementById('commodities-experience');
-const commoditiesErrorMessage = 'Please select at least one commodity experience.';
-*/
-
-// Función de validación
-function validateForm() {
-  let valid = true;
-  const errorMessages = []; // Almacenar todos los mensajes de error
-
-  // Validación de campos de texto
-  const textFields = ['company-name', 'abn', 'acn', 'email', 'phone'];
-  textFields.forEach(field => {
-    const inputElement = document.getElementById(field);
-    if (!inputElement.value.trim()) {
-      errorMessages.push(`${friendlyNames[field]} is required`);
-      inputElement.classList.add('input-error');
-      valid = false;
-      inputElement.focus();
-      return; // Salir del bucle
-    } else {
-      inputElement.classList.remove('input-error');
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  // Add event listeners for next buttons
+  document.getElementById('next-1').addEventListener('click', function () {
+    nextFormPart(1);
   });
 
-  // Validación de campos select
-  const selectFields = ['state-residence', 'citiesDropdown', 'number-employees', 'type-company', 'years-experience', 'hours-day', 'commodities-experience'];
-  selectFields.forEach(field => {
-    const select = document.getElementById(field);
-    if (!select.value) {
-      errorMessages.push(`Please select a value for ${friendlyNames[field]}.`);
-      valid = false;
-      select.focus();
-      return; // Salir del bucle
-    }
+  document.getElementById('next-2').addEventListener('click', function () {
+    nextFormPart(2);
   });
 
-  // Validar checkboxes (experiencias)
-  const checkboxesToValidate = [
-    { name: 'experience-as[]', message: 'Please select at least one type of experience.' },
-    { name: 'work-time[]', message: 'Please select at least one work time preference.' },
-    { name: 'work-site[]', message: 'Please select at least one work site.' },
-    { name: 'experience-with[]', message: 'Please select at least one experience with.' },
-    { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
-    { name: 'roster[]', message: 'Please select roster preference.' },
-  ];
-
-  checkboxesToValidate.forEach(item => {
-    const checkboxes = document.querySelectorAll(`input[name="${item.name}"]`);
-    const checkedBoxes = document.querySelectorAll(`input[name="${item.name}"]:checked`);
-
-    if (checkedBoxes.length === 0) {
-      errorMessages.push(item.message); // Agrega el mensaje de error
-      checkboxes.forEach(checkbox => {
-        checkbox.classList.add('error-highlight'); // Agrega la clase 'error-highlight'
-      });
-
-      // Desplazar hasta el primer checkbox del grupo no válido
-      checkboxes[0].scrollIntoView();
-      checkboxes[0].focus();
-      valid = false;
-    } else {
-      checkboxes.forEach(checkbox => {
-        checkbox.classList.remove('error-highlight'); // Remover la clase de error si ya está corregido
-      });
-    }
+  document.getElementById('next-3').addEventListener('click', function () {
+    nextFormPart(3);
   });
 
-  // Validar campos de fechas
-  const dayStart = document.getElementById('day-start');
-  if (!dayStart.value) {
-    errorMessages.push('Please select a start date.');
-    valid = false;
-    dayStart.focus();
-  }
-
-  const dayEnd = document.getElementById('day-end');
-  if (!dayEnd.value) {
-    errorMessages.push('Please select an end date.');
-    valid = false;
-    dayEnd.focus();
-  }
-
-  const startDate = dayStart.value;
-  const endDate = dayEnd.value;
-  if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
-    errorMessages.push('The start date cannot be later than the end date.');
-    valid = false;
-    dayEnd.focus();
-  }
-
-  // Mostrar un solo alerta con todos los mensajes de error si hay errores
-  if (errorMessages.length > 0) {
-    alert(errorMessages.join('\n'));
-  }
-
-  return valid; // Asegúrate de devolver el estado de validación
-}
-
-// Evento de envío del formulario
-document.querySelector('.companyFormRegister').addEventListener('submit', function (event) {
-  event.preventDefault();
-
-  // Verificar si es válido
-  const formIsValid = validateForm();
-  if (!formIsValid) {
-    return;
-  }
-
-  // Convertir el formulario a JSON
-  const formData = new FormData(event.target);
-  const formObject = {};
-  formData.forEach((value, key) => {
-    if (formObject[key]) {
-      if (!Array.isArray(formObject[key])) {
-        formObject[key] = [formObject[key]];
-      }
-      formObject[key].push(value);
-    } else {
-      formObject[key] = value;
-    }
+  // Add event listeners for back buttons
+  document.getElementById('back-2').addEventListener('click', function () {
+    previousFormPart(2);
   });
 
-  const formDataJSON = JSON.stringify(formObject, null, 2);
-  console.log(formDataJSON);
+  document.getElementById('back-3').addEventListener('click', function () {
+    previousFormPart(3);
+  });
+
+  document.getElementById('back-4').addEventListener('click', function () {
+    previousFormPart(4);
+  });
 });
 
-/* 
-//////////////
- // Dropdown of countries
-  // Seleccionamos el elemento <select>
-  const countriesDropdown = document.getElementById('countriesDropdown');
+// Functions for showing/hiding form parts
+function nextFormPart(currentPart) {
+  document.getElementById(`form-part-${currentPart}`).style.display = 'none';
+  document.getElementById(`form-part-${currentPart + 1}`).style.display = 'block';
+}
 
-  // Cargamos el archivo JSON con Fetch API
-  fetch('countries.json')
-      .then(response => response.json()) // Convertimos la respuesta a JSON
-      .then(countries => {
-          // Iteramos sobre las ciudades del JSON
-          countries.forEach(countriesData => {
-              // Creamos una nueva opción <option> para cada ciudad
-              const option = document.createElement('option');
-              option.value = countriesData.name;  // Asignamos el valor "city"
-              option.textContent = countriesData.name;  // Mostramos el texto de la ciudad
-              
-              // Agregamos la opción al dropdown
-              countriesDropdown.appendChild(option);
-          });
-      })
-      .catch(error => {
-          console.error('Error loading the JSON file:', error);
-      });
-*/
+function previousFormPart(currentPart) {
+  document.getElementById(`form-part-${currentPart}`).style.display = 'none';
+  document.getElementById(`form-part-${currentPart - 1}`).style.display = 'block';
+}
 
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Get all inputs that need validation
+//   const inputsToValidate = document.querySelectorAll('.validate-input');
+
+//   inputsToValidate.forEach(input => {
+//     const errorElement = document.getElementById(`${input.id}-error`);
+
+//     // On blur, validate the input
+//     input.addEventListener('blur', function () {
+//       if (input.value.trim() === '') {
+//         // Show error message and red border if input is empty
+//         errorElement.style.display = 'block';
+//         input.classList.add('input-error');
+//       }
+//     });
+
+//     // On input, hide the error message when valid input is entered
+//     input.addEventListener('input', function () {
+//       if (input.value.trim() !== '') {
+//         // Hide the error message and red border once the input has valid text
+//         errorElement.style.display = 'none';
+//         input.classList.remove('input-error');
+//       }
+//     });
+//   });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all inputs that need validation
+  const inputsToValidate = document.querySelectorAll('.validate-input');
+
+  // Loop through each input and apply validation on blur and input events
+  inputsToValidate.forEach(input => {
+    const errorElement = document.getElementById(`${input.id}-error`);
+
+    // On blur, validate the input
+    input.addEventListener('blur', function () {
+      validateInput(input, errorElement);
+    });
+
+    // On input, hide the error message when valid input is entered
+    input.addEventListener('input', function () {
+      validateInput(input, errorElement);
+    });
+  });
+
+  // On "Next" button click, validate all fields
+  const nextButton = document.getElementById('next-1');
+
+  nextButton.addEventListener('click', function (event) {
+    // Run validation for all inputs
+    let formIsValid = true;
+
+    inputsToValidate.forEach(input => {
+      const errorElement = document.getElementById(`${input.id}-error`);
+      if (!validateInput(input, errorElement)) {
+        formIsValid = false;
+      }
+    });
+
+    // If form is not valid, prevent the default action (e.g., navigating to the next step)
+    if (!formIsValid) {
+      event.preventDefault();
+      alert('Please fill in all required fields correctly.');
+    }
+  });
+
+  // Function to validate a single input
+  function validateInput(input, errorElement) {
+    const inputType = input.type; // Get the type of the input (e.g., text, checkbox, etc.)
+
+    // For text, email, etc., use input.value and trim() to check for empty strings
+    if (inputType === 'text' || inputType === 'email' || inputType === 'number') {
+      if (input.value.trim() === '') {
+        // Show error message and red border if input is empty
+        errorElement.style.display = 'block';
+        input.classList.add('input-error');
+        return false; // Return false if invalid
+      } else {
+        // Hide the error message and red border once the input has valid text
+        errorElement.style.display = 'none';
+        input.classList.remove('input-error');
+        return true; // Return true if valid
+      }
+    }
+
+    // For checkboxes or radio buttons, ensure that at least one is selected
+    if (inputType === 'checkbox' || inputType === 'radio') {
+      const checkboxes = document.querySelectorAll(`input[name="${input.name}"]:checked`);
+      if (checkboxes.length === 0) {
+        errorElement.style.display = 'block';
+        input.classList.add('input-error');
+        return false;
+      } else {
+        errorElement.style.display = 'none';
+        input.classList.remove('input-error');
+        return true;
+      }
+    }
+
+    // For select dropdowns, ensure a value is selected
+    if (input.tagName === 'SELECT') {
+      if (input.value === '' || input.value === null) {
+        errorElement.style.display = 'block';
+        input.classList.add('input-error');
+        return false;
+      } else {
+        errorElement.style.display = 'none';
+        input.classList.remove('input-error');
+        return true;
+      }
+    }
+  }
+});
