@@ -245,145 +245,147 @@
       
       <!-- Button placed below all columns -->
       <div class="button-container">
-        <button type="button" class="btn btn-primary" id="next-1" onclick="nextFormPart(1)">Next</button>
+        <button type="button" class="btn btn-primary" id="next-1">Next</button>
       </div>
       
     </section>
 
     <!-- Second Part -->
-    <section class="form-part" id="form-part-2" style="display: none;">
+<section class="form-part" id="form-part-2" style="display: none;">
+  <!-- Title and Circle aligned horizontally -->
+  <div class="section-title-container">
       <div class="circleList">2</div>
       <h3 class="formTitles">We are looking for:</h3>
+  </div>
 
-      <section class="secondGeoFormSection">
-        <div class="firstColSecondForm">
-          <!-- Type of experience -->
+  <div class="secondGeoFormContainer">
+      <!-- First Column -->
+      <div class="form-column firstColSecondForm">
           <legend>Someone who is a:</legend>
           <fieldset class="typeExperiencechck">
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="new-geologist" name="experience-as[]" value="New Geologist">
-              <label for="new-geologist">New Geologist</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="experienced-fieldy" name="experience-as[]" value="Experienced Fieldy">
-              <label for="experienced-fieldy">Experienced Fieldy</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="experienced-geologist" name="experience-as[]" value="Experienced Geologist">
-              <label for="experienced-geologist">Experienced Geologist</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="new-fieldy" name="experience-as[]" value="New Fieldy">
-              <label for="new-fieldy">New Fieldy</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="general-hand" name="experience-as[]" value="General Hand">
-              <label for="general-hand">General Hand</label>
-            </div>
+              <div>
+                  <input type="checkbox" id="new-geologist" name="experience-as[]" value="New Geologist">
+                  <label for="new-geologist">New Geologist</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="experienced-fieldy" name="experience-as[]" value="Experienced Fieldy">
+                  <label for="experienced-fieldy">Experienced Fieldy</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="experienced-geologist" name="experience-as[]" value="Experienced Geologist">
+                  <label for="experienced-geologist">Experienced Geologist</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="new-fieldy" name="experience-as[]" value="New Fieldy">
+                  <label for="new-fieldy">New Fieldy</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="general-hand" name="experience-as[]" value="General Hand">
+                  <label for="general-hand">General Hand</label>
+              </div>
           </fieldset>
+          <small class="error-message" style="color: red; display: none;">Please select at least one option.</small>
 
-          <!-- Work preference -->
           <legend>Work time preference:</legend>
           <fieldset class="workPreferencechck">
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="casual" name="work-time[]" value="Casual">
-              <label for="casual">Casual</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="part-time" name="work-time[]" value="Part Time">
-              <label for="part-time">Part Time</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="potential-ongoing" name="work-time[]" value="Potential for ongoing">
-              <label for="potential-ongoing">Potential for ongoing</label>
-            </div>
+              <div>
+                  <input type="checkbox" id="casual" name="work-time[]" value="Casual">
+                  <label for="casual">Casual</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="part-time" name="work-time[]" value="Part Time">
+                  <label for="part-time">Part Time</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="potential-ongoing" name="work-time[]" value="Potential for ongoing">
+                  <label for="potential-ongoing">Potential for ongoing</label>
+              </div>
           </fieldset>
-        </div>
+      </div>
 
-        <div class="secondColSecondForm">
-          <!-- Experience in (checkbox) -->
-          <fieldset style="margin-bottom: 1rem;">
-            <label>Work site preference:</label>
-            <div class="locationExperiencechck">
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="remote-field" name="work-site[]" value="Remote Field">
-                <label for="remote-field">Remote field work with camping/off-grid accommodation</label><br>
+      <!-- Second Column -->
+      <div class="form-column secondColSecondForm">
+          <legend>Work site preference:</legend>
+          <fieldset class="locationExperiencechck">
+              <div>
+                  <input type="checkbox" id="remote-field" name="work-site[]" value="Remote Field">
+                  <label for="remote-field">Remote field work with camping/off-grid accommodation</label>
               </div>
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="field" name="work-site[]" value="Field">
-                <label for="field">Field work with town-based accommodation</label><br>
+              <div>
+                  <input type="checkbox" id="field" name="work-site[]" value="Field">
+                  <label for="field">Field work with town-based accommodation</label>
               </div>
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="office-site" name="work-site[]" value="office Site">
-                <label for="office-site">Office based work (major city/town) Site</label><br>
+              <div>
+                  <input type="checkbox" id="office-site" name="work-site[]" value="Office Site">
+                  <label for="office-site">Office based work (major city/town) Site</label>
               </div>
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="office-mine" name="work-site[]" value="office mine">
-                <label for="office-mine">Office based work (mine site)</label><br>
+              <div>
+                  <input type="checkbox" id="office-mine" name="work-site[]" value="Office Mine">
+                  <label for="office-mine">Office based work (mine site)</label>
               </div>
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="open-pit" name="work-site[]" value="Open Pit">
-                <label for="open-pit">Open Pit</label><br>
+              <div>
+                  <input type="checkbox" id="open-pit" name="work-site[]" value="Open Pit">
+                  <label for="open-pit">Open Pit</label>
               </div>
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="underground" name="work-site[]" value="Underground">
-                <label for="underground">Underground</label><br>
+              <div>
+                  <input type="checkbox" id="underground" name="work-site[]" value="Underground">
+                  <label for="underground">Underground</label>
               </div>
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="fifo" name="work-site[]" value="fifo">
-                <label for="fifo">FIFO</label><br>
+              <div>
+                  <input type="checkbox" id="fifo" name="work-site[]" value="FIFO">
+                  <label for="fifo">FIFO</label>
               </div>
-              <div style="display: flex; align-items:baseline">
-                <input type="checkbox" id="dido" name="work-site[]" value="dido">
-                <label for="dido">DIDO</label><br>
+              <div>
+                  <input type="checkbox" id="dido" name="work-site[]" value="DIDO">
+                  <label for="dido">DIDO</label>
               </div>
-            </div>
           </fieldset>
-        </div>
+      </div>
 
-        <div class="thirdColSecondForm">
-          <!-- Principal activity -->
+      <!-- Third Column -->
+      <div class="form-column thirdColSecondForm">
           <legend>Principal activity:</legend>
           <fieldset class="experienceWithchck">
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="exploration-greenfields" name="experience-with[]"
-                value="Exploration Greenfields">
-              <label for="exploration-greenfields">Exploration greenfields</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="exploration-brownfields" name="experience-with[]"
-                value="Exploration Brownfields">
-              <label for="exploration-brownfields">Exploration brownfields</label>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="mining" name="experience-with[]" value="Mining">
-              <label for="mining">Mining</label>
-            </div>
+              <div>
+                  <input type="checkbox" id="exploration-greenfields" name="experience-with[]" value="Exploration Greenfields">
+                  <label for="exploration-greenfields">Exploration greenfields</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="exploration-brownfields" name="experience-with[]" value="Exploration Brownfields">
+                  <label for="exploration-brownfields">Exploration brownfields</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="mining" name="experience-with[]" value="Mining">
+                  <label for="mining">Mining</label>
+              </div>
           </fieldset>
 
-          <!-- Driving Experience -->
-          <label>Driving experience:</label>
+          <legend>Driving experience:</legend>
           <div class="drivingExperience">
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="4wdExperience" name="driving-experience[]" value="4wdExperience">
-              <label for="casual">4WD Experience</label><br>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="4wdCertificate" name="driving-experience[]" value="4wdCertificate">
-              <label for="part-time">4WD Certificate</label><br>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="manual" name="driving-experience[]" value="manual">
-              <label for="potential-ongoing">Manual</label><br><br>
-            </div>
+              <div>
+                  <input type="checkbox" id="4wdExperience" name="driving-experience[]" value="4WD Experience">
+                  <label for="4wdExperience">4WD Experience</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="4wdCertificate" name="driving-experience[]" value="4WD Certificate">
+                  <label for="4wdCertificate">4WD Certificate</label>
+              </div>
+              <div>
+                  <input type="checkbox" id="manual" name="driving-experience[]" value="Manual">
+                  <label for="manual">Manual</label>
+              </div>
           </div>
+      </div>
+  </div>
 
-          <!-- Buttons -->
-          <button type="button" class="back-button" id="back-2">Back</button>
-          <button type="button" class="next-button" id="next-2">Next</button>
-        </div>
-      </section>
-    </section>
+  <!-- Centered Buttons Below All Columns -->
+  <div class="button-container">
+      <button type="button" class="btn btn-secondary" id="back-2">Back</button>
+      <button type="button" class="btn btn-primary" id="next-2">Next</button>
+  </div>
+</section>
+
+
 
 
     <!-- Third Part -->

@@ -534,6 +534,7 @@
     justify-content: center;
     margin-top: 20px;
     width: 100%; /* Full width to ensure it's centered below all columns */
+    gap: 4px;
 }
 
 /* Responsive layout for smaller screens */
@@ -553,6 +554,68 @@
     background-color: #ffe6e6; /* Light red background (optional) */
     border-radius: 4px; /* Rounded corners */
 }
+
+
+
+/* Flexbox container for the second part */
+.secondGeoFormContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-left: 40px;  /* Adjust this value as needed */
+    padding-right: 40px; /* Adjust this value as needed */
+}
+
+/* Align circle and title horizontally */
+.section-title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between the circle and the title */
+    margin-bottom: 20px;
+}
+
+/* Flex columns */
+.form-column {
+    flex: 1 1 30%; /* Adjust column width, similar to the first part */
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+/* Style for checkbox fields */
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Space between each checkbox */
+}
+
+fieldset label {
+    font-weight: normal; /* Ensure labels are not bold */
+    margin-left: 5px; /* Space between checkbox and label */
+    font-size: 0.9rem; /* Optional: Make the label text smaller */
+}
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .form-column {
+        flex: 1 1 100%; /* Full width for columns on smaller screens */
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 /* Mobile */
 
