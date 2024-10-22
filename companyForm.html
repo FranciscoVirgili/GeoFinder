@@ -7,7 +7,7 @@
   <title>GeoFinder</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="estilo.css" />
-  <link rel="stylesheet" href="formStyle.css">
+  <link rel="stylesheet" href="formStyleCompany.css">
   <link rel="stylesheet" href="virtual-select.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,7 +94,7 @@
     <!-- First Part (Contact Details Section) -->
     <section class="form-part" id="form-part-1">
       <!-- Title for the first section -->
-      <div class="firstGeoFormTitle">
+      <div class="section-title-container">
         <div class="circleList">1</div>
         <h3 class="formTitles">Contact details for direct and quick connection</h3>
       </div>
@@ -103,546 +103,622 @@
         <!-- First column -->
         <div class="form-column">
           <!-- Company Name-->
-        <label for="company-name">Company name:</label>
-        <input type="text" id="company-name" name="name" class="validate-input" required>
-        <small class="error-message" id="company-name-error">Company name is required.</small>
+          <label for="company-name">Company name:</label>
+          <input type="text" id="company-name" name="name" class="validate-input" required>
+          <small class="error-message" id="company-name-error">Company name is required.</small>
 
-        <!--ABN-->
-        <label for="abn-abc">ABN:</label>
-        <input type="number" id="abn" name="abn" class="validate-input" required>
-        <small class="error-message" id="abn-error" style="color: red; display: none;">ABN is required</small>
+          <!--ABN-->
+          <label for="abn-abc">ABN:</label>
+          <input type="number" id="abn" name="abn" class="validate-input" required>
+          <small class="error-message" id="abn-error" style="color: red; display: none;">ABN is required</small>
 
-        <!-- ACN -->
-        <label for="acn">ACN:</label>
-        <input type="number" id="acn" name="acn" class="validate-input" required>
-        <small class="error-message" id="acn-error" style="color: red; display: none;">ACN is required</small>
+          <!-- ACN -->
+          <label for="acn">ACN:</label>
+          <input type="number" id="acn" name="acn" class="validate-input" required>
+          <small class="error-message" id="acn-error" style="color: red; display: none;">ACN is required</small>
 
-        <!-- Email -->
-        <label for="email">Contact email:</label>
-        <input type="email" id="email" name="email" class="validate-input" required>
-        <small class="error-message" id="email-error" style="color: red; display: none;">Please type email</small>
+          <!-- Email -->
+          <label for="email">Contact email:</label>
+          <input type="email" id="email" name="email" class="validate-input" required>
+          <small class="error-message" id="email-error" style="color: red; display: none;">Please type email</small>
 
-        <!-- Phone -->
-        <label for="phone">Mobile/Contact phone:</label>
-        <input type="number" id="phone" name="phone" class="validate-input" required>
-        <small class="error-message" id="phone-error" style="color: red; display: none;">Please insert phone</small>
-      </div>
-      <!-- Second column -->
-      <div class="form-column secondGeoFormCol">
-        <!-- Country of residence -->
-        <label for="country">Country of residence:</label>
-        <select id="countriesDropdown" name="countriesDropdown" required disabled>
-          <option value="" disabled selected>Australia</option>
-        </select>
-        <small class="error-message" style="color: red; display: none;">Country is required.</small>
-      
-        <!-- State of residence -->
-        <label for="state-residence">Select state or territory of residence:</label>
-        <select id="state-residence" name="state-residence" class="validate-input" required>
-          <option value="" disabled selected>Select your state</option>
-          <option value="Queensland">Queensland</option>
-          <option value="New South Wales">New South Wales</option>
-          <option value="Victoria">Victoria</option>
-          <option value="South Australia">South Australia</option>
-          <option value="Western Australia">Western Australia</option>
-          <option value="Northern Territory">Northern Territory</option>
-          <option value="Tasmania">Tasmania</option>
-        </select>
-        <small class="error-message" id="state-residence-error" style="color: red; display: none;">State is required.</small>
-      
-        <!-- Primary Town of residence -->
-        <label for="primary-location">Primary town of operation (Aus):</label>
-        <select id="citiesDropdown" name="citiesDropdown" class="validate-input" required>
-          <option value="" disabled selected>Select town of residence</option>
-        </select>
-        <small class="error-message" id="citiesDropdown-error" style="color: red; display: none;">Town is required.</small>
-      
-        <!-- Other States/Territories of operation -->
-        <label for="other-towns">Other States/Territories of operation (Aus):</label>
-        <fieldset class="othersTownOperationchck">
-          <div style="display: flex; align-items: baseline">
-            <input type="checkbox" id="queensland" name="otherTown-operation[]" value="Queensland">
-            <label for="queensland">Queensland</label>
-          </div>
-          <div style="display: flex; align-items: baseline">
-            <input type="checkbox" id="new-south-wales" name="otherTown-operation[]" value="New South Wales">
-            <label for="new-south-wales">New South Wales</label>
-          </div>
-          <div style="display: flex; align-items: baseline">
-            <input type="checkbox" id="victoria" name="otherTown-operation[]" value="Victoria">
-            <label for="victoria">Victoria</label>
-          </div>
-          <div style="display: flex; align-items: baseline">
-            <input type="checkbox" id="south-australia" name="otherTown-operation[]" value="South Australia">
-            <label for="south-australia">South Australia</label>
-          </div>
-          <div style="display: flex; align-items: baseline">
-            <input type="checkbox" id="western-australia" name="otherTown-operation[]" value="Western Australia">
-            <label for="western-australia">Western Australia</label>
-          </div>
-          <div style="display: flex; align-items: baseline">
-            <input type="checkbox" id="northern-territory" name="otherTown-operation[]" value="Northern Territory">
-            <label for="northern-territory">Northern Territory</label>
-          </div>
-          <div style="display: flex; align-items: baseline">
-            <input type="checkbox" id="tasmania" name="otherTown-operation[]" value="Tasmania">
-            <label for="tasmania">Tasmania</label>
-          </div>
-        </fieldset>
-      </div>
-      <!-- Third column -->
-      <div class="form-column thirdGeoFormCol">
-        <!-- Number of employees -->
-        <label for="number-employees">Number of full-time employees</label>
-        <select id="number-employees" name="number-employees" class="validate-input" required>
-          <option value="" disabled selected>Select number of full-time employees</option>
-          <option value="one-five">1-5</option>
-          <option value="five-ten">5-10</option>
-          <option value="ten-fifty">10-50</option>
-          <option value="fifty-hundred">50-100</option>
-          <option value="hundred-thousand">100-1000</option>
-          <option value="more-thousand">More than 1000</option>
-        </select>
-        <small class="error-message" id="number-employees-error" style="color: red; display: none;">This field is required.</small>
-      
-        <!-- Type of company -->
-        <label for="type-company">Type of company:</label>
-        <select id="type-company" name="type-company" class="validate-input" required>
-          <option value="" disabled selected>Select type of company</option>
-          <option value="private">Private</option>
-          <option value="public">Public</option>
-          <option value="mix">Mix</option>
-        </select>
-        <small class="error-message" id="type-company-error" style="color: red; display: none;">This field is required.</small>
-      
-        <!-- Years of experience -->
-        <label for="years-experience">Years of experience:</label>
-        <select id="years-experience" name="years-experience" class="validate-input" required>
-          <option value="" disabled selected>Select years of experience</option>
-          <option value="oneyear">0-1 years</option>
-          <option value="one-three-years">1-3 years</option>
-          <option value="three-six-years">3-6 years</option>
-          <option value="six-ten-years">6-10 years</option>
-          <option value="ten-fifteen-years">10-15 years</option>
-          <option value="fifteen-twenty-years">15-20 years</option>
-          <option value="twenty-twentyfive-years">20-25 years</option>
-          <option value="more-twentyfive">More than 25 years</option>
-        </select>
-        <small class="error-message" id="years-experience-error" style="color: red; display: none;">This field is required.</small>
-      
-        <!-- Commodity Experience (Multi-Select) -->
-        <div id="commodities-experience-container">
-          <label>Commodity experience (select multiple if necessary):</label>
-          <select id="commodities-experience" multiple name="commodities-experience" placeholder="Select commodity" class="validate-input">
-            <option value="gold">Gold</option>
-            <option value="silver">Silver</option>
-            <option value="copper">Copper</option>
-            <!-- Add other options -->
-          </select>
+          <!-- Phone -->
+          <label for="phone">Mobile/Contact phone:</label>
+          <input type="number" id="phone" name="phone" class="validate-input" required>
+          <small class="error-message" id="phone-error" style="color: red; display: none;">Please insert phone</small>
         </div>
-        <small class="error-message" id="commodities-experience-error" style="color: red; display: none;">Please select at least one commodity experience.</small>
-      </div>
-      
-      <!-- Button placed below all columns -->
-      <div class="button-container">
-        <button type="button" class="btn btn-primary" id="next-1">Next</button>
-      </div>
-      
+        <!-- Second column -->
+        <div class="form-column secondGeoFormCol">
+          <!-- Country of residence -->
+          <label for="country">Country of residence:</label>
+          <select id="countriesDropdown" name="countriesDropdown" required disabled>
+            <option value="" disabled selected>Australia</option>
+          </select>
+          <small class="error-message" style="color: red; display: none;">Country is required.</small>
+
+          <!-- State of residence -->
+          <label for="state-residence">Select state or territory of residence:</label>
+          <select id="state-residence" name="state-residence" class="validate-input" required>
+            <option value="" disabled selected>Select your state</option>
+            <option value="Queensland">Queensland</option>
+            <option value="New South Wales">New South Wales</option>
+            <option value="Victoria">Victoria</option>
+            <option value="South Australia">South Australia</option>
+            <option value="Western Australia">Western Australia</option>
+            <option value="Northern Territory">Northern Territory</option>
+            <option value="Tasmania">Tasmania</option>
+          </select>
+          <small class="error-message" id="state-residence-error" style="color: red; display: none;">State is
+            required.</small>
+
+          <!-- Primary Town of residence -->
+          <label for="primary-location">Primary town of operation (Aus):</label>
+          <select id="citiesDropdown" name="citiesDropdown" class="validate-input" required>
+            <option value="" disabled selected>Select town of residence</option>
+          </select>
+          <small class="error-message" id="citiesDropdown-error" style="color: red; display: none;">Town is
+            required.</small>
+
+          <!-- Other States/Territories of operation -->
+          <label for="other-towns">Other States/Territories of operation (Aus):</label>
+          <fieldset class="othersTownOperationchck">
+            <div style="display: flex; align-items: baseline">
+              <input type="checkbox" id="queensland" name="otherTown-operation[]" value="Queensland">
+              <label for="queensland">Queensland</label>
+            </div>
+            <div style="display: flex; align-items: baseline">
+              <input type="checkbox" id="new-south-wales" name="otherTown-operation[]" value="New South Wales">
+              <label for="new-south-wales">New South Wales</label>
+            </div>
+            <div style="display: flex; align-items: baseline">
+              <input type="checkbox" id="victoria" name="otherTown-operation[]" value="Victoria">
+              <label for="victoria">Victoria</label>
+            </div>
+            <div style="display: flex; align-items: baseline">
+              <input type="checkbox" id="south-australia" name="otherTown-operation[]" value="South Australia">
+              <label for="south-australia">South Australia</label>
+            </div>
+            <div style="display: flex; align-items: baseline">
+              <input type="checkbox" id="western-australia" name="otherTown-operation[]" value="Western Australia">
+              <label for="western-australia">Western Australia</label>
+            </div>
+            <div style="display: flex; align-items: baseline">
+              <input type="checkbox" id="northern-territory" name="otherTown-operation[]" value="Northern Territory">
+              <label for="northern-territory">Northern Territory</label>
+            </div>
+            <div style="display: flex; align-items: baseline">
+              <input type="checkbox" id="tasmania" name="otherTown-operation[]" value="Tasmania">
+              <label for="tasmania">Tasmania</label>
+            </div>
+          </fieldset>
+        </div>
+        <!-- Third column -->
+        <div class="form-column thirdGeoFormCol">
+          <!-- Number of employees -->
+          <label for="number-employees">Number of full-time employees</label>
+          <select id="number-employees" name="number-employees" class="validate-input" required>
+            <option value="" disabled selected>Select number of full-time employees</option>
+            <option value="one-five">1-5</option>
+            <option value="five-ten">5-10</option>
+            <option value="ten-fifty">10-50</option>
+            <option value="fifty-hundred">50-100</option>
+            <option value="hundred-thousand">100-1000</option>
+            <option value="more-thousand">More than 1000</option>
+          </select>
+          <small class="error-message" id="number-employees-error" style="color: red; display: none;">This field is
+            required.</small>
+
+          <!-- Type of company -->
+          <label for="type-company">Type of company:</label>
+          <select id="type-company" name="type-company" class="validate-input" required>
+            <option value="" disabled selected>Select type of company</option>
+            <option value="private">Private</option>
+            <option value="public">Public</option>
+            <option value="mix">Mix</option>
+          </select>
+          <small class="error-message" id="type-company-error" style="color: red; display: none;">This field is
+            required.</small>
+
+          <!-- Years of experience -->
+          <label for="years-experience">Years of experience:</label>
+          <select id="years-experience" name="years-experience" class="validate-input" required>
+            <option value="" disabled selected>Select years of experience</option>
+            <option value="oneyear">0-1 years</option>
+            <option value="one-three-years">1-3 years</option>
+            <option value="three-six-years">3-6 years</option>
+            <option value="six-ten-years">6-10 years</option>
+            <option value="ten-fifteen-years">10-15 years</option>
+            <option value="fifteen-twenty-years">15-20 years</option>
+            <option value="twenty-twentyfive-years">20-25 years</option>
+            <option value="more-twentyfive">More than 25 years</option>
+          </select>
+          <small class="error-message" id="years-experience-error" style="color: red; display: none;">This field is
+            required.</small>
+
+          <!-- Commodity Experience (Multi-Select) -->
+          <div id="commodities-experience-container">
+            <label>Commodity experience (select multiple if necessary):</label>
+            <select id="commodities-experience" multiple name="commodities-experience" placeholder="Select commodity"
+              class="validate-input">
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="copper">Copper</option>
+              <!-- Add other options -->
+            </select>
+          </div>
+          <small class="error-message" id="commodities-experience-error" style="color: red; display: none;">Please
+            select at least one commodity experience.</small>
+        </div>
+
+        <!-- Button placed below all columns -->
+        <div class="button-container">
+          <button type="button" class="btn btn-primary" id="next-1">Next</button>
+        </div>
+
     </section>
 
     <!-- Second Part -->
-<section class="form-part" id="form-part-2" style="display: none;">
-  <!-- Title and Circle aligned horizontally -->
-  <div class="section-title-container">
-      <div class="circleList">2</div>
-      <h3 class="formTitles">We are looking for:</h3>
-  </div>
+    <section class="form-part" id="form-part-2" style="display: none;">
+      <!-- Title and Circle aligned horizontally -->
+      <div class="section-title-container">
+        <div class="circleList">2</div>
+        <h3 class="formTitles">We are looking for:</h3>
+      </div>
 
-  <div class="secondGeoFormContainer">
-      <!-- First Column -->
-      <div class="form-column firstColSecondForm">
+      <div class="secondGeoFormContainer">
+        <!-- First Column -->
+        <div class="form-column firstColSecondForm">
           <legend>Someone who is a:</legend>
           <fieldset class="typeExperiencechck">
-              <div>
-                  <input type="checkbox" id="new-geologist" name="experience-as[]" value="New Geologist">
-                  <label for="new-geologist">New Geologist</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="experienced-fieldy" name="experience-as[]" value="Experienced Fieldy">
-                  <label for="experienced-fieldy">Experienced Fieldy</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="experienced-geologist" name="experience-as[]" value="Experienced Geologist">
-                  <label for="experienced-geologist">Experienced Geologist</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="new-fieldy" name="experience-as[]" value="New Fieldy">
-                  <label for="new-fieldy">New Fieldy</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="general-hand" name="experience-as[]" value="General Hand">
-                  <label for="general-hand">General Hand</label>
-              </div>
+            <div>
+              <input type="checkbox" id="new-geologist" name="experience-as[]" value="New Geologist">
+              <label for="new-geologist">New Geologist</label>
+            </div>
+            <div>
+              <input type="checkbox" id="experienced-fieldy" name="experience-as[]" value="Experienced Fieldy">
+              <label for="experienced-fieldy">Experienced Fieldy</label>
+            </div>
+            <div>
+              <input type="checkbox" id="experienced-geologist" name="experience-as[]" value="Experienced Geologist">
+              <label for="experienced-geologist">Experienced Geologist</label>
+            </div>
+            <div>
+              <input type="checkbox" id="new-fieldy" name="experience-as[]" value="New Fieldy">
+              <label for="new-fieldy">New Fieldy</label>
+            </div>
+            <div>
+              <input type="checkbox" id="general-hand" name="experience-as[]" value="General Hand">
+              <label for="general-hand">General Hand</label>
+            </div>
           </fieldset>
           <small class="error-message" style="color: red; display: none;">Please select at least one option.</small>
 
           <legend>Work time preference:</legend>
           <fieldset class="workPreferencechck">
-              <div>
-                  <input type="checkbox" id="casual" name="work-time[]" value="Casual">
-                  <label for="casual">Casual</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="part-time" name="work-time[]" value="Part Time">
-                  <label for="part-time">Part Time</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="potential-ongoing" name="work-time[]" value="Potential for ongoing">
-                  <label for="potential-ongoing">Potential for ongoing</label>
-              </div>
+            <div>
+              <input type="checkbox" id="casual" name="work-time[]" value="Casual">
+              <label for="casual">Casual</label>
+            </div>
+            <div>
+              <input type="checkbox" id="part-time" name="work-time[]" value="Part Time">
+              <label for="part-time">Part Time</label>
+            </div>
+            <div>
+              <input type="checkbox" id="potential-ongoing" name="work-time[]" value="Potential for ongoing">
+              <label for="potential-ongoing">Potential for ongoing</label>
+            </div>
           </fieldset>
-      </div>
+          <small class="error-message" style="color: red; display: none;">Please select at least one work
+            preference.</small>
+        </div>
 
-      <!-- Second Column -->
-      <div class="form-column secondColSecondForm">
+        <!-- Second Column -->
+        <div class="form-column secondColSecondForm">
           <legend>Work site preference:</legend>
           <fieldset class="locationExperiencechck">
-              <div>
-                  <input type="checkbox" id="remote-field" name="work-site[]" value="Remote Field">
-                  <label for="remote-field">Remote field work with camping/off-grid accommodation</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="field" name="work-site[]" value="Field">
-                  <label for="field">Field work with town-based accommodation</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="office-site" name="work-site[]" value="Office Site">
-                  <label for="office-site">Office based work (major city/town) Site</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="office-mine" name="work-site[]" value="Office Mine">
-                  <label for="office-mine">Office based work (mine site)</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="open-pit" name="work-site[]" value="Open Pit">
-                  <label for="open-pit">Open Pit</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="underground" name="work-site[]" value="Underground">
-                  <label for="underground">Underground</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="fifo" name="work-site[]" value="FIFO">
-                  <label for="fifo">FIFO</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="dido" name="work-site[]" value="DIDO">
-                  <label for="dido">DIDO</label>
-              </div>
+            <div>
+              <input type="checkbox" id="remote-field" name="work-site[]" value="Remote Field">
+              <label for="remote-field">Remote field work with camping/off-grid accommodation</label>
+            </div>
+            <div>
+              <input type="checkbox" id="field" name="work-site[]" value="Field">
+              <label for="field">Field work with town-based accommodation</label>
+            </div>
+            <div>
+              <input type="checkbox" id="office-site" name="work-site[]" value="Office Site">
+              <label for="office-site">Office based work (major city/town) Site</label>
+            </div>
+            <div>
+              <input type="checkbox" id="office-mine" name="work-site[]" value="Office Mine">
+              <label for="office-mine">Office based work (mine site)</label>
+            </div>
+            <div>
+              <input type="checkbox" id="open-pit" name="work-site[]" value="Open Pit">
+              <label for="open-pit">Open Pit</label>
+            </div>
+            <div>
+              <input type="checkbox" id="underground" name="work-site[]" value="Underground">
+              <label for="underground">Underground</label>
+            </div>
+            <div>
+              <input type="checkbox" id="fifo" name="work-site[]" value="FIFO">
+              <label for="fifo">FIFO</label>
+            </div>
+            <div>
+              <input type="checkbox" id="dido" name="work-site[]" value="DIDO">
+              <label for="dido">DIDO</label>
+            </div>
           </fieldset>
-      </div>
+          <small class="error-message" style="color: red; display: none;">Please select at least one work site
+            preference.</small>
+        </div>
 
-      <!-- Third Column -->
-      <div class="form-column thirdColSecondForm">
+        <!-- Third Column -->
+        <div class="form-column thirdColSecondForm">
           <legend>Principal activity:</legend>
           <fieldset class="experienceWithchck">
-              <div>
-                  <input type="checkbox" id="exploration-greenfields" name="experience-with[]" value="Exploration Greenfields">
-                  <label for="exploration-greenfields">Exploration greenfields</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="exploration-brownfields" name="experience-with[]" value="Exploration Brownfields">
-                  <label for="exploration-brownfields">Exploration brownfields</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="mining" name="experience-with[]" value="Mining">
-                  <label for="mining">Mining</label>
-              </div>
+            <div>
+              <input type="checkbox" id="exploration-greenfields" name="experience-with[]"
+                value="Exploration Greenfields">
+              <label for="exploration-greenfields">Exploration greenfields</label>
+            </div>
+            <div>
+              <input type="checkbox" id="exploration-brownfields" name="experience-with[]"
+                value="Exploration Brownfields">
+              <label for="exploration-brownfields">Exploration brownfields</label>
+            </div>
+            <div>
+              <input type="checkbox" id="mining" name="experience-with[]" value="Mining">
+              <label for="mining">Mining</label>
+            </div>
           </fieldset>
+          <small class="error-message" style="color: red; display: none;">Please select at least one work site
+            preference.</small>
 
           <legend>Driving experience:</legend>
-          <div class="drivingExperience">
-              <div>
-                  <input type="checkbox" id="4wdExperience" name="driving-experience[]" value="4WD Experience">
-                  <label for="4wdExperience">4WD Experience</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="4wdCertificate" name="driving-experience[]" value="4WD Certificate">
-                  <label for="4wdCertificate">4WD Certificate</label>
-              </div>
-              <div>
-                  <input type="checkbox" id="manual" name="driving-experience[]" value="Manual">
-                  <label for="manual">Manual</label>
-              </div>
-          </div>
+          <fieldset class="drivingExperience">
+            <div>
+              <input type="checkbox" id="4wdExperience" name="driving-experience[]" value="4WD Experience">
+              <label for="4wdExperience">4WD Experience</label>
+            </div>
+            <div>
+              <input type="checkbox" id="4wdCertificate" name="driving-experience[]" value="4WD Certificate">
+              <label for="4wdCertificate">4WD Certificate</label>
+            </div>
+            <div>
+              <input type="checkbox" id="manual" name="driving-experience[]" value="Manual">
+              <label for="manual">Manual</label>
+            </div>
+          </fieldset>
+          <small class="error-message" style="color: red; display: none;">Please select at least one driving experience
+            option.</small>
+        </div>
       </div>
-  </div>
+      </div>
+      </div>
 
-  <!-- Centered Buttons Below All Columns -->
-  <div class="button-container">
-      <button type="button" class="btn btn-secondary" id="back-2">Back</button>
-      <button type="button" class="btn btn-primary" id="next-2">Next</button>
-  </div>
-</section>
+      <!-- Centered Buttons Below All Columns -->
+      <div class="button-container">
+        <button type="button" class="btn btn-secondary" id="back-2">Back</button>
+        <button type="button" class="btn btn-primary" id="next-2">Next</button>
+      </div>
+    </section>
 
 
 
 
     <!-- Third Part -->
     <section class="form-part" id="form-part-3" style="display: none;">
-      <div class="circleList">3</div>
-      <h3 class="formTitles">Program your schedule</h3>
+      <div class="section-title-container">
+        <div class="circleList">3</div>
+        <h3 class="formTitles">Program your schedule</h3>
+      </div>
 
-      <div class="firstColThirdForm">
-        <!-- Start Time -->
-        <div class="dayTimeForm">
-          <label for="day-start">Available from (est):</label>
-          <input type="date" id="day-start" name="dayStartDate">
+      <div class="firstGeoFormContainer">
+        <!-- First Column -->
+        <div class="form-column firstColThirdForm">
+          <!-- Start Time -->
+          <div class="dayTimeForm">
+            <label for="day-start">Available from (est):</label>
+            <input type="date" id="day-start" name="dayStartDate" class="validate-input">
+            <small id="day-start-error" class="error-message" style="color: red; display: none;">Please select a start
+              date.</small>
+          </div>
+
+          <!-- Finish Date -->
+          <div class="dayTimeForm">
+            <label for="day-end">Available to (est):</label>
+            <input type="date" id="day-end" name="dayEndDate" class="validate-input">
+            <small id="day-end-error" class="error-message" style="color: red; display: none;">Please select an end
+              date.</small>
+          </div>
         </div>
-        <!-- Finish Date -->
-        <div class="dayTimeForm">
-          <label for="day-end">Available to (est):</label>
-          <input type="date" id="day-end" name="dayEndDate">
+
+        <!-- Second Column -->
+        <div class="form-column secondColThirdForm">
+          <!-- Hours per day -->
+          <label for="hours-day">Hours per day:</label>
+          <select id="hours-day" name="hours-day" class="validate-input" style="margin-bottom: 1rem;">
+            <option value="" disabled selected>Select hours per day work</option>
+            <option value="lessSixHours">less than 6 hours-day</option>
+            <option value="sixHours">6 hours-day</option>
+            <option value="sevenHours">7 hours-day</option>
+            <option value="eightHours">8 hours-day</option>
+            <option value="tenHours">10 hours-day</option>
+            <option value="moreTenHours">more than 10 hours-day</option>
+          </select>
+          <small id="hours-day-error" class="error-message" style="color: red; display: none;">Please select hours per
+            day.</small>
+
+          <!-- Roster Preferences -->
+          <label>I prefer a roster (days on/days off):</label>
+          <fieldset class="rosterchck">
+            <div class="roster-row">
+              <div class="roster-item">
+                <input type="checkbox" id="anyRoster" name="roster[]" value="Any">
+                <label for="anyRoster">Any</label>
+              </div>
+              <div class="roster-item">
+                <input type="checkbox" id="five-two" name="roster[]" value="5/2">
+                <label for="five-two">5/2</label>
+              </div>
+              <div class="roster-item">
+                <input type="checkbox" id="six-three" name="roster[]" value="6/3">
+                <label for="six-three">6/3</label>
+              </div>
+            </div>
+
+            <div class="roster-row">
+              <div class="roster-item">
+                <input type="checkbox" id="seven-four" name="roster[]" value="7/4">
+                <label for="seven-four">7/4</label>
+              </div>
+              <div class="roster-item">
+                <input type="checkbox" id="eight-five" name="roster[]" value="8/5">
+                <label for="eight-five">8/5</label>
+              </div>
+              <div class="roster-item">
+                <input type="checkbox" id="fourteen-fourteen" name="roster[]" value="14/14">
+                <label for="fourteen-fourteen">14/14</label>
+              </div>
+            </div>
+          </fieldset>
+          <small class="error-message rosterchck-error" style="color: red; display: none;">Please select at least one
+            roster preference.</small>
         </div>
       </div>
 
-      <div class="secondColThirdForm">
-        <!-- Hours per day -->
-        <label for="hours-day">Hours per day:</label>
-        <select id="hours-day" name="hours-day" style="margin-bottom: 1rem;">
-          <option value="" disabled selected>Select hours per day work</option>
-          <option value="lessSixHours">less than 6 hours-day</option>
-          <option value="sixHours">6 hours-day</option>
-          <option value="sevenHours">7 hours-day</option>
-          <option value="eightHours">8 hours-day</option>
-          <option value="tenHours">10 hours-day</option>
-          <option value="moreTenHours">more than 10 hours-day</option>
-        </select>
-
-        <!-- Prefer roster -->
-        <label>I prefer a roster (days on/days off):</label>
-        <fieldset class="rosterchck">
-          <div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="anyRoster" name="roster[]" value="Any">
-              <label for="any">Any</label><br>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="five-two" name="roster[]" value="5/2">
-              <label for="five-two">5/2</label><br>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="six-three" name="roster[]" value="6/3">
-              <label for="six-three">6/3</label><br>
-            </div>
-          </div>
-          <div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="seven-four" name="roster[]" value="7/4">
-              <label for="seven-four">7/4</label><br>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="eight-five" name="roster[]" value="8/5">
-              <label for="eight-five">8/5</label><br>
-            </div>
-            <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="fourteen-fourteen" name="roster[]" value="14/14">
-              <label for="fourteen-fourteen">14/14</label><br>
-            </div>
-          </div>
-        </fieldset>
+      <!-- Navigation Buttons -->
+      <div class="button-container">
+        <button type="button" class="btn btn-secondary" id="back-3">Back</button>
+        <button type="button" class="btn btn-primary" id="next-3">Next</button>
       </div>
-
-      <button type="button" class="back-button" id="back-3">Back</button>
-      <button type="button" class="next-button" id="next-3">Next</button>
     </section>
+
 
     <!-- Fourth Part -->
     <section class="form-part" id="form-part-4" style="display: none;">
-      <div class="circleList">4</div>
-      <h3 class="formTitles">Experience and capabilities</h3>
+      <!-- Title for the fourth section -->
+      <div class="section-title-container">
+        <div class="circleList">4</div>
+        <h3 class="formTitles">Experience and capabilities</h3>
       </div>
 
-      <section class="fourthGeoFormSection">
-        <div class="firstColFourthForm">
+      <!-- Flex container for form fields -->
+      <div class="fourthGeoFormContainer">
+        <!-- First Column -->
+        <div class="form-column firstColFourthForm">
           <h3>Drilling (field/underground/pit)</h3>
-          <label><input type="checkbox" name="drilling_field" value="program_manager"> Program manager</label><br>
-          <label><input type="checkbox" name="drilling_field" value="experienced_geologist"> RC/AC drilling assistance
-            – experienced geologist</label><br>
-          <label><input type="checkbox" name="drilling_field" value="geologist"> RC/AC drilling assistance –
-            geologist</label><br>
-          <label><input type="checkbox" name="drilling_field" value="fieldy_general_help"> RC/AC drilling assistance –
-            Fieldy/general help</label><br>
-          <label><input type="checkbox" name="drilling_field" value="diamond_experienced_geologist"> Diamond/mixed
-            drilling assistance – experienced geologist</label><br>
-          <label><input type="checkbox" name="drilling_field" value="diamond_geologist"> Diamond/mixed drilling
-            assistance – geologist</label><br>
-          <label><input type="checkbox" name="drilling_field" value="diamond_fieldy_general_help"> Diamond/mixed
-            drilling assistance – Fieldy/general help</label><br>
-
+          <fieldset class="experienceField">
+            <label><input type="checkbox" name="drilling_field" value="program_manager"> Program manager</label>
+            <label><input type="checkbox" name="drilling_field" value="experienced_geologist"> RC/AC drilling assistance
+              – experienced geologist</label>
+            <label><input type="checkbox" name="drilling_field" value="geologist"> RC/AC drilling assistance –
+              geologist</label>
+            <label><input type="checkbox" name="drilling_field" value="fieldy_general_help"> RC/AC drilling assistance –
+              Fieldy/general help</label>
+            <label><input type="checkbox" name="drilling_field" value="diamond_experienced_geologist"> Diamond/mixed
+              drilling assistance – experienced geologist</label>
+            <label><input type="checkbox" name="drilling_field" value="diamond_geologist"> Diamond/mixed drilling
+              assistance – geologist</label>
+            <label><input type="checkbox" name="drilling_field" value="diamond_fieldy_general_help"> Diamond/mixed
+              drilling assistance – Fieldy/general help</label>
+          </fieldset>
           <h3>Drilling (logging and sampling)</h3>
-          <label><input type="checkbox" name="drilling_logging" value="program_manager"> Program manager</label><br>
-          <label><input type="checkbox" name="drilling_logging" value="rc_ac_logging_sampling"> RC/AC chip logging and
-            sampling</label><br>
-          <label><input type="checkbox" name="drilling_logging" value="diamond_logging_simple"> Diamond drill core
-            logging and markup – simple drill site markup and cataloging</label><br>
-          <label><input type="checkbox" name="drilling_logging" value="diamond_logging_detailed"> Diamond drill core
-            logging and markup – detailed e.g. rock ID, sample markup.</label><br>
-          <label><input type="checkbox" name="drilling_logging" value="core_structural_assessment"> Diamond drill core
-            structural assessment/technical assessment</label><br>
-          <label><input type="checkbox" name="drilling_logging" value="drill_core_photography"> Drill core photography
-            (equipment provided)</label><br>
-          <label><input type="checkbox" name="drilling_logging" value="drill_core_markup"> Drill core markup (meter
-            marking, ori marking, QAQC)</label><br>
-
+          <fieldset class="experienceField">
+            <label><input type="checkbox" name="drilling_logging" value="program_manager"> Program manager</label>
+            <label><input type="checkbox" name="drilling_logging" value="rc_ac_logging_sampling"> RC/AC chip logging and
+              sampling</label>
+            <label><input type="checkbox" name="drilling_logging" value="diamond_logging_simple"> Diamond drill core
+              logging and markup – simple drill site markup and cataloging</label>
+            <label><input type="checkbox" name="drilling_logging" value="diamond_logging_detailed"> Diamond drill core
+              logging and markup – detailed e.g. rock ID, sample markup.</label>
+            <label><input type="checkbox" name="drilling_logging" value="core_structural_assessment"> Diamond drill core
+              structural assessment/technical assessment</label>
+            <label><input type="checkbox" name="drilling_logging" value="drill_core_photography"> Drill core photography
+              (equipment provided)</label>
+            <label><input type="checkbox" name="drilling_logging" value="drill_core_markup"> Drill core markup (meter
+              marking, ori marking, QAQC)</label>
+          </fieldset>
           <h3>Drill core/Rock chip and sample preparation</h3>
-          <label><input type="checkbox" name="drill_core_prep" value="rock_chip_management"> Rock chip sampling
-            program management</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="rock_chip_prep"> Rock chip prep (crushing,
-            milling, splitting, bagging, cataloging)</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="core_sampling_management"> Diamond drill core
-            sampling program management</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="core_cutting"> Diamond drill core
-            cutting</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="drill_photography"> Diamond drill
-            photography</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="sample_markup"> Sample photography, markup,
-            bagging and cataloging for lab</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="rock_chip_cutting"> Rock chip cutting for
-            petrography (e.g. thin section blocks)</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="sample_dispatch_forms"> Sample submission
-            form(s)/dispatch form(s)</label><br>
-          <label><input type="checkbox" name="drill_core_prep" value="sample_delivery"> Sample delivery to
-            lab</label><br>
-
+          <fieldset class="experienceField">
+            <label><input type="checkbox" name="drill_core_prep" value="rock_chip_management"> Rock chip sampling
+              program management</label>
+            <label><input type="checkbox" name="drill_core_prep" value="rock_chip_prep"> Rock chip prep (crushing,
+              milling, splitting, bagging, cataloging)</label>
+            <label><input type="checkbox" name="drill_core_prep" value="core_sampling_management"> Diamond drill core
+              sampling program management</label>
+            <label><input type="checkbox" name="drill_core_prep" value="core_cutting"> Diamond drill core
+              cutting</label>
+            <label><input type="checkbox" name="drill_core_prep" value="drill_photography"> Diamond drill
+              photography</label>
+            <label><input type="checkbox" name="drill_core_prep" value="sample_markup"> Sample photography, markup,
+              bagging and cataloging for lab</label>
+            <label><input type="checkbox" name="drill_core_prep" value="rock_chip_cutting"> Rock chip cutting for
+              petrography (e.g. thin section blocks)</label>
+            <label><input type="checkbox" name="drill_core_prep" value="sample_dispatch_forms"> Sample submission
+              form(s)/dispatch form(s)</label>
+            <label><input type="checkbox" name="drill_core_prep" value="sample_delivery"> Sample delivery to lab</label>
+          </fieldset>
           <h3>Vehicle Driver/Transport</h3>
-          <label><input type="checkbox" name="vehicle_driver_transport" value="4wd_transport"> 4WD transport (e.g.
-            equipment/personnel transport to site)</label><br>
-          <label><input type="checkbox" name="vehicle_driver_transport" value="2wd_transport"> 2WD transport only
-            (e.g. sample to lab delivery)</label><br>
-        </div>
-
-        <div class="secondColFourthForm">
+          <fieldset class="experienceField">
+            <label><input type="checkbox" name="vehicle_driver_transport" value="4wd_transport"> 4WD transport (e.g.
+              equipment/personnel transport to site)</label>
+            <label><input type="checkbox" name="vehicle_driver_transport" value="2wd_transport"> 2WD transport only
+              (e.g. sample to lab delivery)</label>
+          </fieldset>
           <h3>General help (in-field)</h3>
+          <fieldset class="experienceField"></fieldset>
           <label><input type="checkbox" name="general_in_field" value="experienced_geologist"> Assorted tasks –
-            experienced geologist</label><br>
+            experienced geologist</label>
           <label><input type="checkbox" name="general_in_field" value="geologist"> Assorted tasks –
-            geologist</label><br>
+            geologist</label>
           <label><input type="checkbox" name="general_in_field" value="fieldy_general_help"> Assorted tasks –
-            fieldy/general help</label><br>
+            fieldy/general help</label>
+          </fieldset>
 
           <h3>General help (office/on-site)</h3>
+          <fieldset class="experienceField"></fieldset>
           <label><input type="checkbox" name="general_office_site" value="experienced_geologist"> Assorted tasks –
-            experienced geologist</label><br>
+            experienced geologist</label>
           <label><input type="checkbox" name="general_office_site" value="geologist"> Assorted tasks –
-            geologist</label><br>
+            geologist</label>
           <label><input type="checkbox" name="general_office_site" value="fieldy_general_help"> Assorted tasks –
-            fieldy/general help</label><br>
+            fieldy/general help</label>
+          </fieldset>
+        </div>
+        <!-- Second Column -->
+        <div class="form-column secondColFourthForm">
+          
 
           <h3>Field mapping</h3>
-          <label><input type="checkbox" name="field_mapping" value="program_manager"> Program manager</label><br>
+          <fieldset class="experienceField"></fieldset>
+          <label><input type="checkbox" name="field_mapping" value="program_manager"> Program manager</label>
           <label><input type="checkbox" name="field_mapping" value="complex_geology"> Field geology mapping – complex
-            geology</label><br>
+            geology</label>
           <label><input type="checkbox" name="field_mapping" value="simple_geology"> Field geology mapping – simple
-            geology</label><br>
+            geology</label>
           <label><input type="checkbox" name="field_mapping" value="structural"> Field geology mapping –
-            structural</label><br>
+            structural</label>
           <label><input type="checkbox" name="field_mapping" value="alteration"> Field geology mapping –
-            alteration</label><br>
+            alteration</label>
+          </fieldset>
 
           <h3>Rock chip sampling</h3>
-          <label><input type="checkbox" name="rock_chip_sampling" value="program_manager"> Program manager</label><br>
+          <fieldset class="experienceField"></fieldset>
+          <label><input type="checkbox" name="rock_chip_sampling" value="program_manager"> Program manager</label>
           <label><input type="checkbox" name="rock_chip_sampling" value="experienced_geologist"> Rock chip sampling –
-            experienced geologist</label><br>
+            experienced geologist</label>
           <label><input type="checkbox" name="rock_chip_sampling" value="assistant_geologist"> Rock Chip sampling –
-            assistant geologist</label><br>
+            assistant geologist</label>
           <label><input type="checkbox" name="rock_chip_sampling" value="fieldy_general_help"> Rock Chip sampling –
-            fieldy/general help</label><br>
+            fieldy/general help</label>
+          </fieldset>
 
           <h3>Soil sampling</h3>
-          <label><input type="checkbox" name="soil_sampling" value="program_manager"> Program manager</label><br>
+          <fieldset class="experienceField"></fieldset>
+          <label><input type="checkbox" name="soil_sampling" value="program_manager"> Program manager</label>
           <label><input type="checkbox" name="soil_sampling" value="principal_geologist"> Soil sampling – principal
-            geologist</label><br>
+            geologist</label>
           <label><input type="checkbox" name="soil_sampling" value="assistant_geologist"> Soil sampling – assistant
-            geologist</label><br>
+            geologist</label>
           <label><input type="checkbox" name="soil_sampling" value="fieldy_general_help"> Soil sampling –
-            fieldy/general help</label><br>
-          <label><input type="checkbox" name="soil_sampling" value="mmi"> MMI</label><br>
-          <label><input type="checkbox" name="soil_sampling" value="ultrafine"> Ultrafine</label><br>
+            fieldy/general help</label>
+          <label><input type="checkbox" name="soil_sampling" value="mmi"> MMI</label>
+          <label><input type="checkbox" name="soil_sampling" value="ultrafine"> Ultrafine</label>
+          </fieldset>
 
           <h3>Geophysics survey</h3>
+          <fieldset class="experienceField"></fieldset>
           <label><input type="checkbox" name="geophysics_survey" value="experienced_geologist"> Field assistant –
-            experienced geologist for geophysics survey</label><br>
+            experienced geologist for geophysics survey</label>
           <label><input type="checkbox" name="geophysics_survey" value="non_geologist"> Field assistant – non
-            geologist for geophysics survey help</label><br>
-        </div>
-        <div class="thirdColFourthForm">
+            geologist for geophysics survey help</label>
+          </fieldset>
           <h3>GIS</h3>
+          <fieldset class="experienceField"></fieldset>
           <label><input type="checkbox" name="gis" value="assorted_tasks_experienced_geologist"> Assorted tasks –
-            experienced geologist</label><br>
+            experienced geologist</label>
           <label><input type="checkbox" name="gis" value="assorted_tasks_geologist"> Assorted tasks –
-            geologist</label><br>
+            geologist</label>
+          </fieldset>
 
           <h3>GIS Mapping (2D)</h3>
+          <fieldset class="experienceField"></fieldset>
           <label><input type="checkbox" name="gis_mapping" value="complex_geology"> GIS digital mapping – complex
-            geology</label><br>
+            geology</label>
           <label><input type="checkbox" name="gis_mapping" value="simple_geology"> GIS digital mapping – simple
-            geology</label><br>
+            geology</label>
           <label><input type="checkbox" name="gis_mapping" value="structural"> GIS digital mapping –
-            structural</label><br>
+            structural</label>
           <label><input type="checkbox" name="gis_mapping" value="interpretation"> GIS digital mapping –
-            interpretation</label><br>
+            interpretation</label>
+          </fieldset>
+        </div>
+        <!-- Third Column -->
+        <div class="form-column thirdColFourthForm">
+          
 
           <h3>Data entry</h3>
+          <fieldset class="experienceField"></fieldset>
           <label><input type="checkbox" name="data_entry" value="experienced_geologist"> Geology data entry/cataloging
-            – experienced geologist</label><br>
+            – experienced geologist</label>
           <label><input type="checkbox" name="data_entry" value="assistant_geologist"> Geology data entry/cataloging –
-            assistant geologist</label><br>
+            assistant geologist</label>
           <label><input type="checkbox" name="data_entry" value="fieldy_general_help"> Geology data entry/cataloging –
-            fieldy/general help</label><br>
+            fieldy/general help</label>
+          </fieldset>
 
           <h3>Equipment operation</h3>
+          <fieldset class="experienceField"></fieldset>
           <label><input type="checkbox" name="equipment_operation" value="excavator_0_4t"> Excavator –
-            0-4t</label><br>
-          <label><input type="checkbox" name="equipment_operation" value="excavator_4t"> Excavator – >4t</label><br>
-          <label><input type="checkbox" name="equipment_operation" value="dozer"> Dozer</label><br>
+            0-4t</label>
+          <label><input type="checkbox" name="equipment_operation" value="excavator_4t"> Excavator – >4t</label>
+          <label><input type="checkbox" name="equipment_operation" value="dozer"> Dozer</label>
           <label><input type="checkbox" name="equipment_operation" value="front_end_loader"> Front end
-            loader</label><br>
-          <label><input type="checkbox" name="equipment_operation" value="truck"> Truck</label><br>
+            loader</label>
+          <label><input type="checkbox" name="equipment_operation" value="truck"> Truck</label>
+          </fieldset>
 
           <h3>Other activities</h3>
-          <label><input type="checkbox" name="other_activities" value="trench_sampling"> Trench sampling</label><br>
+          <fieldset class="experienceField"></fieldset>
+          <label><input type="checkbox" name="other_activities" value="trench_sampling"> Trench sampling</label>
           <label><input type="checkbox" name="other_activities" value="trench_logging_mapping"> Trench logging and
-            mapping</label><br>
+            mapping</label>
           <label><input type="checkbox" name="other_activities" value="drone"> Drone (registered pilot/can
-            fly)</label><br>
-          <label><input type="checkbox" name="other_activities" value="photography"> Photography</label><br>
+            fly)</label>
+          <label><input type="checkbox" name="other_activities" value="photography"> Photography</label>
           <label><input type="checkbox" name="other_activities" value="biogeochemistry_sampling"> Biogeochemistry
-            sampling (e.g., leaf/termite mound)</label><br>
+            sampling (e.g., leaf/termite mound)</label>
           <label><input type="checkbox" name="other_activities" value="bore_water_sampling"> Bore water
-            sampling</label><br>
+            sampling</label>
           <label><input type="checkbox" name="other_activities" value="pilot_helicopter"> Pilot –
-            Helicopter</label><br>
+            Helicopter</label>
           <label><input type="checkbox" name="other_activities" value="pilot_fixed_wing"> Pilot – Fixed
-            Wing</label><br>
+            Wing</label>
+          </fieldset>
 
           <h3>Other NOT LISTED</h3>
-          <label>Freeform field to be added here to allow some words</label><br>
+          <fieldset class="experienceField"></fieldset>
+          <label>Freeform field to be added here to allow some words</label>
           <textarea name="other_not_listed" rows="4" cols="50"
-            placeholder="Please specify other activities here..."></textarea><br>
+            placeholder="Please specify other activities here..."></textarea>
+          </fieldset>
         </div>
-        <button type="button" class="back-button" id="back-4">Back</button>
-        <button type="submit" id="submitForm">Submit</button>
-      </section>
+      </div>
+      <div class="button-container">
+        <button type="button" class="btn btn-secondary" id="back-4">Back</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+    </section>
 
-      <div class="fifthGeoFormTitle">
+    <!-- <div class="fifthGeoFormTitle">
         <div class="circleList">5</div>
         <h3 class="formTitles">We finish! Now submit your form </h3>
       </div>
 
       <div class="submitGeoFormBtn">
         <input class="btn btn-primary" id="btnGeoForm" type="submit" value="Submit">
-      </div>
+      </div> -->
   </form>
   <!-- Footer -->
 
