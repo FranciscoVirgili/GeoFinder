@@ -16,7 +16,7 @@
 .vscomp-ele {
     display: inline-block;
     width: 100%;
-    height: 51px;
+
 }
 
 .vscomp-wrapper {
@@ -28,7 +28,6 @@
     position: relative;
     text-align: left;
     width: 100%;
-    height: 51px
 }
 
 .vscomp-wrapper *,
@@ -64,7 +63,8 @@
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
+    font-weight: 400;
 }
 
 .vscomp-arrow {
@@ -347,7 +347,6 @@
     animation: vscomp-animation-spin .8s infinite linear;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: -4px -5px 3px -3px rgba(0, 0, 0, .3);
     content: "";
     display: inline-block;
     height: 40px;
@@ -377,7 +376,7 @@
 
 .vscomp-wrapper .checkbox-icon::after {
     transition-duration: .2s;
-    border: 2px solid #888;
+    border: 1px solid #888;
     content: "";
     display: inline-block;
     height: 100%;
@@ -460,16 +459,14 @@
 
 .vscomp-wrapper.multiple .vscomp-option.selected .checkbox-icon::after {
     transform: rotate(45deg) translate(1px, -4px);
-    border-color: #512da8;
+    border-color: #3279c5;
     border-left-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     width: 50%
 }
 
 .vscomp-wrapper.focused .vscomp-toggle-button,
-.vscomp-wrapper:focus .vscomp-toggle-button {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2)
-}
+.vscomp-wrapper:focus .vscomp-toggle-button {}
 
 .vscomp-wrapper.closed .vscomp-dropbox-container,
 .vscomp-wrapper.closed.vscomp-dropbox-wrapper {
@@ -484,7 +481,7 @@
 
 .vscomp-wrapper.has-clear-button .vscomp-toggle-button {
     padding-right: 54px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     padding-top: 12px;
@@ -539,9 +536,7 @@
 
 .vscomp-wrapper.keep-always-open.focused,
 .vscomp-wrapper.keep-always-open:focus,
-.vscomp-wrapper.keep-always-open:hover {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2)
-}
+.vscomp-wrapper.keep-always-open:hover {}
 
 .vscomp-wrapper.server-searching .vscomp-options-list {
     display: none
@@ -737,10 +732,11 @@
     opacity: 0;
     color: #000;
     background-color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
     text-align: left;
     flex-wrap: wrap;
-    z-index: 1
+    z-index: 1;
+    width: 100%;
+    border: 1px solid;
 }
 
 .pop-comp-arrow {
@@ -760,8 +756,6 @@
     width: 16px;
     height: 16px;
     background-color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
-    -webkit-transform-origin: left top;
     transform-origin: left top;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
@@ -778,9 +772,7 @@
     top: -15px
 }
 
-.pop-comp-wrapper.position-bottom>.pop-comp-arrow::before {
-    box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, .14)
-}
+.pop-comp-wrapper.position-bottom>.pop-comp-arrow::before {}
 
 .pop-comp-wrapper.position-top>.pop-comp-arrow {
     margin-left: -8px;

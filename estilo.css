@@ -1,6 +1,6 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-*{
+
+* {
     font-family: "Poppins", "sans-serif";
 }
 
@@ -10,32 +10,32 @@ body {
     overflow-x: hidden;
 }
 
-#navbarNavDesktop li{
+#navbarNavDesktop li {
     padding: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
-     font-size: calc(0.5rem + 1vw);
+    font-size: calc(0.5rem + 1vw);
     font-weight: 500 !important;
 }
 
-.imgCompany{
+.imgCompany {
     width: 10vw;
     padding: 10px;
 }
 
-.btnSignIn button{
+.btnSignIn button {
     width: 100%;
-    font-size: 1.5rem ;
+    font-size: 1.5rem;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: rgb(31, 105, 189);
     border-color: rgb(31, 105, 189);
     width: 6rem;
 }
 
-.mobile{
+.mobile {
     display: none;
 }
 
@@ -43,7 +43,7 @@ body {
     width: 100%;
 }
 
-#listaNav{
+#listaNav {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -54,7 +54,7 @@ body {
 }
 
 
-.btnSignInDesktop{
+.btnSignInDesktop {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
@@ -62,13 +62,13 @@ body {
 }
 
 
-.mobile a{
+.mobile a {
     font-size: large;
     font-weight: 400;
     padding-left: 1rem;
 }
 
-.mobile .imgCompany{
+.mobile .imgCompany {
     padding: 10px;
     width: 14vw;
 }
@@ -76,11 +76,11 @@ body {
 /* Main Menú */
 
 /*First Menu Section*/
-.firstMenuSection{
+.firstMenuSection {
     width: 100%;
 }
 
-.firstGalleryMenu{
+.firstGalleryMenu {
     display: flex;
     height: 100%;
     width: 100%;
@@ -88,18 +88,18 @@ body {
     flex-direction: row-reverse;
 }
 
-.firstGalleryImage{
+.firstGalleryImage {
     width: 100%;
 }
 
-.firstImageGallery{
+.firstImageGallery {
     width: 100%;
     padding: 20px;
     height: 100%;
     object-fit: cover;
 }
 
-.firstGalleryGeologistTitle{
+.firstGalleryGeologistTitle {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -110,11 +110,11 @@ body {
     padding-right: 30px;
 }
 
-.firstGalleryGeologistTitle button{
+.firstGalleryGeologistTitle button {
     width: 100%;
 }
 
-.secondGalleryMenu{
+.secondGalleryMenu {
     display: flex;
     height: 100%;
     width: 100%;
@@ -122,18 +122,18 @@ body {
     flex-direction: row;
 }
 
-.secondGalleryImage{
+.secondGalleryImage {
     width: 100%;
     padding: 20px;
     height: 100%;
     object-fit: cover;
 }
 
-.secondImageGallery{
+.secondImageGallery {
     width: 100%;
 }
 
-.secondGalleryGeologistTitle{
+.secondGalleryGeologistTitle {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -144,7 +144,7 @@ body {
     padding-right: 30px;
 }
 
-.secondGalleryGeologistTitle h1{
+.secondGalleryGeologistTitle h1 {
     display: flex;
     width: 100%;
     align-items: center;
@@ -152,40 +152,41 @@ body {
     margin-left: 4rem;
 }
 
-.secondGalleryGeologistTitle button{
+.secondGalleryGeologistTitle button {
     width: 100%;
 }
 
 /*First Menu Mobile*/
 
-.firstMenuMobile{
+.firstMenuMobile {
     display: none;
 }
 
 @media only screen and (max-width: 992px) {
     .firstMenuMobile {
-        display: block 
+        display: block
     }
+
     .firstMenuSection {
         display: none;
     }
 
-    .firstGalleryMenu{
+    .firstGalleryMenu {
         display: flex;
         flex-direction: column;
     }
 
-    .secondGalleryMenu{
+    .secondGalleryMenu {
         display: flex;
         flex-direction: column;
     }
 
-    .firstGalleryGeologistTitle{
+    .firstGalleryGeologistTitle {
         justify-content: center;
         text-align: center;
     }
 
-    .secondGalleryGeologistTitle{
+    .secondGalleryGeologistTitle {
         justify-content: center;
         text-align: center;
     }
@@ -194,14 +195,14 @@ body {
 
 /*  */
 
-.containerMenu{
+.containerMenu {
     display: flex;
     flex-direction: column;
     justify-content: end;
     height: 100%;
 }
 
-.mainMenuDesktop{
+.mainMenuDesktop {
     background-image: url(./Images/mainImage1.jpg);
     background-size: cover;
     background-position: center;
@@ -213,14 +214,14 @@ body {
     filter: brightness(0.8);
 }
 
-.btn-outline-success{
-        background-color: rgb(15, 40, 69);
-        border-color: rgb(15, 40, 69);
-        width: 6rem;
-    }
+.btn-outline-success {
+    background-color: rgb(15, 40, 69);
+    border-color: rgb(15, 40, 69);
+    width: 6rem;
+}
 
 
-.Home{
+.Home {
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -228,7 +229,7 @@ body {
     justify-content: center
 }
 
-.mainMenuTitle{
+.mainMenuTitle {
     color: white;
     display: flex;
     justify-content: center;
@@ -236,35 +237,35 @@ body {
     font-size: x-large;
 }
 
-#menuTitle{
+#menuTitle {
     width: 100%;
 }
 
-#menuSearch{
+#menuSearch {
     width: 100%;
 }
 
-#menuSearchBox{
+#menuSearchBox {
     display: flex;
     justify-content: center;
     padding-bottom: 20px !important;
 }
 
-#formSearch{
+#formSearch {
     width: 50%;
     height: 3.5rem;
     align-items: baseline;
 
 }
 
-#formControl{
+#formControl {
     font-size: 1.5rem !important;
 }
 
 
 /* MainMenu Mobile */
 
-.mainMenuMobile{
+.mainMenuMobile {
     display: none;
     background-image: url(./Images/mainImage1.jpg);
     background-size: cover;
@@ -277,26 +278,30 @@ body {
     filter: brightness(0.8);
 }
 
-.secondListMenuMobile{
+.secondListMenuMobile {
     display: none;
 }
 
 
 @media only screen and (max-width: 992px) {
     .mainMenuMobile {
-        display: block 
+        display: block
     }
+
     .mainMenuDesktop {
         display: none;
     }
-    .secondListMenuMobile{
+
+    .secondListMenuMobile {
         display: block;
     }
-    .secondListMenu{
+
+    .secondListMenu {
         display: none;
     }
 }
-.containerMenuMobile{
+
+.containerMenuMobile {
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -304,62 +309,62 @@ body {
     justify-content: center
 }
 
-#mainMenuBoxMobile{
+#mainMenuBoxMobile {
     margin: 1vh;
     display: flex;
     align-items: center;
 }
 
-#menuTitleMobile{
+#menuTitleMobile {
     width: 100%;
 }
 
-#menuSearchMobile{
+#menuSearchMobile {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-#menuSearchBoxMobile{
+#menuSearchBoxMobile {
     display: flex;
     justify-content: flex-start;
     width: 100%;
 }
 
-.mainMenuTitleMobile{
+.mainMenuTitleMobile {
     font-size: 6vw;
     width: 100%;
     color: white;
     filter: drop-shadow(2px 5px 6px black);
 }
 
-#formSearchMobile{
+#formSearchMobile {
     width: 100%;
 }
 
-#goButton{
+#goButton {
     height: 3.5rem;
 }
 
 /* SecondMainMenu */
-.secondSectionMainMenuTittle{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-  font-size: calc(2rem + 1vw); 
-  padding-bottom: 20px;
+.secondSectionMainMenuTittle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: calc(2rem + 1vw);
+    padding-bottom: 20px;
 }
 
 
-.containerSecondMenu img{
+.containerSecondMenu img {
     width: 400px;
     height: 350px;
     border-radius: 20px;
 }
 
-.containerSecondMenu h3{
+.containerSecondMenu h3 {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -369,14 +374,14 @@ body {
     font-weight: 600;
 }
 
-.containerSecondMenu .col{
+.containerSecondMenu .col {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 1vw;
 }
 
-.containerSecondMenu p{
+.containerSecondMenu p {
     display: flex;
     justify-content: center;
     width: 80%;
@@ -387,7 +392,7 @@ body {
     padding-top: 20px;
 }
 
-h1{
+h1 {
     display: flex;
     width: 100%;
     align-items: center;
@@ -398,21 +403,21 @@ h1{
 
 /* Third Main Menu */
 
-.thirdMainMenu{
+.thirdMainMenu {
     background-color: #07223e;
     margin-top: 8vh;
     border-radius: 20px;
     margin: 2rem;
 }
 
-.geologicalServiceImage{
+.geologicalServiceImage {
     width: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 100%;
 }
 
-#thirdMenuGrid{
+#thirdMenuGrid {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -421,22 +426,22 @@ h1{
     color: white;
 }
 
-#thirdMenuGrid h2{
+#thirdMenuGrid h2 {
     font-weight: 700;
     font-size: 1.5vw;
 }
 
-#thirdMenuGrid h3{
+#thirdMenuGrid h3 {
     font-size: 1.5vw;
     font-weight: 500;
 }
 
-#thirdMenuGrid p{
+#thirdMenuGrid p {
     font-size: 1vw;
     font-weight: 300;
 }
 
-#thirdMenuGrid .btn-primary{
+#thirdMenuGrid .btn-primary {
     color: white;
     width: 100%;
     color: white;
@@ -444,24 +449,24 @@ h1{
     font-size: 1.5em
 }
 
-.thirdGridButton{
+.thirdGridButton {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
 
-.thirdGridButton a{
+.thirdGridButton a {
     width: 100%;
 }
 
 /* Fourth Menu */
 
-.containerFourthMenu img{
+.containerFourthMenu img {
     width: 150px;
     height: 130px;
 }
 
-.containerFourthMenu{
+.containerFourthMenu {
     display: flex;
     justify-content: center;
     height: 100%;
@@ -469,26 +474,26 @@ h1{
 
 }
 
-.containerFourthMenu .row{
+.containerFourthMenu .row {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
 }
 
-.containerFourthMenu .col{
+.containerFourthMenu .col {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
 }
 
-.containerFourthMenu h3{
+.containerFourthMenu h3 {
     padding: 10px;
     font-size: 2.5vh;
 }
 
-.containerFourthMenu h2{
+.containerFourthMenu h2 {
     padding: 12px;
     margin-top: 2vh;
     font-size: 3vh;
@@ -510,7 +515,7 @@ h1{
 }
 
 /* Fifth Menú */
-.fifthMainMenu h1{
+.fifthMainMenu h1 {
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
@@ -522,7 +527,7 @@ h1{
     padding: 10px;
 }
 
-.carouselMenu p{
+.carouselMenu p {
     color: white;
     font-size: 2vh;
     padding: 20px;
@@ -530,46 +535,46 @@ h1{
     font-weight: 300;
 }
 
-.carouselMenu span{
+.carouselMenu span {
     color: white;
     margin-top: 2vh;
     font-size: 2vh;
     font-weight: 200;
 }
 
-.card img{
+.card img {
     width: 60px;
     height: 50px;
 }
 
 .carouselMenu {
-    
+
     width: 100%;
 }
 
-.carouselMenu .carousel{
+.carouselMenu .carousel {
     display: grid;
     grid-auto-columns: max-content;
     gap: 16px;
     margin-right: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
-    
+
 }
 
-.carousel .card{
-height: 50vh;
- list-style: none;
- background:  #07223e;
- border-radius: 8px;
- padding-bottom: 15px;
- display: flex;
- align-items: center;
- justify-content: space-evenly;
- flex-direction: column;
+.carousel .card {
+    height: 50vh;
+    list-style: none;
+    background: #07223e;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 /* Sign In Page */
-  
+
 
 #bodySignIn {
     display: flex;
@@ -608,37 +613,37 @@ height: 50vh;
     border-top-right-radius: 0;
 }
 
-#btnSignIn{
+#btnSignIn {
     width: 80%;
     margin-top: 2vh;
     font-size: smaller;
 }
 
-#signInH1{
+#signInH1 {
     margin-top: 2vh;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.desktopSign{
+.desktopSign {
     width: 100%;
 }
 
-#emailBoxSignIn{
+#emailBoxSignIn {
     margin-top: 5vh;
     margin-bottom: 2vh;
 }
 
-.form-signin label{
+.form-signin label {
     font-size: 1vh;
     font-weight: 300;
 }
 
-#passwordBoxSignIn{
+#passwordBoxSignIn {
     margin-bottom: 5vh;
-}    
+}
 
-.registerBox{
+.registerBox {
     margin-top: 5vh;
     margin-bottom: 5vh;
     display: flex;
@@ -646,35 +651,36 @@ height: 50vh;
     justify-content: center;
 }
 
-.checkbox label{
+.checkbox label {
     font-size: 1rem;
     font-weight: 400;
 }
 
-.checkbox input{
+.checkbox input {
     height: 2vh;
     width: 3vw;
 }
 
-.spanRegister{
+.spanRegister {
     padding-right: 30px;
     font-size: 1rem;
     font-weight: 400;
     width: 100%;
 }
 
-#btnRegisterBox{
+#btnRegisterBox {
     width: 40%;
     font-size: 1rem;
     text-decoration: none;
     font-style: normal;
 }
 
-.btnRegisterH{
+.btnRegisterH {
     text-decoration: none;
     color: #f5f5f5;
 }
-.forgetPassword{
+
+.forgetPassword {
     font-size: 1.5vh;
 }
 
@@ -697,12 +703,12 @@ height: 50vh;
     gap: 20px;
 }
 
-.registerForm{
+.registerForm {
     grid-template-columns: 1fr 1fr;
     grid-gap: 5vw;
     display: grid;
     margin: 2vw;
-    
+
 }
 
 .form-toggle {
@@ -743,7 +749,8 @@ label {
     font-weight: bold;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -756,22 +763,22 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
-.checkboxTitle{
+.checkboxTitle {
     font-size: x-large;
 }
 
-.checkbox-group{
+.checkbox-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.checkbox-group label{
+.checkbox-group label {
     font-size: x-large;
     font-weight: normal;
 }
 
-.form-signUp{
+.form-signUp {
     margin: 5vw;
     display: flex;
     flex-direction: column;
@@ -779,12 +786,12 @@ input[type="checkbox"] {
     width: 100%;
 }
 
-.form-signUp label{
+.form-signUp label {
     font-weight: normal;
 }
 
-.form-signUp button{
-   width: 40%;
+.form-signUp button {
+    width: 40%;
 }
 
 .submit-btn {
@@ -802,7 +809,7 @@ input[type="checkbox"] {
     background-color: #0056b3;
 }
 
-#signUp{
+#signUp {
     font-size: 1rem;
     width: 100%;
 }
@@ -811,15 +818,15 @@ input[type="checkbox"] {
 
 Main Menu */
 
-.findGeotitle{
+.findGeotitle {
     font-size: 2rem;
 }
 
-.ListMenu{
+.ListMenu {
     background: #07223e;
 }
 
-#ListMenuGrid{
+#ListMenuGrid {
     color: white;
     display: flex;
     flex-direction: column;
@@ -828,20 +835,20 @@ Main Menu */
     margin-left: 2vw;
 }
 
-#ListMenuGrid p{
+#ListMenuGrid p {
     width: 100%;
     text-align: justify;
 }
 
 
-.ListGridMenu{
+.ListGridMenu {
     width: 100%;
     margin-top: -15px;
     display: flex;
     justify-content: center;
 }
 
-.ListGridMenu button{
+.ListGridMenu button {
     width: 40%;
     justify-content: center;
     display: flex;
@@ -850,61 +857,60 @@ Main Menu */
 
 /* Second List Menu */
 
-.circleList{
+.circleList {
     margin: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 3rem;
     height: 3rem;
-    background-color:  #11447a;
+    background-color: #11447a;
     color: white;
     border-radius: 50%;
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-.containerSecondList h3{
-        font-size: 1.5rem;
-        font-weight: 500; 
-    }
-
-    .containerSecondList p{
-        font-size: 1rem;
-        font-weight: 300; 
-        margin-top: 2vh;
-    }
-
-.containerSecondList .row{
-    padding: 2vw;
-    gap: 40px
-    ;
+.containerSecondList h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
-.containerSecondList .col{
+.containerSecondList p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 2vh;
+}
+
+.containerSecondList .row {
+    padding: 2vw;
+    gap: 40px;
+}
+
+.containerSecondList .col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: justify;
 }
 
-.listButton{
+.listButton {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.listButton .btn{
+.listButton .btn {
     width: 18%;
     font-size: xx-large;
 }
 
-.thirdListMenu{
+.thirdListMenu {
     margin-top: 10vh;
 }
 
-.listButton a{
+.listButton a {
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
@@ -914,7 +920,7 @@ Main Menu */
 
 /* Gallery */
 
-.galleryMenu{
+.galleryMenu {
     margin: 1rem;
 }
 
@@ -942,7 +948,7 @@ Main Menu */
     transition: transform 0.3s ease;
 }
 
-.gallery-item div{
+.gallery-item div {
     font-size: 1vw;
 }
 
@@ -964,21 +970,21 @@ Main Menu */
 
 /* FormGeoFinder */
 
-.form-group{
+.form-group {
     margin: 2vh;
 }
 
-#target-container{
+#target-container {
     max-width: 100% !important;
     padding: 80px;
 }
 
-#target-container h2{
+#target-container h2 {
     font-size: x-large;
     font-weight: 400;
 }
 
-#geologicalForm{
+#geologicalForm {
     display: flex;
     width: 100%;
     align-items: center;
@@ -986,160 +992,161 @@ Main Menu */
     margin: 4vh;
 }
 
-#target-container .row{
+#target-container .row {
     font-size: x-large;
-    
+
 }
 
-#target-container label{
+#target-container label {
     font-weight: 400;
 }
 
-#geologicalForm button{
-width: 20%;
-color: white;
-font-size: 1.2rem;
-font-weight: 600;
-text-decoration: none;
+#geologicalForm button {
+    width: 20%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-#formCheckBoxFindGeo{
+#formCheckBoxFindGeo {
     margin: 2vh;
 }
 
 
 /* Review Swipper */
 
-.containerReview{
+.containerReview {
     padding: 80px;
 }
 
-#testimonialReview{
+#testimonialReview {
     padding: 50px;
 }
 
-.containerReview{
+.containerReview {
     margin: 2vw;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-   
+
+
 }
 
-.testimonial{
+.testimonial {
     position: relative;
     width: 100%;
     padding: 50px 0px;
     row-gap: 30px;
 }
 
-.testimonialContent img{
+.testimonialContent img {
     height: 600px;
     width: 500px;
     object-fit: contain;
     border-radius: 50%;
 }
 
-.testimonialContent .slideReview{
+.testimonialContent .slideReview {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.slideReview p{
+.slideReview p {
     padding: 0px 160px;
-    text-align:center;
+    text-align: center;
     font-size: 2rem;
     font-weight: 400;
     color: #333;
 }
 
-.slideReview .detailsReview{
+.slideReview .detailsReview {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.slideReview .nameReview{
-  font-size: 2rem;
-  font-weight: 600;
-  color: #333;
+.slideReview .nameReview {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
 }
 
-.slideReview .jobReview{
+.slideReview .jobReview {
     font-size: 1.5rem;
     font-weight: 400;
     color: #333;
-  }
+}
 
-  .slideReview .quote-icon{
+.slideReview .quote-icon {
     font-size: 1rem;
     color: #4070f4;
-  }
+}
 
 /*  Find Work  */
 
-.geoMain{
+.geoMain {
     height: 50vh;
 }
 
-.geoMain img{
+.geoMain img {
     width: 100%;
     height: 64vh;
 }
 
-.geoListMenu h1{
-margin-top: 10vh;
+.geoListMenu h1 {
+    margin-top: 10vh;
 }
 
-.geoListMenu{
+.geoListMenu {
     margin-top: 2vh
 }
 
-.containerGeoList .row{
+.containerGeoList .row {
     padding: 40px;
-    gap: 60px; 
+    gap: 60px;
 }
 
 
-.containerGeoList .col{
-display: flex;
+.containerGeoList .col {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: justify;
 }
-.containerGeoList h3{
+
+.containerGeoList h3 {
     font-size: 1.5rem;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
-.containerGeoList p{
+.containerGeoList p {
     font-size: 1rem;
-    font-weight: 300; 
+    font-weight: 300;
     margin-top: 2vh;
 }
 
 
-.secondListMenu{
+.secondListMenu {
     margin-top: 2vh;
 }
 
-.listButton{
+.listButton {
     margin-top: 5vh;
 }
 
-.listButton a{
+.listButton a {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.geoFormMain{
+.geoFormMain {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -1148,26 +1155,26 @@ display: flex;
     gap: 2vw;
 }
 
-.geoForm1{
+.geoForm1 {
     width: 50%;
 }
 
-.geoForm2{
+.geoForm2 {
     width: 50%;
     margin-right: 2vw;
 }
 
-.geoFormMain form{
+.geoFormMain form {
     padding-top: 20px;
 }
 
-.geoForm div{
+.geoForm div {
     padding-bottom: 20px;
 }
 
 /* FindWork Form */
 
-#advertiseForm{
+#advertiseForm {
     display: flex;
     width: 100%;
     align-items: center;
@@ -1175,7 +1182,7 @@ display: flex;
     margin: 3vh;
 }
 
-#advertiseForm button{
+#advertiseForm button {
     width: 20%;
     color: white;
     font-size: 1.2rem;
@@ -1186,54 +1193,54 @@ display: flex;
 
 /* Home Page */
 
-.logoCompanyHome{
+.logoCompanyHome {
     margin: 5px;
     margin-right: 3%;
 }
 
-.userOn img{
+.userOn img {
     width: 60px;
     height: 60px;
     object-fit: cover;
 }
 
-.homeMenu{
+.homeMenu {
     margin-right: 2vw;
 }
 
-.card{
+.card {
     margin-bottom: 3vh;
 }
 
-#containerHomeMenu h5{
+#containerHomeMenu h5 {
     font-size: 2.5vh;
 }
 
-#containerHomeMenu p{
+#containerHomeMenu p {
     font-size: 0.8vw;
     font-weight: 300;
 }
 
-#containerHomeMenu a{
+#containerHomeMenu a {
     font-size: larger;
 }
 
-#navbarSupportedContent{
-        display: flex !important;
-        flex-basis: auto;
-        justify-content: center;
-        width: 100%;
+#navbarSupportedContent {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: center;
+    width: 100%;
 }
 
-#navHome{
+#navHome {
     font-size: x-large;
     font-weight: 400;
 }
 
 
-#navbarSupportedContent form{
-width: 40%;
-height: 3vh;
+#navbarSupportedContent form {
+    width: 40%;
+    height: 3vh;
 }
 
 #containerHomeMenu {
@@ -1244,17 +1251,17 @@ height: 3vh;
     justify-content: center;
 }
 
-.homeFormDetails .mb-3{
+.homeFormDetails .mb-3 {
     margin-bottom: 3vh !important;
 }
 
 
-.geoFormHome{
+.geoFormHome {
     width: 100%;
     margin-bottom: 5vh;
 }
 
-#formHome{
+#formHome {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
@@ -1263,16 +1270,16 @@ height: 3vh;
     padding: 50px;
 }
 
-.geoFormHome div{
+.geoFormHome div {
     width: 100%;
 }
 
-.homeFormDetails label{
+.homeFormDetails label {
     font-size: x-large;
     font-weight: 400;
 }
 
-#navbarNavHome{
+#navbarNavHome {
     width: 100%;
     margin: 20px;
     display: flex;
@@ -1280,13 +1287,13 @@ height: 3vh;
     justify-content: space-between;
 }
 
-.userOnHome img{
+.userOnHome img {
     width: 100px;
     height: 90px;
     object-fit: cover;
 }
 
-.geoFormHome label{
+.geoFormHome label {
     font-size: x-large;
     font-weight: 400;
 }
@@ -1294,21 +1301,21 @@ height: 3vh;
 
 /* Mobile Home */
 
-.mobile ul{
+.mobile ul {
     gap: 1rem;
 }
 
-#nav-itemSearchHome div{
+#nav-itemSearchHome div {
     display: flex !important;
     flex-basis: auto;
     width: 100%;
 }
 
-#nav-itemSearchHome form{
+#nav-itemSearchHome form {
     width: 100%;
 }
 
-.userOnHomeMobile img{
+.userOnHomeMobile img {
     width: 50px;
     height: 50px;
     object-fit: cover
@@ -1316,11 +1323,22 @@ height: 3vh;
 
 /* Sub Menu Header Section */
 
-.sub-menu-wrap .open-menu{
+.sub-menu-wrap .open-menu {
     max-height: 600px;
 }
 
-.sub-menu{
+.imgUserModal {
+    width: 50px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    /* Igual al ancho para mantener proporciones */
+    border-radius: 50%;
+    /* Hace que la imagen sea circular */
+    object-fit: cover;
+    /* Recorta la imagen si es necesario para llenar el contenedor */
+}
+
+.sub-menu {
     background: #e0e4e7;
     display: flex;
     justify-content: flex-start;
@@ -1330,7 +1348,7 @@ height: 3vh;
     outline: 0;
 }
 
-.user-info{
+.user-info {
     display: flex;
     align-items: center;
     gap: 10%;
@@ -1339,17 +1357,18 @@ height: 3vh;
 }
 
 
-.user-info h3{
+.user-info h3 {
     font-weight: 500;
     margin-bottom: 0vh;
 }
 
-user-info  img{
+user-info img {
     width: 40px;
     border-radius: 50%;
     margin-right: 15px;
 }
-.sub-menu hr{
+
+.sub-menu hr {
     border: 0px;
     height: 3px;
     width: 100%;
@@ -1357,7 +1376,7 @@ user-info  img{
     margin: 15px 0 10px;
 }
 
-.sub-menu-link{
+.sub-menu-link {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -1366,13 +1385,13 @@ user-info  img{
     font-size: x-large;
 }
 
-.sub-menu-link p{
+.sub-menu-link p {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.sub-menu-link img{
+.sub-menu-link img {
     width: 50px;
     background: #e5e5e5;
     border-radius: 50%;
@@ -1380,43 +1399,41 @@ user-info  img{
     margin-right: 15px;
 }
 
-.sub-menu-link span{
+.sub-menu-link span {
     font-size: 22px;
     transition: transform 0.5s;
 }
 
-.sub-menu-link:hover span{
+.sub-menu-link:hover span {
     transform: translateX(5px)
 }
 
-.sub-menu-link:hover p{
+.sub-menu-link:hover p {
     font-weight: 600;
 }
 
 /* Footer */
 
-#footerDesign h5{
-   
-}
+#footerDesign h5 {}
 
-#footerDesign p{
+#footerDesign p {
     font-size: 1rem;
 }
 
 
-.contact-item{
+.contact-item {
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: flex;
     gap: 20px;
 }
 
-.contact-item img{
+.contact-item img {
     width: 30px;
     height: 25px;
 }
 
-.contact-section{
+.contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1427,22 +1444,23 @@ user-info  img{
 /*******************************************/
 @media only screen and (max-width: 992px) {
     .mobile {
-        display: block 
+        display: block
     }
+
     .desktop {
         display: none;
     }
 
     /* Mobile Main Page */
 
-    .secondSectionMainMenuTittle{
+    .secondSectionMainMenuTittle {
         display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3rem;
-    font-size: calc(1.5rem + 1vw);
-    padding-bottom: 20px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        font-size: calc(1.5rem + 1vw);
+        padding-bottom: 20px;
     }
 
     .containerSecondMenu img {
@@ -1451,7 +1469,7 @@ user-info  img{
         border-radius: 20px;
     }
 
-    .containerThirdMenu .row{
+    .containerThirdMenu .row {
         display: flex;
         flex-direction: column-reverse;
     }
@@ -1481,13 +1499,13 @@ user-info  img{
         font-weight: 300;
     }
 
-    .thirdGridButton{
+    .thirdGridButton {
         display: flex;
         width: 100%;
         justify-content: center;
     }
 
-    .thirdGridButton a{
+    .thirdGridButton a {
         display: flex;
         justify-content: center;
     }
@@ -1499,6 +1517,7 @@ user-info  img{
         width: 80%;
         font-size: 1.2rem;
     }
+
     .containerFourthMenu button {
         margin-top: 5vh;
         width: 100%;
@@ -1507,143 +1526,162 @@ user-info  img{
 
     /* Review Mobile */
 
-    .carouselMenu .carousel{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-right: 1rem;
-    width: 100%;
+    .carouselMenu .carousel {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-right: 1rem;
+        width: 100%;
     }
 
-/* Sign In Mobile Page */
+    /* Sign In Mobile Page */
 
-.gallery-item img {
-    width: 300px;
-    height: 260px;
-    display: block;
-    transition: transform 0.3s ease;
+    .gallery-item img {
+        width: 300px;
+        height: 260px;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item div {
+        font-size: calc(1rem);
+    }
+
+    .form-signin {
+        width: 100%;
+        padding: 15px;
+        margin: auto;
+        max-width: 60%;
+    }
+
+    .form-signin label {
+        font-size: 1rem !important;
+        font-weight: 300;
+    }
+
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+        height: 12px;
+    }
+
+    .spanRegister {
+        padding-right: 30px;
+        font-size: 1rem;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    /* Find Geo Page */
+
+    .findGeoTitle {
+        font-size: 1.5rem !important;
+    }
+
+    .containerSecondListDiv {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 2rem;
+    }
+
+    .containerSecondListDiv h3 {
+        font-size: 1.2rem;
+    }
+
+    .paragraphFindGeo {
+        margin: 1.5rem;
+        font-weight: 300;
+    }
+
+    .listButton .btn {
+        width: 30%;
+        font-size: 1rem;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonialContent img {
+        height: 280px;
+        width: 300px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .slideReview p {
+        padding: 0px 160px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .slideReview .nameReview {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .slideReview .jobReview {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #333;
+    }
+
+    /* Footer */
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
-.gallery-item div {
-    font-size: calc(1rem);
-}
-
-.form-signin {
-    width: 100%;
-    padding: 15px;
-    margin: auto;
-    max-width: 60%;
-}
-
-.form-signin label {
-    font-size: 1rem !important;
-    font-weight: 300;
-}
-
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 5px;
-    height: 12px;
-}
-
-.spanRegister {
-    padding-right: 30px;
-    font-size: 1rem;
-    font-weight: 400;
-    width: 100%;
-}
-
-/* Find Geo Page */
-
-.findGeoTitle {
-    font-size: 1.5rem !important;
-}
-
-.containerSecondListDiv {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 2rem;
-}
-
-.containerSecondListDiv h3{
-    font-size: 1.2rem;
-}
-
-.paragraphFindGeo{
-    margin: 1.5rem;
-    font-weight: 300;
-}
-
-.listButton .btn {
-    width: 30%;
-    font-size: 1rem;
-}
-
-.gallery{
-    display: flex;
-    flex-direction: column;
-}
-
-.testimonialContent img {
-    height: 280px;
-    width: 300px;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-.slideReview p {
-    padding: 0px 160px;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #333;
-}
-
-.slideReview .nameReview {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #333;
-}
-
-.slideReview .jobReview {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #333;
-}
-}
 
 
 
- /* Container for the form input and the tick */
- .form-section div {
+/* Container for the form input and the tick */
+.form-section div {
     position: relative;
-  }
-  
-  input {
-    padding-right: 30px; /* Leave space on the right for the tick */
-  }
-  
-  #emailTick, #passwordTick, #confirmEmailTick, #confirmPasswordTick {
+}
+
+input {
+    padding-right: 30px;
+    /* Leave space on the right for the tick */
+}
+
+#emailTick,
+#passwordTick,
+#confirmEmailTick,
+#confirmPasswordTick {
     position: absolute;
-    right: 10px; /* Position it inside the input field */
+    right: 10px;
+    /* Position it inside the input field */
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
-    color: green; /* Tick color */
-    pointer-events: none; /* So the tick doesn't interfere with input focus */
-  }
-  
-  /* Ensure the ticks only appear when needed */
-  #emailTick, #passwordTick, #confirmEmailTick, #confirmPasswordTick {
-    display: none;
-  }
+    color: green;
+    /* Tick color */
+    pointer-events: none;
+    /* So the tick doesn't interfere with input focus */
+}
 
-  button:disabled,
-button[disabled]{
-  border: 1px solid #999999;
-  background-color: #cccccce9;
-  color: #666666;
-  
+/* Ensure the ticks only appear when needed */
+#emailTick,
+#passwordTick,
+#confirmEmailTick,
+#confirmPasswordTick {
+    display: none;
+}
+
+button:disabled,
+button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccce9;
+    color: #666666;
+
 }
 
 button:disabled,
@@ -1655,23 +1693,33 @@ button[disabled]:hover disabled {
 
 /* Pop ups */
 .popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/ opacity */
 }
 
 .popup-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
-    border: 1.5px solid rgb(31, 105, 189); /* Blue border */
-    width: 40%; /* Could be more or less, depending on screen size */
+    border: 1.5px solid rgb(31, 105, 189);
+    /* Blue border */
+    width: 40%;
+    /* Could be more or less, depending on screen size */
     border-radius: 5px;
 }
 
@@ -1684,7 +1732,8 @@ button[disabled]:hover disabled {
 
 .close:hover,
 .close:focus {
-    color: darkred; /* Dark red on hover */
+    color: darkred;
+    /* Dark red on hover */
     text-decoration: none;
     cursor: pointer;
 }
@@ -1703,58 +1752,54 @@ input {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-  }
-  
-  /* Style the submit button */
-  input[type=submit] {
+}
+
+/* Style the submit button */
+input[type=submit] {
     background-color: #04AA6D;
     color: white;
-  }
-  
-  /* Style the container for inputs */
-  .container {
+}
+
+/* Style the container for inputs */
+.container {
     background-color: #f1f1f1;
     padding: 20px;
-  }
-  
-  /* The message box is shown when the user clicks on the password field */
-  #message {
-    display:none;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display: none;
     background: #f1f1f1;
     color: #000;
     position: relative;
     padding: 20px;
     margin-top: 10px;
-  }
-  
-  #message p {
+}
+
+#message p {
     padding: 0px 35px;
     font-size: 18px;
-  }
-  
-  /* Add a green text color and a checkmark when the requirements are right */
-  .valid {
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
     color: green;
-  }
-  
-  .valid:before {
+}
+
+.valid:before {
     position: relative;
     left: -35px;
     content: "✔";
-  }
-  
-  /* Add a red text color and an "x" icon when the requirements are wrong */
-  .invalid {
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
     color: red;
-  }
-  
-  .invalid:before {
+}
+
+.invalid:before {
     position: relative;
     left: -35px;
-    content: "✘"; /* ✘ */
-  }
-
-
-
-
-
+    content: "✘";
+    /* ✘ */
+}

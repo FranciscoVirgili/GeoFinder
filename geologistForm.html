@@ -56,13 +56,10 @@
               <div class="collapse navbar-collapse" id="navbarNavDesktop">
                 <ul class="navbar-nav" id="listaNav">
                   <li class="nav-item">
-                    <a class="nav-link" href="./home.html">Main</a>
+                    <a class="nav-link" href="./index.html.html">Main</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./company.html">Im a Company</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./geologist.html">Im a Geo</a>
+                    <a class="nav-link" href="./postedJobs.html">Posted Jobs</a>
                   </li> 
                   <span id="authSection" class="btnSignInDesktop">
                     <a href="./signin.html"><button style="font-size: 1.5rem;
@@ -96,16 +93,14 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="./home.html">Main</a>
+                    <a class="nav-link" href="./index.html">Main</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./signin.html">Im a Company</a>
-                  </li>
-                  <li class="nav-item" href="./signin.html">
-                      <a class="nav-link" href="./signin.html">Im a Geo</a>
-                    </li> 
-                  <span>
-                    <a href="./signin.html"><button  class="btn btn-primary">
+                    <a class="nav-link" href="./postedJobs.html">Posted Jobs</a>
+                  </li> 
+                  <span id="authSection" class="btnSignInDesktop">
+                    <a href="./signin.html"><button style="font-size: 1.5rem;
+      width: 100%;" class="btn btn-primary">
                       Sign In</button></a>
                   </span>
                 </ul>
@@ -123,25 +118,25 @@
             <h3 class="formTitles">Contact detils for direct and quick connection</h3>
     </section>
 </head>
-    <form class="geologistFormRegister">
+    <form class="geologistFormRegister" id="formulario">
       <!-- First Form Section -->
       <section class="firstGeoFormSection">
         <div class="firstGeoFormCol">
-          <!--Name-->
+          <!-- Name -->
           <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="name" required>
-
+          <input class="validate-input" type="text" id="first-name" name="name" required>
+          
           <!-- Surname -->
           <label for="surname">Surname:</label>
-          <input type="text" id="surname" name="surname" required>
-
+          <input class="validate-input" type="text" id="surname" name="surname" required>
+          
           <!-- Email -->
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
+          <input class="validate-input" type="email" id="email" name="email" required>
+          
           <!-- Phone -->
           <label for="phone">Mobile phone:</label>
-          <input type="tel" id="phone" name="phone" required>
+          <input class="validate-input" type="tel" id="phone" name="phone" required>
           
           <!--Gender-->
           <label class="genderLabel" for="gender">Gender:</label>
@@ -253,7 +248,7 @@
       <!-- Second Form Section -->
       <div class="secondGeoFormTitle">
         <div class="circleList">2</div>
-        <h3 class="formTitles">We are looking for:</h3>
+        <h3 class="formTitles">We are looking for</h3>
       </div>
       
       <section class="secondGeoFormSection">
@@ -310,35 +305,35 @@
             <label>Work site preference:</label>
             <div class="locationExperiencechck">
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="remote-field" name="experience-in[]" value="Remote Field">
+              <input type="checkbox" id="remote-field" name="work-site[]" value="Remote Field">
               <label for="remote-field">Remote field work with camping/off-grid accommodation</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="field" name="experience-in[]" value="Field">
+              <input type="checkbox" id="field" name="work-site[]" value="Field">
               <label for="field">Field work with town-based accommodation</label><br>
             </div>  
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="office-site" name="experience-in[]" value="office Site">
+              <input type="checkbox" id="office-site" name="work-site[]" value="office Site">
               <label for="office-site">Office based work (major city/town) Site</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="office-mine" name="experience-in[]" value="office mine">
+              <input type="checkbox" id="office-mine" name="work-site[]" value="office mine">
               <label for="office-mine">Office based work (mine site)</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="open-pit" name="experience-in[]" value="Open Pit">
+              <input type="checkbox" id="open-pit" name="work-site[]" value="Open Pit">
               <label for="open-pit">Open Pit</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="underground" name="experience-in[]" value="Underground">
+              <input type="checkbox" id="underground" name="work-site[]" value="Underground">
               <label for="underground">Underground</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="fifo" name="experience-in[]" value="fifo">
+              <input type="checkbox" id="fifo" name="work-site[]" value="fifo">
               <label for="fifo">FIFO</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="dido" name="experience-in[]" value="dido">
+              <input type="checkbox" id="dido" name="work-site[]" value="dido">
               <label for="dido">DIDO</label><br>
             </div>  
           </div>
@@ -484,33 +479,13 @@
           <label><input type="checkbox" name="drill_core_prep" value="rock_chip_cutting"> Rock chip cutting for petrography (e.g. thin section blocks)</label><br>
           <label><input type="checkbox" name="drill_core_prep" value="sample_dispatch_forms"> Sample submission form(s)/dispatch form(s)</label><br>
           <label><input type="checkbox" name="drill_core_prep" value="sample_delivery"> Sample delivery to lab</label><br>
+
+          <h3>Vehicle Driver/Transport</h3>
+          <label><input type="checkbox" name="vehicle_driver_transport" value="4wd_transport"> 4WD transport (e.g. equipment/personnel transport to site)</label><br>
+          <label><input type="checkbox" name="vehicle_driver_transport" value="2wd_transport"> 2WD transport only (e.g. sample to lab delivery)</label><br>
         </div>
-      
-        
+
         <div class="secondColFourthForm">
-          <h3>Field mapping</h3>
-          <label><input type="checkbox" name="field_mapping" value="program_manager"> Program manager</label><br>
-          <label><input type="checkbox" name="field_mapping" value="complex_geology"> Field geology mapping – complex geology</label><br>
-          <label><input type="checkbox" name="field_mapping" value="simple_geology"> Field geology mapping – simple geology</label><br>
-          <label><input type="checkbox" name="field_mapping" value="structural"> Field geology mapping – structural</label><br>
-          <label><input type="checkbox" name="field_mapping" value="alteration"> Field geology mapping – alteration</label><br>
-
-        <h3>Rock chip sampling</h3>
-          <label><input type="checkbox" name="rock_chip_sampling" value="program_manager"> Program manager</label><br>
-          <label><input type="checkbox" name="rock_chip_sampling" value="experienced_geologist"> Rock chip sampling – experienced geologist</label><br>
-          <label><input type="checkbox" name="rock_chip_sampling" value="assistant_geologist"> Rock Chip sampling – assistant geologist</label><br>
-          <label><input type="checkbox" name="rock_chip_sampling" value="fieldy_general_help"> Rock Chip sampling – fieldy/general help</label><br>
-
-        <h3>Soil sampling</h3>
-          <label><input type="checkbox" name="soil_sampling" value="program_manager"> Program manager</label><br>
-          <label><input type="checkbox" name="soil_sampling" value="principal_geologist"> Soil sampling – principal geologist</label><br>
-          <label><input type="checkbox" name="soil_sampling" value="assistant_geologist"> Soil sampling – assistant geologist</label><br>
-          <label><input type="checkbox" name="soil_sampling" value="fieldy_general_help"> Soil sampling – fieldy/general help</label><br>
-          <label><input type="checkbox" name="soil_sampling" value="mmi"> MMI</label><br>
-          <label><input type="checkbox" name="soil_sampling" value="ultrafine"> Ultrafine</label><br>
-      </div>
-
-        <div class="thirdColFourthForm">
           <h3>General help (in-field)</h3>
           <label><input type="checkbox" name="general_in_field" value="experienced_geologist"> Assorted tasks – experienced geologist</label><br>
           <label><input type="checkbox" name="general_in_field" value="geologist"> Assorted tasks – geologist</label><br>
@@ -521,13 +496,66 @@
           <label><input type="checkbox" name="general_office_site" value="geologist"> Assorted tasks – geologist</label><br>
           <label><input type="checkbox" name="general_office_site" value="fieldy_general_help"> Assorted tasks – fieldy/general help</label><br>
 
+          <h3>Field mapping</h3>
+          <label><input type="checkbox" name="field_mapping" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="field_mapping" value="complex_geology"> Field geology mapping – complex geology</label><br>
+          <label><input type="checkbox" name="field_mapping" value="simple_geology"> Field geology mapping – simple geology</label><br>
+          <label><input type="checkbox" name="field_mapping" value="structural"> Field geology mapping – structural</label><br>
+          <label><input type="checkbox" name="field_mapping" value="alteration"> Field geology mapping – alteration</label><br>
+
+          <h3>Rock chip sampling</h3>
+          <label><input type="checkbox" name="rock_chip_sampling" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="rock_chip_sampling" value="experienced_geologist"> Rock chip sampling – experienced geologist</label><br>
+          <label><input type="checkbox" name="rock_chip_sampling" value="assistant_geologist"> Rock Chip sampling – assistant geologist</label><br>
+          <label><input type="checkbox" name="rock_chip_sampling" value="fieldy_general_help"> Rock Chip sampling – fieldy/general help</label><br>
+
+          <h3>Soil sampling</h3>
+          <label><input type="checkbox" name="soil_sampling" value="program_manager"> Program manager</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="principal_geologist"> Soil sampling – principal geologist</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="assistant_geologist"> Soil sampling – assistant geologist</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="fieldy_general_help"> Soil sampling – fieldy/general help</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="mmi"> MMI</label><br>
+          <label><input type="checkbox" name="soil_sampling" value="ultrafine"> Ultrafine</label><br>
+    
           <h3>Geophysics survey</h3>
           <label><input type="checkbox" name="geophysics_survey" value="experienced_geologist"> Field assistant – experienced geologist for geophysics survey</label><br>
           <label><input type="checkbox" name="geophysics_survey" value="non_geologist"> Field assistant – non geologist for geophysics survey help</label><br>
-
-          <h3>Vehicle Driver/Transport</h3>
-          <label><input type="checkbox" name="vehicle_driver_transport" value="4wd_transport"> 4WD transport (e.g. equipment/personnel transport to site)</label><br>
-          <label><input type="checkbox" name="vehicle_driver_transport" value="2wd_transport"> 2WD transport only (e.g. sample to lab delivery)</label><br> 
+      </div>
+        <div class="thirdColFourthForm">
+          <h3>GIS</h3>
+          <label><input type="checkbox" name="gis" value="assorted_tasks_experienced_geologist"> Assorted tasks – experienced geologist</label><br>
+          <label><input type="checkbox" name="gis" value="assorted_tasks_geologist"> Assorted tasks – geologist</label><br>
+      
+          <h3>GIS Mapping (2D)</h3>
+          <label><input type="checkbox" name="gis_mapping" value="complex_geology"> GIS digital mapping – complex geology</label><br>
+          <label><input type="checkbox" name="gis_mapping" value="simple_geology"> GIS digital mapping – simple geology</label><br>
+          <label><input type="checkbox" name="gis_mapping" value="structural"> GIS digital mapping – structural</label><br>
+          <label><input type="checkbox" name="gis_mapping" value="interpretation"> GIS digital mapping – interpretation</label><br>
+      
+          <h3>Data entry</h3>
+          <label><input type="checkbox" name="data_entry" value="experienced_geologist"> Geology data entry/cataloging – experienced geologist</label><br>
+          <label><input type="checkbox" name="data_entry" value="assistant_geologist"> Geology data entry/cataloging – assistant geologist</label><br>
+          <label><input type="checkbox" name="data_entry" value="fieldy_general_help"> Geology data entry/cataloging – fieldy/general help</label><br>
+      
+          <h3>Equipment operation</h3>
+          <label><input type="checkbox" name="equipment_operation" value="excavator_0_4t"> Excavator – 0-4t</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="excavator_4t"> Excavator – >4t</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="dozer"> Dozer</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="front_end_loader"> Front end loader</label><br>
+          <label><input type="checkbox" name="equipment_operation" value="truck"> Truck</label><br>
+      
+          <h3>Other activities</h3>
+          <label><input type="checkbox" name="other_activities" value="trench_sampling"> Trench sampling</label><br>
+          <label><input type="checkbox" name="other_activities" value="trench_logging_mapping"> Trench logging and mapping</label><br>
+          <label><input type="checkbox" name="other_activities" value="drone"> Drone (registered pilot/can fly)</label><br>
+          <label><input type="checkbox" name="other_activities" value="photography"> Photography</label><br>
+          <label><input type="checkbox" name="other_activities" value="biogeochemistry_sampling"> Biogeochemistry sampling (e.g., leaf/termite mound)</label><br>
+          <label><input type="checkbox" name="other_activities" value="bore_water_sampling"> Bore water sampling</label><br>
+          <label><input type="checkbox" name="other_activities" value="pilot_helicopter"> Pilot – Helicopter</label><br>
+          <label><input type="checkbox" name="other_activities" value="pilot_fixed_wing"> Pilot – Fixed Wing</label><br>
+      
+          <h3>Other NOT LISTED</h3>
+          <textarea name="other_not_listed" rows="4" cols="50" placeholder="Please specify other activities here..."></textarea><br>
         </div>
       </section>
 
@@ -609,7 +637,7 @@
           <p>
             Copyright All rights reserved
             <a href="#">
-              <strong class="text-primary">Francisco Virgili y Daniel Virgili</strong>
+              <strong class="text-primary">Geofinder® 2024</strong>
             </a>
           </p>
         </div>

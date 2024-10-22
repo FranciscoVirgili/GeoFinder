@@ -1,4 +1,3 @@
-
 // Friendly Names
 const friendlyNames = {
   'first-name': 'First Name',
@@ -13,7 +12,6 @@ const friendlyNames = {
   'years-experience': 'Years Experience',
   'education-level': 'Level of Education',
   'hours-day': 'Hours per Day',
-  'roster-hours': 'Roster Hours',
 };
 
 // Dropdown of town Aus
@@ -56,14 +54,18 @@ fetch('australianCities.json')
 // Función de validación
 function validateForm() {
   let valid = true;
-
+  const errorMessages = []; // Declarar array de errores
+  let firstInvalidField = null; // Para almacenar el primer campo no válido
+  
   // Validación de campos de texto
   const textFields = ['first-name', 'surname', 'email', 'phone'];
   textFields.forEach(field => {
     const inputElement = document.getElementById(field);
     if (!inputElement.value.trim()) {
       alert(`${friendlyNames[field]} is required`);
-      inputElement.focus();
+      if (!firstInvalidField) {
+        firstInvalidField = inputElement; // Almacena el primer campo no válido
+      }
       valid = false;
     }
   });
@@ -72,8 +74,9 @@ function validateForm() {
   const gender = document.querySelector('input[name="gender"]:checked');
   if (!gender) {
     alert('Please select a gender.');
-    const firstGenderRadio = document.querySelector('input[name="gender"]');
-    firstGenderRadio.focus();
+    if (!firstInvalidField) {
+      firstInvalidField = document.querySelector('input[name="gender"]');
+    }
     valid = false;
   }
 
@@ -83,47 +86,88 @@ selectFields.forEach(field => {
   const select = document.getElementById(field);
   if (!select.value) {
     alert(`Please select a value for ${friendlyNames[field]}.`);
-    select.focus();
+    if (!firstInvalidField) {
+      firstInvalidField = select;
+    }
     valid = false;
-    return; // Añadir return aquí para detener la validación
   }
 });
 
 
-// Validar checkboxes (experiencias)
-const checkboxesToValidate = [
-  { name: 'experience-as[]', message: 'Please select at least one type of experience.' },
-  { name: 'work-time[]', message: 'Please select at least one work time preference.' },
-  { name: 'experience-in[]', message: 'Please select at least one work site experience.' },
-  { name: 'experience-with[]', message: 'Please select at least one experience with.' },
-  { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
-];
-
+  // Validar checkboxes (experiencias)
+  const checkboxesToValidate = [
+    { name: 'experience-as[]', message: 'Please select at least one type of experience.' },
+    { name: 'work-time[]', message: 'Please select at least one work time preference.' },
+    { name: 'work-site[]', message: 'Please select at least one work site.' },
+    { name: 'experience-with[]', message: 'Please select at least one experience with.' },
+    { name: 'driving-experience[]', message: 'Please select at least one driving experience.' },
+    { name: 'roster[]', message: 'Please select roster preference.' },
+  ];
 
   checkboxesToValidate.forEach(item => {
-    const checkboxes = document.querySelectorAll(`input[name="${item.name}"]:checked`);
-    if (checkboxes.length === 0) {
-      alert(item.message);
+    const checkboxes = document.querySelectorAll(`input[name="${item.name}"]`);
+    const checkedBoxes = document.querySelectorAll(`input[name="${item.name}"]:checked`);
+
+    if (checkedBoxes.length === 0) {
+      errorMessages.push(item.message);
+      checkboxes.forEach(checkbox => {
+        checkbox.classList.add('error-highlight');
+      });
+      if (!firstInvalidField) {
+        firstInvalidField = checkboxes[0];
+      }
       valid = false;
+    } else {
+      checkboxes.forEach(checkbox => {
+        checkbox.classList.remove('error-highlight');
+      });
     }
   });
 
-  // Validar fechas
+  // Validar campos de fechas
   const dayStart = document.getElementById('day-start');
   const dayEnd = document.getElementById('day-end');
-
+  
+  // Forzamos la apertura del date picker al hacer clic en el input
+  dayStart.addEventListener("click", function() {
+  this.focus();
+});
+  dayEnd.addEventListener("click", function() {
+  this.focus();
+});
   if (!dayStart.value) {
-    alert('Please select a start date.');
-    dayStart.focus();
+    errorMessages.push('Please select a start date.');
+    if (!firstInvalidField) {
+      firstInvalidField = dayStart;
+    }
     valid = false;
-  } else if (!dayEnd.value) {
-    alert('Please select an end date.');
-    dayEnd.focus();
+  }
+
+  if (!dayEnd.value) {
+    errorMessages.push('Please select an end date.');
+    if (!firstInvalidField) {
+      firstInvalidField = dayEnd;
+    }
     valid = false;
-  } else if (new Date(dayStart.value) > new Date(dayEnd.value)) {
-    alert('The start date cannot be later than the end date.');
-    dayEnd.focus();
+  }
+
+  if (dayStart.value && dayEnd.value && new Date(dayStart.value) > new Date(dayEnd.value)) {
+    errorMessages.push('The start date cannot be later than the end date.');
+    if (!firstInvalidField) {
+      firstInvalidField = dayEnd;
+    }
     valid = false;
+  }
+
+  // Mostrar un solo alerta con todos los mensajes de error si hay errores
+  if (errorMessages.length > 0) {
+    alert(errorMessages.join('\n'));
+  }
+
+  // Desplazar y enfocar el primer campo no válido, si existe
+  if (firstInvalidField) {
+    firstInvalidField.scrollIntoView();
+    firstInvalidField.focus();
   }
 
   return valid;
@@ -131,27 +175,29 @@ const checkboxesToValidate = [
 
 // Evento de envío del formulario
 document.querySelector('.geologistFormRegister').addEventListener('submit', function (event) {
-  event.preventDefault();
+event.preventDefault();
 
-  const formIsValid = validateForm();
-  if (!formIsValid) {
-    return;
-  }
+// Verificar si es válido
+const formIsValid = validateForm();
+if (!formIsValid) {
+  return;
+}
 
-  // Convertir el formulario a JSON
-  const formData = new FormData(event.target);
-  const formObject = {};
-  formData.forEach((value, key) => {
-    if (formObject[key]) {
-      if (!Array.isArray(formObject[key])) {
-        formObject[key] = [formObject[key]];
-      }
-      formObject[key].push(value);
-    } else {
-      formObject[key] = value;
+// Convertir el formulario a JSON
+const formData = new FormData(event.target);
+const formObject = {};
+formData.forEach((value, key) => {
+  if (formObject[key]) {
+    if (!Array.isArray(formObject[key])) {
+      formObject[key] = [formObject[key]];
     }
-  });
-
-  const formDataJSON = JSON.stringify(formObject, null, 2);
-  console.log(formDataJSON);
+    formObject[key].push(value);
+  } else {
+    formObject[key] = value;
+  }
 });
+
+const formDataJSON = JSON.stringify(formObject, null, 2);
+console.log(formDataJSON);
+});
+
