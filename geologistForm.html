@@ -56,13 +56,10 @@
               <div class="collapse navbar-collapse" id="navbarNavDesktop">
                 <ul class="navbar-nav" id="listaNav">
                   <li class="nav-item">
-                    <a class="nav-link" href="./home.html">Main</a>
+                    <a class="nav-link" href="./index.html.html">Main</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./company.html">Im a Company</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./geologist.html">Im a Geo</a>
+                    <a class="nav-link" href="./postedJobs.html">Posted Jobs</a>
                   </li> 
                   <span id="authSection" class="btnSignInDesktop">
                     <a href="./signin.html"><button style="font-size: 1.5rem;
@@ -96,16 +93,14 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="./home.html">Main</a>
+                    <a class="nav-link" href="./index.html">Main</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./signin.html">Im a Company</a>
-                  </li>
-                  <li class="nav-item" href="./signin.html">
-                      <a class="nav-link" href="./signin.html">Im a Geo</a>
-                    </li> 
-                  <span>
-                    <a href="./signin.html"><button  class="btn btn-primary">
+                    <a class="nav-link" href="./postedJobs.html">Posted Jobs</a>
+                  </li> 
+                  <span id="authSection" class="btnSignInDesktop">
+                    <a href="./signin.html"><button style="font-size: 1.5rem;
+      width: 100%;" class="btn btn-primary">
                       Sign In</button></a>
                   </span>
                 </ul>
@@ -123,25 +118,25 @@
             <h3 class="formTitles">Contact detils for direct and quick connection</h3>
     </section>
 </head>
-    <form class="geologistFormRegister">
+    <form class="geologistFormRegister" id="formulario">
       <!-- First Form Section -->
       <section class="firstGeoFormSection">
         <div class="firstGeoFormCol">
-          <!--Name-->
+          <!-- Name -->
           <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="name" required>
-
+          <input class="validate-input" type="text" id="first-name" name="name" required>
+          
           <!-- Surname -->
           <label for="surname">Surname:</label>
-          <input type="text" id="surname" name="surname" required>
-
+          <input class="validate-input" type="text" id="surname" name="surname" required>
+          
           <!-- Email -->
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
+          <input class="validate-input" type="email" id="email" name="email" required>
+          
           <!-- Phone -->
           <label for="phone">Mobile phone:</label>
-          <input type="tel" id="phone" name="phone" required>
+          <input class="validate-input" type="tel" id="phone" name="phone" required>
           
           <!--Gender-->
           <label class="genderLabel" for="gender">Gender:</label>
@@ -253,7 +248,7 @@
       <!-- Second Form Section -->
       <div class="secondGeoFormTitle">
         <div class="circleList">2</div>
-        <h3 class="formTitles">We are looking for:</h3>
+        <h3 class="formTitles">We are looking for</h3>
       </div>
       
       <section class="secondGeoFormSection">
@@ -310,35 +305,35 @@
             <label>Work site preference:</label>
             <div class="locationExperiencechck">
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="remote-field" name="experience-in[]" value="Remote Field">
+              <input type="checkbox" id="remote-field" name="work-site[]" value="Remote Field">
               <label for="remote-field">Remote field work with camping/off-grid accommodation</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="field" name="experience-in[]" value="Field">
+              <input type="checkbox" id="field" name="work-site[]" value="Field">
               <label for="field">Field work with town-based accommodation</label><br>
             </div>  
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="office-site" name="experience-in[]" value="office Site">
+              <input type="checkbox" id="office-site" name="work-site[]" value="office Site">
               <label for="office-site">Office based work (major city/town) Site</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="office-mine" name="experience-in[]" value="office mine">
+              <input type="checkbox" id="office-mine" name="work-site[]" value="office mine">
               <label for="office-mine">Office based work (mine site)</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="open-pit" name="experience-in[]" value="Open Pit">
+              <input type="checkbox" id="open-pit" name="work-site[]" value="Open Pit">
               <label for="open-pit">Open Pit</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="underground" name="experience-in[]" value="Underground">
+              <input type="checkbox" id="underground" name="work-site[]" value="Underground">
               <label for="underground">Underground</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="fifo" name="experience-in[]" value="fifo">
+              <input type="checkbox" id="fifo" name="work-site[]" value="fifo">
               <label for="fifo">FIFO</label><br>
             </div>
             <div style="display: flex; align-items:baseline">
-              <input type="checkbox" id="dido" name="experience-in[]" value="dido">
+              <input type="checkbox" id="dido" name="work-site[]" value="dido">
               <label for="dido">DIDO</label><br>
             </div>  
           </div>
@@ -609,7 +604,7 @@
           <p>
             Copyright All rights reserved
             <a href="#">
-              <strong class="text-primary">Francisco Virgili y Daniel Virgili</strong>
+              <strong class="text-primary">Geofinder® 2024</strong>
             </a>
           </p>
         </div>

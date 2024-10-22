@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GeoEasy</title>
+    <title>Geofinder®</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="estilo.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +16,26 @@
     />
     
   </head>
+  <!-- Script -->
+  <script>
+    // Function to load the modal
+    function loadModal() {
+        fetch('userModal.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('modalContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading modal:', error));
+    }
+  
+    // Call the function to load the modal on page load
+    document.addEventListener('DOMContentLoaded', loadModal);
+  </script>
+  <script src="sessionCheck.js"></script> <!-- Include the external JS file -->
   <body>
-    <!-- Script -->
     <script>
-      // Call the session-checking function for a company user type
-      checkUserSession('Company');
+      // Call the session-checking function for a geologist user type
+      checkUserSession('Geologist');
     </script>
     <header>
       <section class="desktop">
