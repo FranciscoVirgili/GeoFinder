@@ -273,7 +273,7 @@
 }
 
 .vscomp-search-container {
-    align-items: center;
+    /* align-items: center; */
     border-bottom: 1px solid #ddd;
     display: flex;
     height: 40px;
