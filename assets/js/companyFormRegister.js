@@ -23,7 +23,7 @@ const friendlyNames = {
 const citiesDropdown = document.getElementById('citiesDropdown');
 const stateDropdown = document.getElementById('state-residence');
 
-fetch('australianCities.json')
+fetch('data/australianCities.json')
   .then(response => response.json())
   .then(cities => {
     const citiesByState = {};

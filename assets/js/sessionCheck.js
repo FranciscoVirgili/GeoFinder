@@ -30,7 +30,7 @@ function checkSessionAndHandleLogout() {
                 // User is logged in, replace sign-in button with user icon
                 authSection.innerHTML = `
                     <div class="userOn">
-                        <img src="./Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
+                        <img src="assets/Images/usuario.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">
                     </div>
                 `;
 

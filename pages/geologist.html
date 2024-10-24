@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GeoEasy</title>
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="estilo.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Icons -->
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>GeoEasy</title>
+      <link rel="stylesheet" href="assets\css\styles.css" />
+      <link rel="stylesheet" href="assets\css\estilo.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    <!-- Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- Swippers CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Script -->
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Script -->
+  </head>
+  <body>
     <header>
       <section class="desktop">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <span class="logoCompany">
               <a href="./index.html"
-                ><img class="imgCompany" src="./Images/geoFinderLogo.png"
+                ><img class="imgCompany" src="assets/Images/geoFinderLogo.png"
               /></a>
             </span>
             <button
@@ -49,8 +56,8 @@
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./geologist.html"
-                    >Im a Geo</a
+                    href="./company.html"
+                    >Im a Company</a
                   >
                 </li>
                 <span class="btnSignIn">
@@ -72,7 +79,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <span class="logoCompany">
-              <img class="imgCompany" src="./Images/geoFinderLogo.png" />
+              <img class="imgCompany" src="assets/Images/geoFinderLogo.png" />
             </span>
             <button
               class="navbar-toggler"
@@ -88,21 +95,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./geologist.html">Im a Geo</a>
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./company.html"
+                    >Im a Company</a
+                  >
                 </li>
-                <span>
+                <span class="btnSignIn" style="width: 15%;">
                   <a href="./signin.html"
                     ><button class="btn btn-primary">Sign In</button></a
                   >
                 </span>
-                <span>
+                <span class="btnSignIn" style="width: 15%;">
                     <a href="./register.html"
-                      ><button class="btn btn-primary" style="background-color: rgb(108, 116, 126); border-color:rgb(108, 116, 126);">Register</button></a
+                      ><button class="btn btn-secondary">Register</button></a
                     >
                   </span>
               </ul>
@@ -112,66 +122,81 @@
       </section>
     </header>
 
-    <!-- First List Menu -->
+<!-- First List Menu -->
+<!-- Second List Menu -->
 
-    <h1 class="findGeoTitle">How GeoFinder works!</h1>
-    <section class="secondListMenu">
-      <div class="containerSecondList">
-        <div class="row">
-          <div class="col">
-            <div class="circleList">1</div>
-            <h3>Find the right professional for your project</h3>
-            <div class="paragraphFindGeo">
-              <p>
-                Geological Services are listed here. When you need geological
-                services, simply post the details of your project. Our platform
-                connects your request with geologists and related professionals
-                who match your needs.
-              </p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="circleList">2</div>
-            <h3>Review the proposals</h3>
-            <div class="paragraphFindGeo">
-              <p>
-                Interested professionals will send you their proposals. You can
-                choose who to hire based on their profiles, experience, and
-                reviews from previous clients.
-              </p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="circleList">3</div>
-            <h3>
-              Manage the project directly from the platform and your phone
-            </h3>
-            <div class="paragraphFindGeo">
-              <p>
-                Once you choose a professional, you can communicate with them,
-                manage the project, schedule visits through our platform, all in
-                one place.
-              </p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="circleList">4</div>
-            <h3>Leave a review</h3>
-            <p>
-              After the project is completed, you can leave a review of the
-              professional's work. This helps other users make informed
-              decisions and strengthens the professional's reputation within our
-              community.
-            </p>
-          </div>
-        </div>
-        <div class="listButton">
-          <button class="btn btn-primary" type="submit">
-            <a href="./register.html">Get started</a>
-          </button>
+<section class="galleryMenu">
+  <h1 class="secondFindGeoTitle">Geological jobs are posted here daily</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="assets/Images/geologicalMapping.jpg" alt="Geological Mapping" />
+      <div class="gallery-item-caption">Geological Mapping</div>
+    </div>
+    <div class="gallery-item">
+      <img src="assets/Images/mineralExpo.jpg" alt="Mineral Exploration" />
+      <div class="gallery-item-caption">Mineral Exploration</div>
+    </div>
+    <div class="gallery-item">
+      <img src="assets/Images/soilTesting.jpg" alt="Soil Testing" />
+      <div class="gallery-item-caption">Soil Testing</div>
+    </div>
+    <div class="gallery-item">
+      <img src="assets/Images/seismicSurveys.jpg" alt="Seismic Surveys" />
+      <div class="gallery-item-caption">Seismic Surveys</div>
+    </div>
+    <!-- Añadir más servicios según sea necesario -->
+  </div>
+</section>
+
+<h1 class="findGeoTitle">How to Get Started as a Geologist on GeoFinder!</h1>
+<section class="secondListMenu">
+  <div class="containerSecondList">
+    <div class="row">
+      <div class="col">
+        <div class="circleList">1</div>
+        <h3>Create your profile</h3>
+        <div class="paragraphFindGeo">
+          <p>
+            Start by creating a detailed profile. Share your experience, areas of expertise, certifications, and any additional skills that set you apart. This will help companies understand what services you offer.
+          </p>
         </div>
       </div>
-    </section>
+      <div class="col">
+        <div class="circleList">2</div>
+        <h3>Receive project invitations</h3>
+        <div class="paragraphFindGeo">
+          <p>
+            Once your profile is complete, companies looking for geological services will be able to find you. You will receive invitations to submit proposals based on your skills and their project needs.
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="circleList">3</div>
+        <h3>Send proposals and discuss details</h3>
+        <div class="paragraphFindGeo">
+          <p>
+            When you receive an invitation, you can send your proposal outlining how you would approach the project. You can discuss project details directly through our platform, ensuring smooth communication.
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="circleList">4</div>
+        <h3>Complete the project and get reviewed</h3>
+        <div class="paragraphFindGeo">
+          <p>
+            Once hired, work with the company to complete the project. Afterward, the company will leave a review based on your performance. Positive reviews will help you build a strong reputation on GeoFinder.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="listButton">
+      <button class="btn btn-primary" type="submit">
+        <a href="./register.html">Get started</a>
+      </button>
+    </div>
+  </div>
+</section>
+
 
     <section class="secondListMenuMobile">
       <div class="containerSecondList">
@@ -228,36 +253,13 @@
         </div>
         <div class="listButton">
           <button class="btn btn-primary" type="submit">
-            <a href="./register.html">Get started</a>
+            <a href="./geologistForm.html">Get started</a>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- Second List Menu -->
-
-    <section class="galleryMenu">
-      <h1 class="secondFindGeoTitle">Geological services are posted here daily</h1>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="./Images/geologicalMapping.jpg" alt="Geological Mapping" />
-          <div class="gallery-item-caption">Geological Mapping</div>
-        </div>
-        <div class="gallery-item">
-          <img src="./Images/mineralExpo.jpg" alt="Mineral Exploration" />
-          <div class="gallery-item-caption">Mineral Exploration</div>
-        </div>
-        <div class="gallery-item">
-          <img src="./Images/soilTesting.jpg" alt="Soil Testing" />
-          <div class="gallery-item-caption">Soil Testing</div>
-        </div>
-        <div class="gallery-item">
-          <img src="./Images/seismicSurveys.jpg" alt="Seismic Surveys" />
-          <div class="gallery-item-caption">Seismic Surveys</div>
-        </div>
-        <!-- Añadir más servicios según sea necesario -->
-      </div>
-    </section>
+    
 
     <!-- Reviews -->
     <section class="containerReview swiper">
@@ -265,7 +267,7 @@
         <div class="testimonialContent swiper-wrapper">
           <div class="slideReview swiper-slide">
             <img
-              src="./Images/customer1.jpg"
+              src="assets/Images/customer1.jpg"
               alt="tradiwReview1"
               class="imageReview"
             />
@@ -283,7 +285,7 @@
           </div>
           <div class="slideReview swiper-slide">
             <img
-              src="./Images/customer2.jpg"
+              src="assets/Images/customer2.jpg"
               alt="tradiwReview1"
               class="imageReview"
             />
@@ -301,7 +303,7 @@
           </div>
           <div class="slideReview swiper-slide">
             <img
-              src="./Images/customer3.jpg"
+              src="assets/Images/customer3.jpg"
               alt="tradiwReview1"
               class="imageReview"
             />
@@ -371,15 +373,15 @@
           <hr class="mb-4">
           <div class="contact-section">
             <div class="contact-item">
-                <img src="./Images/hogar.png">
+                <img src="assets/Images/hogar.png">
                 <span>Brisbane, Australia</span>
             </div>
             <div class="contact-item">
-                <img src="./Images/correo-electronico.png">
+                <img src="assets/Images/correo-electronico.png">
                 <span>geofinder@gmail.com</span>
             </div>
             <div class="contact-item">
-                <img src="./Images/telefono.png">
+                <img src="assets/Images/telefono.png">
                 <span>+5555555555</span>
             </div>
         </div>
@@ -390,7 +392,7 @@
           <p>
             Copyright All rights reserved
             <a href="#">
-              <strong class="text-primary">Geofinder® 2024</strong>
+              <strong class="text-primary">Francisco Virgili y Daniel Virgili</strong>
             </a>
           </p>
         </div>
@@ -425,6 +427,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- JavaScript -->
-    <script src="./findgeo.js"></script>
+    <script src="assets/js/findgeo.js"></script>
   </body>
 </html>
